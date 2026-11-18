@@ -126,7 +126,7 @@ Une défaillance cyber peut avoir plusieurs effets qui doivent être séparés :
 
 Le risque n'est pas limité à la fuite de données. Une interruption du monitorage, une valeur fausse ou une alarme non transmise peut avoir une conséquence opérationnelle et potentiellement clinique.
 
-## 6. Sources
+## 8. Sources
 
 - [H40] GE CARESCAPE Cybersecurity Fundamentals : https://www.gehealthcare.com/-/media/86efd534d0c94edb831beacde0c0f7eb.pdf
 - [H41] Philips IntelliVue MX400/MX450/MX500/MX550 Instructions for Use : https://www.documents.philips.com/assets/Instruction%20for%20Use/20241010/7d137e87854a40a5b843b205009e75dc.pdf
@@ -134,4 +134,5 @@ Le risque n'est pas limité à la fuite de données. Une interruption du monitor
 - [H43] Dräger Infinity CentralStation Wide VG6.0 : https://www.draeger.com/Content/Documents/Products/ics-ifu-3736474-fr.pdf
 - [H44] Dräger Infinity CentralStation Wide VG4.0 release notes : https://www.draeger.com/Content/Documents/Products/ics-ifusp-3720573-en.pdf
 - [H45] Mindray BeneVision CMS brochure, 2026 : https://www.mindray.com/content/dam/xpace/en/resources/brochure/BeneVision_CMS.pdf
+- [H64] IEC 80001-1:2021 : https://webstore.iec.ch/en/publication/34263
 - [H54] NHS England — Philips PIC iX and Efficia cybersecurity vulnerabilities : https://digital.nhs.uk/cyber-alerts/2021/cc-3980
