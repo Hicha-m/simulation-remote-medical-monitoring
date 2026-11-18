@@ -76,14 +76,7 @@ Ce dossier est volontairement découpé par thème. Chaque document traite un su
 - [Prévention, détection, réponse et continuité](07-cybersecurite/03-prevention-detection-reponse-continuite.md) — pratiques organisationnelles et techniques.
 - [Modèle de menace et matrice](07-cybersecurite/04-modele-de-menace-et-matrice.md) — menaces et scénarios non destructifs pour le POC.
 
-### 11. Normes, recommandations et couverture intégrale
 
-- [Registre des normes et textes](09-normes-et-recommandations/01-registre-normes-et-reglementation.md) — IEC/ISO, MDR, RGPD, HDS, PGSSI-S, CI-SIS et HAS.
-- [Recommandations](09-normes-et-recommandations/02-recommandations.md) — exigences métier, sécurité, ergonomie et continuité.
-- [Couverture intégrale du projet](09-normes-et-recommandations/03-couverture-integrale-du-projet.md) — 24 domaines du sujet et 16 scénarios de traçabilité.
-- [Checklist avant conception](09-normes-et-recommandations/04-checklist-avant-conception.md) — critères de sortie de l'analyse.
-
-Le registre note aussi le projet de loi français de transposition NIS2, adopté en première lecture à l'Assemblée nationale le 17 novembre 2026, mais non promulgué au 18 novembre 2026.
 
 ### 8. Vérifier la couverture du sujet initial
 
@@ -115,6 +108,15 @@ La proposition actuelle est de prendre une réanimation adulte polyvalente comme
 - [Mapping MIMIC versionné](11-maquette-etablissement/mimic-transfer-mapping-v1.json) — unités, parcours réels et lits fictifs.
 
 La maquette est fictive et versionnée. Elle ne prétend pas reproduire le plan d'un hôpital français précis.
+
+### 11. Normes, recommandations et couverture intégrale
+
+- [Registre des normes et textes](09-normes-et-recommandations/01-registre-normes-et-reglementation.md) — IEC/ISO, MDR, RGPD, HDS, PGSSI-S, CI-SIS et HAS.
+- [Recommandations](09-normes-et-recommandations/02-recommandations.md) — exigences métier, sécurité, ergonomie et continuité.
+- [Couverture intégrale du projet](09-normes-et-recommandations/03-couverture-integrale-du-projet.md) — 24 domaines du sujet et 16 scénarios de traçabilité.
+- [Checklist avant conception](09-normes-et-recommandations/04-checklist-avant-conception.md) — critères de sortie de l'analyse.
+
+Le registre note aussi le projet de loi français de transposition NIS2, adopté en première lecture à l'Assemblée nationale le 17 novembre 2026, mais non promulgué au 18 novembre 2026.
 
 ## Règles de preuve
 
