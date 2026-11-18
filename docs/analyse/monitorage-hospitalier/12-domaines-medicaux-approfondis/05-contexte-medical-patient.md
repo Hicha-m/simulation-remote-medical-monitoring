@@ -41,7 +41,7 @@ Le projet doit distinguer les données nécessaires à l'identification, celles 
 
 ## 3. Dossier patient français et identitovigilance
 
-Le ministère distingue le volet administratif (état civil, débiteurs, entourage) et le volet médical, et rappelle que le dossier patient est constitué à l'admission [H126]. Le Code de la santé publique décrit le contenu du dossier médical ; la version juridique exacte doit être vérifiée dans sa rédaction en vigueur au moment d'un éventuel usage réglementaire [H127].
+Le ministère distingue le volet administratif (état civil, débiteurs, entourage) et le volet médical, et rappelle que le dossier patient est constitué à l'admission [H136]. Le Code de la santé publique décrit le contenu du dossier médical ; la version juridique exacte doit être vérifiée dans sa rédaction consolidée en vigueur au moment d'un éventuel usage réglementaire.
 
 L'Identité Nationale de Santé (INS) et le Référentiel National d'Identitovigilance (RNIV) structurent l'identification et le référencement des données de santé en France [H126, H127]. Ce ne sont pas de simples champs libres à recopier.
 
