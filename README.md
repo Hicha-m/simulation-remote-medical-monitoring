@@ -10,7 +10,16 @@ Projet académique de conception et de développement d'un système logiciel com
 
 Le service de référence, le nombre de services, les fonctionnalités exactes, les profils médicaux, les langages et l'architecture doivent être validés avec le tuteur. L'échéance de livraison prévue est le **8 janvier 2027**.
 
-## Documentation
+## Méthode de réalisation
+
+Le développement suivra trois phases successives, inspirées des consignes du projet Intern :
+1. [DEV](docs/consignes/DEV.md) — analyse, maquettes, données, ingestion/métier, interface et recette locale ;
+2. [Docker](docs/consignes/Docker.md) — images, réseaux, volumes, composition et déploiement reproductible ;
+3. [Metrics](docs/consignes/Metrics.md) — instrumentation, campagnes de mesure, charge, intégrité et analyse.
+
+La [CI/CD](docs/consignes/CI-CD.md) sera mise en place dès DEV et enrichie à chaque phase.
+
+## Documentation médicale et fonctionnelle
 
 Le dossier de référence est [docs/analyse/monitorage-hospitalier](docs/analyse/monitorage-hospitalier/README.md).
 
@@ -29,6 +38,7 @@ Il est organisé par thèmes :
 - [Questionnaire à poser au tuteur](docs/analyse/monitorage-hospitalier/13-pilotage-projet/01-questionnaire-tuteur.md)
 - [Planning Gantt jusqu'au 8 janvier 2027](docs/analyse/monitorage-hospitalier/13-pilotage-projet/03-gantt-generique.md)
 - [Stratégies et arbitrages critiques](docs/analyse/monitorage-hospitalier/13-pilotage-projet/04-strategies-et-arbitrages-critiques.md)
+- [Méthode DEV → Docker → Metrics](docs/consignes/README.md)
 
 Les documents de cadrage initiaux sont conservés dans [docs/analyse](docs/analyse/README.md).
 
