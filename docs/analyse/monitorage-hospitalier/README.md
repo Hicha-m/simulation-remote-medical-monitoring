@@ -3,7 +3,9 @@
 **Version :** 0.1  
 **Date de mise à jour :** 18 novembre 2026  
 **Périmètre confirmé :** monitorage hospitalier.  
-**Statut :** analyse, cadrage médical et fonctionnel ; les choix de services, fonctionnalités et technologies restent à valider.\n\n**Nature confirmée :** système de monitorage hospitalier reliant des moniteurs de chevet à une ou plusieurs centrales de surveillance. **Échéance de livraison : 8 janvier 2027.** Il s'agit du projet logiciel complet, et non d'une simple preuve de concept.
+**Statut :** analyse, cadrage médical et fonctionnel ; les choix de services, fonctionnalités et technologies restent à valider.
+
+**Nature confirmée :** système de monitorage hospitalier reliant des moniteurs de chevet à une ou plusieurs centrales de surveillance. **Échéance de livraison : 8 janvier 2027.** Il s'agit du projet logiciel complet, et non d'une simple preuve de concept.
 
 ## Objectif
 
@@ -133,6 +135,17 @@ Le registre note aussi le projet de loi français de transposition NIS2, adopté
 - [Questionnaire d'organisation de l'équipe de quatre](13-pilotage-projet/02-questionnaire-equipe.md) — disponibilités, compétences, responsabilités, Git, intégration et décisions.
 - [Gantt générique](13-pilotage-projet/03-gantt-generique.md) — macro-planning du 18 novembre 2026 au 8 janvier 2027.
 - [Stratégies et arbitrages critiques](13-pilotage-projet/04-strategies-et-arbitrages-critiques.md) — options d'architecture, scénarios de panne et mesures comparatives.
+
+### 14. Méthode de réalisation et livraison
+
+Le développement suivra les trois phases définies dans [docs/consignes](../consignes/README.md) :
+
+- [DEV](../consignes/DEV.md) — analyse, prototype d'interface, données, ingestion, backend, centrale et recette locale.
+- [Docker](../consignes/Docker.md) — construction des images, réseaux, volumes, Compose, santé et installation reproductible.
+- [Metrics](../consignes/Metrics.md) — instrumentation, plan de test, étalonnage, campagnes et analyse.
+- [CI/CD](../consignes/CI-CD.md) — intégration, contrôles qualité, construction et livraison continues, transversalement aux trois phases.
+
+La séquence VM intermédiaire présente dans le projet de référence n'est pas retenue comme une phase obligatoire à ce stade. La date de livraison est le 8 janvier 2027 ; le [Gantt](13-pilotage-projet/03-gantt-generique.md) est aligné sur cette séquence et devra être révisé après validation des disponibilités.
 
 ## Règles de preuve
 
