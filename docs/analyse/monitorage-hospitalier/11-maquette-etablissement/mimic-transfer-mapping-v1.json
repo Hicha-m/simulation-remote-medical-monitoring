@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "1.0",
+  "mappingVersion": "1.0",
+  "dataset": "MIMIC-IV Clinical Database Demo 2.2",
+  "sourceFile": "hosp/transfers.csv.gz",
+  "sourceFileUrl": "https://physionet.org/content/mimic-iv-demo/2.2/hosp/transfers.csv.gz",
+  "sourceFields": [
+    "subject_id",
+    "hadm_id",
+    "transfer_id",
+    "eventtype",
+    "careunit",
+    "intime",
+    "outtime"
+  ],
+  "sourceDateDisclaimer": "Les dates de démonstration sont décalées pour anonymisation et ne correspondent pas aux dates calendaires réelles des soins.",
+  "careUnitMappings": [
+    {
+      "sourceCareUnit": "Emergency Department",
+      "targetUnitId": "UNIT-URG",
+      "mappingStatus": "explicit"
+    },
+    {
+      "sourceCareUnit": "Trauma SICU (TSICU)",
+      "targetUnitId": "UNIT-REA-ADU",
+      "mappingStatus": "functional-adaptation",
+      "warning": "La maquette adulte polyvalente n'est pas une reproduction exacte du service source Trauma SICU."
+    },
+    {
+      "sourceCareUnit": "Med/Surg/Trauma",
+      "targetUnitId": "UNIT-MED-TRAUMA",
+      "mappingStatus": "explicit-functional"
+    },
+    {
+      "sourceCareUnit": "Medicine/Cardiology",
+      "targetUnitId": "UNIT-CARD-HOSP",
+      "mappingStatus": "explicit-functional"
+    },
+    {
+      "sourceCareUnit": "Cardiac Vascular Intensive Care Unit (CVICU)",
+      "targetUnitId": "UNIT-CVICU",
+      "mappingStatus": "explicit-functional"
+    },
+    {
+      "sourceCareUnit": "Cardiac Surgery",
+      "targetUnitId": "UNIT-CHIR-CARD",
+      "mappingStatus": "explicit-functional"
+    },
+    {
+      "sourceCareUnit": "Coronary Care Unit (CCU)",
+      "targetUnitId": "UNIT-CARD-HOSP",
+      "mappingStatus": "manual-review",
+      "warning": "Ne pas assimiler automatiquement CCU et CVICU."
+    },
+    {
+      "sourceCareUnit": "Medical Intensive Care Unit (MICU)",
+      "targetUnitId": "UNIT-REA-ADU",
+      "mappingStatus": "generic-profile-only",
+      "warning": "Conserver la spécialité source MICU."
+    },
+    {
+      "sourceCareUnit": "Surgical Intensive Care Unit (SICU)",
+      "targetUnitId": "UNIT-REA-ADU",
+      "mappingStatus": "generic-profile-only",
+      "warning": "Conserver la spécialité source SICU."
+    },
+    {
+      "sourceCareUnit": "PACU",
+      "targetUnitId": "UNIT-SSPI",
+      "mappingStatus": "explicit-functional"
+    }
+  ],
+  "allocationPolicy": {
+    "policyVersion": "1.0",
+    "intervalConvention": "[intime,outtime)",
+    "sourceTransferPreserved": true,
+    "dischargeCreatesBedAssignment": false,
+    "deterministicOffset": "uint32(first 8 hex chars of SHA-256(subject_id + '|' + hadm_id + '|' + transfer_id)) modulo sorted target bed count",
+    "collisionHandling": "Scan cyclically from deterministic offset for first free bed. If no bed is available, emit capacity_conflict; never create a hidden overflow bed.",
+    "explicitDemoOverridesTakePrecedence": true
+  },
+  "explicitDemoJourneys": [
+    {
+      "scenarioId": "MAP-01",
+      "subjectId": 10019568,
+      "hadmId": 28710730,
+      "segments": [
+        {
+          "transferId": 36381328,
+          "eventType": "ed",
+          "sourceCareUnit": "Emergency Department",
+          "intime": "2120-01-30T19:44:00",
+          "outtime": "2120-01-30T22:51:00",
+          "targetUnitId": "UNIT-URG",
+          "targetRoomId": "URG-BOX-02",
+          "targetBedId": "URG-BED-02"
+        },
+        {
+          "transferId": 30876334,
+          "eventType": "admit",
+          "sourceCareUnit": "Trauma SICU (TSICU)",
+          "intime": "2120-01-30T22:51:00",
+          "outtime": "2120-01-31T18:25:12",
+          "targetUnitId": "UNIT-REA-ADU",
+          "targetRoomId": "REA-CH-03",
+          "targetBedId": "REA-BED-03"
+        },
+        {
+          "transferId": 30037221,
+          "eventType": "transfer",
+          "sourceCareUnit": "Med/Surg/Trauma",
+          "intime": "2120-01-31T18:25:12",
+          "outtime": "2120-02-02T15:40:32",
+          "targetUnitId": "UNIT-MED-TRAUMA",
+          "targetRoomId": "MED-TR-CH-04",
+          "targetBedId": "MED-TR-BED-04"
+        },
+        {
+          "transferId": 34768989,
+          "eventType": "discharge",
+          "sourceCareUnit": null,
+          "intime": "2120-02-02T15:40:32",
+          "outtime": null,
+          "targetUnitId": null,
+          "targetRoomId": null,
+          "targetBedId": null
+        }
+      ]
+    },
+    {
+      "scenarioId": "MAP-02",
+      "subjectId": 10004422,
+      "hadmId": 21255400,
+      "segments": [
+        {
+          "transferId": 31415822,
+          "eventType": "admit",
+          "sourceCareUnit": "Medicine/Cardiology",
+          "intime": "2111-01-15T14:55:58",
+          "outtime": "2111-01-17T09:44:50",
+          "targetUnitId": "UNIT-CARD-HOSP",
+          "targetRoomId": "CARD-CH-02",
+          "targetBedId": "CARD-BED-02"
+        },
+        {
+          "transferId": 32155744,
+          "eventType": "transfer",
+          "sourceCareUnit": "Cardiac Vascular Intensive Care Unit (CVICU)",
+          "intime": "2111-01-17T09:44:50",
+          "outtime": "2111-01-23T18:18:46",
+          "targetUnitId": "UNIT-CVICU",
+          "targetRoomId": "CVICU-CH-02",
+          "targetBedId": "CVICU-BED-02"
+        },
+        {
+          "transferId": 35494464,
+          "eventType": "transfer",
+          "sourceCareUnit": "Cardiac Surgery",
+          "intime": "2111-01-23T18:18:46",
+          "outtime": "2111-01-25T15:34:47",
+          "targetUnitId": "UNIT-CHIR-CARD",
+          "targetRoomId": "CHIR-CARD-CH-03",
+          "targetBedId": "CHIR-CARD-BED-03"
+        },
+        {
+          "transferId": 32873549,
+          "eventType": "discharge",
+          "sourceCareUnit": null,
+          "intime": "2111-01-25T15:34:47",
+          "outtime": null,
+          "targetUnitId": null,
+          "targetRoomId": null,
+          "targetBedId": null
+        }
+      ]
+    }
+  ]
+}
