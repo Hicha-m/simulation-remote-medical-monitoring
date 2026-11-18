@@ -1,119 +1,138 @@
-# 03 — Planning Gantt générique
+# 03 — Planning Gantt générique — DEV → Docker → Metrics
 
-**Version :** 1.0 — **Date de préparation :** 18 novembre 2026  
-**Début de planification :** 18 novembre 2026  
-**Échéance :** vendredi 8 janvier 2027  
-**Nature :** maquette de macro-planning, à ajuster après la réponse du tuteur et les disponibilités des quatre membres.
+**Version :** 2.0 — **Date de préparation :** 18 novembre 2026  
+**Début :** 18 novembre 2026  
+**Livraison :** vendredi 8 janvier 2027  
+**Statut :** macro-planning générique, à réviser après le rendez-vous tuteur et la réunion des quatre membres.
 
-## 1. Hypothèses
+## 1. Hypothèses de planification
 
-- Le projet est un projet logiciel complet à livrer, pas une simple preuve de concept.
-- La nature générale du système est déjà connue : monitorage hospitalier, moniteurs de chevet et centrale(s).
-- Les services exacts, fonctionnalités, technologies et critères de notation restent à valider.
-- Les activités se chevauchent : cadrage, conception, développement, intégration et tests ne doivent pas être strictement séquentiels.
-- Les périodes du 21 décembre au 4 janvier comportent Noël et le Jour de l'An ; la disponibilité de l'équipe doit être confirmée.
-- Le 8 janvier est réservé à la livraison et à la démonstration, pas à un développement important.
+- Le projet est une réalisation logicielle complète de monitorage hospitalier.
+- Le flux fonctionnel cible relie des moniteurs de chevet à une ou plusieurs centrales de surveillance.
+- La méthode est organisée en trois phases principales successives : DEV, Docker, Metrics.
+- La CI/CD est transversale et commence dès DEV.
+- Les choix précis de service, de charge et de technologies restent à valider.
+- La période du 21 décembre au 4 janvier comprend les fêtes : les disponibilités doivent être recueillies et le planning révisé en conséquence.
+- Le 8 janvier est réservé au rendu et à la démonstration, pas à du développement majeur.
 
-## 2. Gantt macro
+Le planning de référence d'Intern comporte aussi un déploiement sur machines virtuelles entre DEV et Docker. Cette étape VM n'est pas incluse comme phase obligatoire dans notre organisation actuelle.
 
-`█` = période principale de travail ; `░` = activité de soutien / chevauchement.
+## 2. Gantt macro par phases
 
-| Chantier / période | 18–22 nov. | 23–29 nov. | 30 nov.–6 déc. | 7–13 déc. | 14–20 déc. | 21–27 déc. | 28 déc.–3 janv. | 4–8 janv. |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| Questions tuteur et organisation équipe | █ | ░ | | | | | | |
-| Recherche médicale ciblée et clôture des inconnues | █ | █ | ░ | | | | | |
-| Exigences fonctionnelles et critères d'acceptation | ░ | █ | █ | ░ | | | | |
-| Comparaison et décision d'architecture | | ░ | █ | █ | | | | |
-| Contrats de données et modèle métier | | █ | █ | ░ | ░ | | | |
-| Infrastructure, dépôt, CI, environnement | | ░ | █ | █ | ░ | | | |
-| Backend et communication des moniteurs | | | ░ | █ | █ | ░ | ░ | |
-| Simulation des signaux / données / appareils | | ░ | ░ | █ | █ | █ | ░ | |
-| Base de données et historique | | | ░ | █ | █ | ░ | ░ | |
-| Interface centrale multi-patients | | | ░ | ░ | █ | █ | ░ | |
-| Alarmes, qualité et workflow soignant | | ░ | ░ | ░ | █ | █ | █ | ░ |
-| Intégration et tests de bout en bout | | | ░ | ░ | █ | █ | █ | █ |
-| Robustesse, sécurité et performance | | | | ░ | ░ | ░ | █ | █ |
-| Documentation, installation et démonstration | | | | | ░ | ░ | █ | █ |
+| Phase / activité | 18–29 nov. | 30 nov.–6 déc. | 7–13 déc. | 14–20 déc. | 21–27 déc. | 28 déc.–3 janv. | 4–8 janv. |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **DEV** — exigences, services et scénarios | █ | | | | | | |
+| DEV — prototype d'interface et contrats | █ | █ | | | | | |
+| DEV — données, modèle et persistance | ░ | █ | █ | | | | |
+| DEV — ingestion, simulateurs et backend | | ░ | █ | █ | | | |
+| DEV — interface centrale | | | █ | █ | | | |
+| DEV — intégration et recette locale | | | ░ | █ | | | |
+| **Docker** — images, volumes, réseaux | | | | ░ | █ | | |
+| Docker — Compose, santé et installation | | | | ░ | █ | ░ | |
+| Docker — vérification et référence | | | | | ░ | █ | |
+| **Metrics** — instrumentation et plan de test | ░ | ░ | ░ | ░ | ░ | █ | |
+| Metrics — étalonnage et campagnes | | | | | | █ | █ |
+| Metrics — analyse et rapport | | | | | | ░ | █ |
+| **CI/CD** — tests et qualité à chaque PR | █ | █ | █ | █ | █ | █ | █ |
+| CI/CD — build images, scan et publication | | | | ░ | █ | █ | █ |
+| **Livraison** — gel, documentation, démo | | | | | | ░ | █ |
 
-## 2 bis. Diagramme Gantt Mermaid modifiable
+L'instrumentation élémentaire (horodatages, logs structurés, compteurs) commence pendant DEV. La phase Metrics correspond à la préparation des campagnes, à leur étalonnage, à leur exécution et à l'analyse, pas au premier ajout de logs dans le code.
 
-Le diagramme ci-dessous est une représentation de départ. Les dates et durées sont volontairement génériques : elles devront être recalées en fonction des réponses du tuteur, des disponibilités réelles et des résultats des premiers essais.
+## 3. Diagramme Mermaid modifiable
 
-```mermaid
+Les dates sont indicatives. Les tâches sont volontairement regroupées à un niveau macro pour pouvoir les déplacer après validation du tuteur.
+
+~~~mermaid
 gantt
-    title Projet de monitorage hospitalier — livraison du 8 janvier 2027
+    title Monitorage hospitalier — livraison du 8 janvier 2027
     dateFormat YYYY-MM-DD
     axisFormat %d/%m
 
-    section Cadrage
-    Questions tuteur et équipe       :a1, 2026-11-18, 2026-11-22
-    Exigences et périmètre v1        :a2, 2026-11-23, 2026-11-29
+    section DEV
+    Cadrage et exigences                  :a1, 2026-11-18, 2026-11-29
+    Prototype UI et contrats              :a2, 2026-11-23, 2026-12-06
+    Modèle de données et persistance      :a3, 2026-11-30, 2026-12-13
+    Ingestion, simulateurs et backend     :a4, 2026-12-07, 2026-12-17
+    Interface centrale                    :a5, 2026-12-07, 2026-12-17
+    Intégration et recette locale         :a6, 2026-12-14, 2026-12-20
 
-    section Conception
-    Architecture et comparatifs      :b1, 2026-11-30, 2026-12-06
-    Contrats de données              :b2, 2026-11-30, 2026-12-06
-    Socle technique et CI            :b3, 2026-12-07, 2026-12-13
+    section Docker
+    Images et volumes                     :b1, 2026-12-18, 2026-12-23
+    Réseaux et Compose                    :b2, 2026-12-21, 2026-12-26
+    Vérification et installation          :b3, 2026-12-26, 2026-12-28
 
-    section Développement
-    Ingestion et simulateurs         :c1, 2026-12-14, 2026-12-20
-    Persistance et historique        :c2, 2026-12-14, 2026-12-27
-    Interface centrale               :c3, 2026-12-21, 2026-12-27
-    Alarmes et qualité                :c4, 2026-12-21, 2027-01-03
+    section Metrics
+    Plan de test et étalonnage            :c1, 2026-12-28, 2026-12-30
+    Campagnes de charge et de reprise     :c2, 2026-12-30, 2027-01-03
+    Analyse et rapport                    :c3, 2027-01-02, 2027-01-05
 
-    section Intégration et validation
-    Intégration multi-patients       :d1, 2026-12-28, 2027-01-03
-    Tests et corrections             :d2, 2027-01-04, 2027-01-07
-    Livraison finale                 :milestone, d3, 2027-01-08, 0d
-```
+    section CI CD transversal
+    CI tests et qualité                   :d1, 2026-11-18, 2027-01-08
+    Build, scan et publication Docker     :d2, 2026-12-18, 2027-01-08
 
-## 3. Jalons et livrables
+    section Livraison
+    Gel et validation finale              :e1, 2027-01-05, 2027-01-07
+    Rendu final                           :milestone, e2, 2027-01-08, 0d
+~~~
+
+## 4. Jalons et conditions de passage
 
 | Jalon | Date cible | Résultat attendu | Condition de passage |
 |---|---|---|---|
-| M0 — Lancement | 22 nov. 2026 | Réponses tuteur initiales, responsabilités et disponibilités | Périmètre et contraintes bloquantes identifiés |
-| M1 — Exigences version 1 | 29 nov. 2026 | Services, utilisateurs, fonctionnalités, données et scénarios priorisés | Fonctions obligatoires distinguées des extensions |
-| M2 — Architecture version 1 | 6 déc. 2026 | Comparatifs terminés, choix techniques documentés, contrats gelés en v1 | Un test d'intégration minimal est planifié |
-| M3 — Socle opérationnel | 13 déc. 2026 | Dépôt, CI, environnement, schéma de données et serveur démarrent | Installation reproductible et tests de base |
-| M4 — Premier flux complet | 20 déc. 2026 | Un moniteur virtuel envoie des données reçues, persistées et affichées | Démonstration de bout en bout, avec horodatage et provenance |
-| M5 — Fonctions intégrées | 27 déc. 2026 | Multi-patients, historique, alarmes et états techniques intégrés selon périmètre | Scénario principal rejouable |
-| M6 — Gel fonctionnel | 3 janv. 2027 | Fonctionnalités prioritaires intégrées, plus de changement architectural majeur | Aucun défaut bloquant connu |
-| M7 — Version candidate | 7 janv. 2027 | Tests, documentation, installation et démonstration vérifiés | Procédure de livraison répétée |
-| M8 — Livraison | **8 janv. 2027** | Rendu final et démonstration | Dépôt et livrables conformes à la consigne |
+| M0 — Cadrage de départ | 22 nov. 2026 | Réponses du tuteur, disponibilités, responsabilités | Les contraintes bloquantes sont identifiées |
+| M1 — Exigences v1 | 29 nov. 2026 | Services, population, fonctionnalités, données et parcours | Les fonctions obligatoires sont séparées des extensions |
+| M2 — Conception v1 | 6 déc. 2026 | Maquettes, contrats de données, modèle métier et architecture | Interfaces entre les quatre chantiers validées |
+| M3 — Socle intégré | 13 déc. 2026 | Base, backend et simulateur échangent un premier flux | Le flux conserve identité, provenance et horodatage |
+| M4 — DEV terminé | 20 déc. 2026 | Application locale intégrée et recette fonctionnelle | Tests P0 passants, parcours principal démontrable |
+| M5 — Docker terminé | 28 déc. 2026 | Compose reproductible, volumes et réseaux vérifiés | Même scénario DEV passe dans l'environnement conteneurisé |
+| M6 — Metrics terminé | 5 janv. 2027 | Campagnes principales, résultats et analyse | Résultats reproductibles et limites identifiées |
+| M7 — Gel final | 7 janv. 2027 | Version candidate, documentation, installation | Livraison répétée avec procédure vérifiée |
+| M8 — Livraison | **8 janv. 2027** | Dépôt, application et démonstration | Tous les livrables demandés par le tuteur sont présents |
 
-## 4. Dépendances importantes
+## 5. CI/CD transversal par niveau de maturité
 
-1. Le choix des services détermine les profils d'appareils, paramètres, utilisateurs et workflows.
-2. Les fonctionnalités déterminent les contrats de données et le modèle métier.
-3. Les contrats de données déterminent les API, événements et schéma de persistance.
-4. Le choix de protocole doit être testé sur les cadences réelles retenues pour les courbes.
-5. Le workflow d'alarme détermine les événements, les rôles, l'interface et l'audit.
-6. L'interface multi-lits dépend de l'association correcte patient / séjour / lit / appareil / session.
-7. La charge de waveform détermine les stratégies de stockage et de rendu graphique.
-8. Les tests de panne doivent être prévus dès la conception, pas ajoutés après coup.
+| Période | Ce qui doit être automatisé |
+|---|---|
+| Dès le début de DEV | Format, compilation, tests unitaires, analyse statique, secrets et dépendances |
+| Fin DEV | Tests API, contrats, migrations et scénario d'intégration |
+| Docker | Construction des images, Compose up, healthchecks, tests de bout en bout et scan d'images |
+| Metrics | Smoke tests automatiques ; campagnes de charge contrôlées séparées |
+| Livraison | Artefact versionné, rapport de tests, documentation et procédure de retour arrière |
 
-## 5. Répartition indicative sur quatre chantiers
+## 6. Répartition en quatre chantiers
 
-| Chantier | Travail dominant | Collaborations indispensables |
+| Chantier | Responsabilité dominante | Collaboration obligatoire |
 |---|---|---|
-| Médical / données / simulation | Semaines 1 à 5 | Contrat d'observation, qualité, profils et validation des scénarios |
-| Backend / réseau | Semaines 2 à 7 | Contrats, sécurité, persistance, événements et charge |
-| Base de données / sécurité | Semaines 2 à 7 | Modèle métier, audits, sauvegarde et contrôles d'accès |
-| Interface centrale | Semaines 3 à 7 | API, affichage des courbes, états d'alarme et ergonomie |
+| Domaine médical, données et simulateurs | Profils de mesures, datasets, waveforms, qualité et scénarios | Contrats avec backend, vérification de provenance |
+| Backend, ingestion et réseau | Réception, sessions, traitement, événements, API | Modèle de données, tests et métriques |
+| Base de données et sécurité | Persistance, migrations, identité, rôles, audit et sauvegarde | Contrats, backend et exploitation Docker |
+| Interface centrale | Multi-patients, patient, courbes, alarmes et états système | Prototype, API et validation utilisateur |
 
-Les responsabilités nominatives sont à remplir dans le [questionnaire équipe](02-questionnaire-equipe.md).
+Une responsabilité principale ne dispense pas de contribuer à l'intégration et à la revue de code.
 
-## 6. Chemin critique
+## 7. Chemin critique
 
-`Validation du périmètre → Contrats de données → Socle serveur/BDD → Premier flux moniteur → Intégration interface → Workflow alarmes → Tests de bout en bout → Version candidate → Livraison`
+Validation périmètre → contrats métier et données → premier flux moniteur → centrale intégrée → recette locale → images et Compose → scénario conteneurisé → campagnes Metrics → livraison.
 
-Les retards sur les contrats, l'identité patient/appareil, l'ingestion ou l'intégration ont le plus fort impact sur la livraison.
+Les risques les plus importants sont :
+- retard de validation du service et des fonctions ;
+- contrats de données non stabilisés ;
+- intégration tardive entre ingestion et interface ;
+- indisponibilité de l'équipe pendant les fêtes ;
+- données waveform trop volumineuses pour le stockage ou le rendu retenu ;
+- campagnes Metrics non étalonnées ;
+- absence de procédure de livraison reproductible.
 
-## 7. Règles de pilotage du planning
+## 8. Règles de pilotage
 
-- Mettre à jour les dates, responsables, charges et statuts chaque semaine.
-- Ajouter un responsable et un résultat vérifiable à chaque tâche.
-- Prévoir un jalon de démonstration chaque semaine.
-- À chaque retard, décider explicitement si l'on réduit le périmètre, change de stratégie ou ajoute de la capacité.
-- Ne pas repousser tous les tests à la dernière semaine.
-- Geler les nouvelles fonctionnalités au plus tard le 3 janvier, sauf correction bloquante.
-- Conserver les 7 et 8 janvier pour la validation finale, la correction limitée et la livraison.
+- Mettre à jour le planning chaque semaine.
+- Affecter un responsable et un livrable vérifiable à chaque tâche.
+- Faire une démonstration intégrée chaque semaine.
+- Ne pas commencer Docker tant que la recette locale DEV n'est pas satisfaisante.
+- Ne pas tirer de conclusion de performance avant d'avoir étalonné le protocole.
+- Définir les seuils d'acceptation avant les campagnes, après validation de la charge cible.
+- Geler les nouvelles fonctionnalités après le passage M4, sauf correction nécessaire.
+- Réserver les 5 à 8 janvier à la stabilisation, la documentation et la livraison.
+
+Les dates sont un mockup. Les durées doivent être recalculées avec la disponibilité réelle des quatre membres et la portée finale confirmée par le tuteur.
