@@ -59,6 +59,12 @@ Ces pages établissent des fonctions ou capacités présentées par les fabrican
 | H27 | [HL7 FHIR R5 — Observation](https://www.hl7.org/fhir/observation.html) | Standard de données | Modèle d'observations, incluant les mesures physiologiques. |
 | H28 | [IEC 60601-1-8 — Alarm systems in medical electrical equipment and systems](https://www.iso.org/standard/41986.html) | Norme électromédicale | Exigences, essais et guidance sur les alarmes ; priorités et signaux d'alarme. |
 
+| H33 | [ANSM — Gestion des alarmes des dispositifs médicaux dans les établissements de santé, septembre 2019](https://ansm.sante.fr/uploads/2020/10/16/20201016-rapport-gestion-alarmes-dm.pdf) | Enquête nationale / matériovigilance | 631 réponses de services dans 318 établissements en 2017 ; report d'alarmes, centrales, inter-chevet, mobiles et difficultés de gestion. |
+| H34 | [UniHA — Monitoring multiparamétrique M_1908](https://www.uniha.org/marche/monitoring-multiparametrique-m-1908) | Marché public / centrale d'achat | Marché actif 2023–2027 couvrant moniteurs et services de maintenance / formation, soins intermédiaires, SSPI, bloc, réanimation, néonatologie et IRM. |
+| H35 | [BOAMP — Avis n° 24-143962, marché UniHA M_2976](https://www.boamp.fr/telechargements/FILES/PDF/2024/12/24-143962.pdf) | Avis de marché public | Gestion optimisée du parc de monitorage, centrales, moniteurs, maintenance, déploiement, formation et références opérationnelles. |
+| H36 | [RESAH — Gestion de parc en ventilation et monitorage 2025-R023](https://espace-acheteur.resah.fr/gestion-de-parc-en-ventilation-et-monitorage) | Offre de centrale d'achat | Offre 2025–2029 ; lot de recueil de données Philips : PIC iX, moniteurs, notification, intégration et logiciels cliniques. |
+| H37 | [BOAMP / France Marchés — Avis d'attribution 25-102326, procédure 24U009](https://www.francemarches.com/files/BOAMP/25-102326.html) | Avis d'attribution de marché public | Lots attribués à Spacelabs, Mindray, Philips, GE et Dräger pour des environnements de monitorage, néonatalogie et péri-opératoire. Les valeurs par lot sont estimatives, pas des dépenses constatées. |
+
 ## 5. Précautions d'interprétation
 
 - Les spécifications fabricants sont des sources primaires pour comprendre leurs produits, mais restent des documents commerciaux ou de documentation produit.
