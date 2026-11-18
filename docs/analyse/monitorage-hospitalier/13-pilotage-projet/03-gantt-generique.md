@@ -32,6 +32,7 @@ Le planning de référence d'Intern comporte aussi un déploiement sur machines 
 | Docker — vérification et référence | | | | | | █ | |
 | Instrumentation élémentaire (préparée pendant DEV) | ░ | ░ | ░ | ░ | ░ | ░ | ░ |
 | **Metrics** — plan de test et étalonnage | | | | | | █ | ░ |
+| Metrics — campagnes de charge et de reprise | | | | | | █ | █ |
 | Metrics — analyse et rapport | | | | | | ░ | █ |
 | **CI/CD** — tests et qualité à chaque PR | █ | █ | █ | █ | █ | █ | █ |
 | CI/CD — build images, scan et publication | | | | ░ | █ | █ | █ |
