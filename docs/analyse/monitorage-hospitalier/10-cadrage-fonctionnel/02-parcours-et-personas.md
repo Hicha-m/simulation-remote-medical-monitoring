@@ -133,3 +133,36 @@ Chaque événement doit conserver son horodatage, son origine et son contexte pa
 - [H100] MIMIC-IV ; [H101] MIMIC-IV-ED ; [H102] HiRID ; [H103] eICU ; [H104] AmsterdamUMCdb.
 - [H108] SFAR — dossier anesthésique et surveillance post-interventionnelle.
 - [H109] Ministère de la Santé — dossier patient, admission et parcours.
+
+
+## 6. Parcours de référence tirés d'une base réelle
+
+Les quatre personas de ce document restent des scénarios composites. Pour éviter de confondre un scénario pédagogique avec un parcours observé, les deux séquences suivantes sont issues de MIMIC-IV Demo 2.2. Les identifiants sont ceux du jeu de données anonymisé et les dates ont été décalées pour la confidentialité [H110].
+
+### Trace réelle A — Urgences, soins intensifs, unité médico-chirurgicale, sortie
+
+Séjour subject_id 10019568, hadm_id 28710730 :
+
+| Segment réel enregistré | Début | Fin |
+|---|---|---|
+| Emergency Department | 2120-01-30 19:44 | 2120-01-30 22:51 |
+| Trauma SICU | 2120-01-30 22:51 | 2120-01-31 18:25:12 |
+| Med/Surg/Trauma | 2120-01-31 18:25:12 | 2120-02-02 15:40:32 |
+| Discharge | 2120-02-02 15:40:32 | — |
+
+Ce parcours permet de tester une succession réelle de segments de localisation. La chambre, le lit et les appareils exacts ne sont pas connus dans cette trace ; ils devront être générés dans notre maquette.
+
+### Trace réelle B — Chirurgie cardiaque, CVICU, chirurgie cardiaque, sortie
+
+Séjour subject_id 10005817, hadm_id 20626031 :
+
+| Segment réel enregistré | Début | Fin |
+|---|---|---|
+| Cardiac Surgery | 2132-12-12 01:44:24 | 2132-12-15 09:29:01 |
+| Cardiac Vascular Intensive Care Unit | 2132-12-15 09:29:01 | 2132-12-17 18:06:07 |
+| Cardiac Surgery | 2132-12-17 18:06:07 | 2132-12-20 15:04:14 |
+| Discharge | 2132-12-20 15:04:14 | — |
+
+Les horaires proviennent des enregistrements MIMIC-IV Demo ; ce ne sont pas des dates de soins réelles à utiliser comme calendrier. Ces traces décrivent les mouvements enregistrés, pas la totalité des actions de soignants ou des alarmes.
+
+Source de référence : [H110] MIMIC-IV Demo et [H111] documentation de la table transfers.
