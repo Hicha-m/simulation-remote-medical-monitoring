@@ -35,9 +35,9 @@
 | 19. Ergonomie et usage | Lisibilité, erreurs, alarmes, accessibilité, formation, fatigue. | Partiel | IEC 62366-1 [H75], HAS/ANSM [H93–H95]. | Scénarios d'utilisation et tests d'interface. |
 | 20. Vérification et validation | Tests unitaires, intégration, bout en bout, charge, sécurité, restauration, reproductibilité. | Ouvert | IEC 62304/ISO 14971 comme références [H73–H74]. | Stratégie de test, critères d'acceptation et preuves. |
 | 21. Réglementation | Finalité du logiciel, MDR, RGPD, HDS, PGSSI-S, responsabilités. | Partiel | [Registre des normes](01-registre-normes-et-reglementation.md). | Note de périmètre réglementaire validée pour le POC. |
+| 22. Documentation et reproductibilité | Architecture, décisions, sources, prompts, installation, scénario de démonstration. | Documenté, à maintenir | README, prompts et journal des décisions. | Dossier de conception et guide de démonstration. |
 | 23. Java et outillage | Version du JDK, bibliothèques réseau, framework serveur et GUI, outillage de build, tests, packaging et documentation. | Ouvert | Sujet initial (Java) et contraintes académiques à confirmer. | Version Java, contraintes de langage, framework autorisé et procédure d'exécution. |
 | 24. Périmètre et critères de réussite | Objectif du POC, fonctions prioritaires, fonctions exclues, scénarios de démonstration et indicateurs de succès. | Ouvert | Cadrage général et scénarios initiaux. | Note de périmètre, backlog priorisé et critères d'acceptation. |
-| 22. Documentation et reproductibilité | Architecture, décisions, sources, prompts, installation, scénario de démonstration. | Documenté, à maintenir | README, prompts et journal des décisions. | Dossier de conception et guide de démonstration. |
 
 ## 3. Matrice de traçabilité exigences → scénarios
 
