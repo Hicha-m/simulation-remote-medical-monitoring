@@ -22,7 +22,7 @@ Le travail est organisé en trois phases principales :
 2. **Docker** : images, réseaux, volumes, composition, santé et reproduction de l'environnement ;
 3. **Metrics** : instrumentation, étalonnage, campagnes et analyse.
 
-La **CI/CD est transversale** et commence dès DEV. Les consignes détaillées sont dans [docs/consignes](../../consignes/README.md).
+La **CI/CD est transversale** et commence dès DEV. Les consignes détaillées sont dans [docs/consignes](../../../consignes/README.md).
 
 La référence Intern inclut une phase VM intermédiaire ; elle n'est pas obligatoire dans le planning actuel. Elle pourra être ajoutée si le tuteur demande explicitement une comparaison VM/Docker.
 
