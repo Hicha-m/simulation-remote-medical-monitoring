@@ -7,3 +7,5 @@ Les documents décrivent des environnements distincts. Ils ne doivent pas être 
 - [Cardiologie et télémétrie hospitalière](03-cardiologie-telemetrie.md) — patients mobiles, émetteurs et surveillance ECG centralisée.
 - [Unités de soins conventionnelles](04-unites-conventionnelles.md) — mesures intermittentes et monitorage continu sélectif.
 - [Urgences et transport intrahospitalier](05-urgences-et-transport.md) — zones d'urgence, déchocage et continuité pendant le déplacement.
+
+- [Néonatologie et pédiatrie](06-neonatologie-et-pediatrie.md) — surveillance cardiorespiratoire, alarmes spécifiques et besoins pédiatriques.
