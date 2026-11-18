@@ -21,3 +21,6 @@ Comprendre les technologies qui composent les systèmes hospitaliers actuels, le
 - Les protocoles propriétaires et configurations exactes peuvent être couverts par des manuels réservés aux clients ou aux mainteneurs.
 - Les architectures proposées dans ces documents ne sont pas des architectures de production validées.
 - Les détails sensibles d'infrastructures réelles ne doivent pas être recherchés ni reproduits sans autorisation.
+
+
+Les normes liées au monitorage, aux réseaux, au logiciel et à la sécurité sont regroupées dans le [registre Normes et réglementation](../09-normes-et-recommandations/01-registre-normes-et-reglementation.md).
