@@ -16,6 +16,8 @@ Identifier les normes techniques, textes réglementaires, référentiels frança
 3. [Couverture intégrale du projet](03-couverture-integrale-du-projet.md) — tous les points à traiter, les preuves disponibles, les questions ouvertes et les travaux à produire.
 4. [Checklist avant conception](04-checklist-avant-conception.md) — livrables nécessaires avant de commencer le développement.
 
+**Actualité réglementaire :** le projet de loi français de transposition NIS2 a été adopté en première lecture par l'Assemblée nationale le 17 novembre 2026. Il n'est pas encore promulgué au 18 novembre 2026 ; le statut doit être revérifié avant toute conclusion juridique.
+
 ## Règles d'interprétation
 
 - Une **réglementation** est juridiquement obligatoire lorsque son champ d'application est rempli.
