@@ -13,6 +13,8 @@ Ce dossier transforme l'analyse hospitalière en scénarios compréhensibles et 
 4. [Contrats de données proposés](04-contrats-de-donnees.md)
 5. [Workflows métier expliqués](05-workflows-metier.md)
 6. [Points critiques, stratégie de test et acceptation](06-points-critiques-et-criteres-acceptation.md)
+7. [Cartographie hospitalière et architecture du SI](07-cartographie-hospitaliere-et-architecture-du-si.md)
+8. [Continuité électrique et fonctionnement dégradé](08-continuite-electrique-et-mode-degrade.md)
 
 ## Proposition de lecture
 
