@@ -1,6 +1,6 @@
 # Pilotage du projet — cadrage, organisation, planning et arbitrages
 
-**Version :** 1.0 — **Date :** 18 novembre 2026  
+**Version :** 1.1 — **Date :** 18 novembre 2026  
 **Échéance de livraison :** vendredi 8 janvier 2027.  
 **État :** projet logiciel complet en cours de cadrage ; ce dossier n'est pas un cahier des charges validé.
 
@@ -12,8 +12,19 @@ Rendre les décisions explicites et faciles à faire évoluer. Ce dossier est co
 
 1. [Questionnaire à faire remplir par le tuteur](01-questionnaire-tuteur.md) — périmètre clinique, services, fonctionnalités, réalisme médical, technologie, livrables et évaluation.
 2. [Questionnaire d'organisation de l'équipe de quatre](02-questionnaire-equipe.md) — compétences, disponibilité, responsabilités, méthode Git, décisions, réunions et règles d'intégration.
-3. [Planning Gantt générique jusqu'au 8 janvier 2027](03-gantt-generique.md) — macro-phases, dépendances, jalons et livrables ; à réviser après le rendez-vous tuteur.
+3. [Planning Gantt générique](03-gantt-generique.md) — séquence DEV → Docker → Metrics et échéance du 8 janvier 2027.
 4. [Stratégies et arbitrages critiques](04-strategies-et-arbitrages-critiques.md) — orientations possibles, situations critiques, expérimentations, métriques et journal de décision.
+
+## Méthode de réalisation retenue
+
+Le travail est organisé en trois phases principales :
+1. **DEV** : analyse, maquettes, données, ingestion/métier, interface et recette locale ;
+2. **Docker** : images, réseaux, volumes, composition, santé et reproduction de l'environnement ;
+3. **Metrics** : instrumentation, étalonnage, campagnes et analyse.
+
+La **CI/CD est transversale** et commence dès DEV. Les consignes détaillées sont dans [docs/consignes](../../consignes/README.md).
+
+La référence Intern inclut une phase VM intermédiaire ; elle n'est pas obligatoire dans le planning actuel. Elle pourra être ajoutée si le tuteur demande explicitement une comparaison VM/Docker.
 
 ## Règles de pilotage
 
@@ -34,7 +45,9 @@ Rendre les décisions explicites et faciles à faire évoluer. Ce dossier est co
 | DIR-02 | Services cliniques exacts | Ouvert : service principal et extensions à préciser. |
 | DIR-03 | Fonctionnalités fonctionnelles attendues | Ouvert : liste à faire valider. |
 | DIR-04 | Niveau de réalisme médical et signaux | Ouvert : paramètres, courbes et données sources à sélectionner. |
-| DIR-05 | Langages, frameworks, UI et stockage | Ouvert : contraintes du tuteur et comparatifs à réaliser. |
+| DIR-05 | Langages, frameworks, UI et stockage | Ouvert : à comparer, Java reste à faire préciser. |
 | DIR-06 | Architecture réseau et déploiement | Ouvert : à choisir après les besoins et essais. |
 | DIR-07 | Livrables et barème | Ouvert : à confirmer. |
 | DIR-08 | Répartition de l'équipe | Ouvert : à décider en réunion à quatre. |
+| DIR-09 | Séquence DEV → Docker → Metrics | Proposition de travail retenue ; dates à confirmer avec les disponibilités. |
+| DIR-10 | CI/CD | À mettre en place dès DEV, puis enrichir avec Docker et Metrics. |
