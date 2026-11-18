@@ -31,7 +31,7 @@ Il ne faut jamais traiter une donnée absente comme une mesure physiologique nor
 
 ## 3. Priorités et signaux d'alarme
 
-La norme IEC 60601-1-8 définit des exigences de sécurité et de performance essentielle pour les systèmes d'alarme des appareils et systèmes électromédicaux. Elle définit des catégories de priorité selon le degré d'urgence, des signaux cohérents et des états de contrôle [H21].
+La norme IEC 60601-1-8 définit des exigences de sécurité et de performance essentielle pour les systèmes d'alarme des appareils et systèmes électromédicaux. Elle définit des catégories de priorité selon le degré d'urgence, des signaux cohérents et des états de contrôle [H28].
 
 La norme ne décide pas à elle seule :
 - si un équipement doit avoir une alarme ;
@@ -39,7 +39,7 @@ La norme ne décide pas à elle seule :
 - quelle priorité clinique attribuer à chaque condition ;
 - par quel mécanisme technique le signal est généré.
 
-Ces points sont décrits dans le champ de la norme elle-même et dépendent des équipements et de leur destination [H21]. Les règles cliniques ne doivent donc pas être reconstituées arbitrairement dans un POC.
+Ces points sont décrits dans le champ de la norme elle-même et dépendent des équipements et de leur destination [H28]. Les règles cliniques ne doivent donc pas être reconstituées arbitrairement dans un POC.
 
 ## 4. Le report d'alarme dans un service de soins critiques
 
@@ -71,7 +71,7 @@ Ce workflow est un modèle fonctionnel pour la discussion, pas un protocole clin
 
 ## 6. Pourquoi la gestion des alarmes est un sujet métier majeur
 
-Une revue de cadrage de 2025 portant sur la gestion des alarmes en soins intensifs analyse 23 études et regroupe les stratégies observées autour de l'ajustement des paramètres d'alarme, de la formation du personnel, de la standardisation de l'utilisation des dispositifs, des outils d'assistance et des procédures de réponse [H26].
+Une revue de cadrage de 2025 portant sur la gestion des alarmes en soins intensifs analyse 23 études et regroupe les stratégies observées autour de l'ajustement des paramètres d'alarme, de la formation du personnel, de la standardisation de l'utilisation des dispositifs, des outils d'assistance et des procédures de réponse [H29].
 
 Une étude de télémétrie hospitalière a évalué un mécanisme rappelant aux infirmiers de réexaminer les limites d'alarme des patients générant un nombre particulièrement élevé d'alarmes. Elle rapporte une réduction de la durée moyenne des alarmes après intervention [H15].
 
@@ -114,5 +114,5 @@ Ces indicateurs sont techniques ou organisationnels ; ils ne mesurent pas une pe
 
 - **[H02]** HAS, Flash Sécurité Patient — surveillance des patients en soins critiques : https://www.has-sante.fr/jcms/p_3511526/fr/flash-securite-patient-surveillance-des-patients-en-service-de-soins-critiques-une-veille-sans-faille-pour-qu-aucun-patient-ne-defaille
 - **[H15]** Technological Intervention to Improve Alarm Management in Acute Care Telemetry Units, 2023 : https://pubmed.ncbi.nlm.nih.gov/37343111/
-- **[H21]** IEC 60601-1-8, ISO catalogue — exigences et guidance sur les alarmes électromédicales : https://www.iso.org/standard/41986.html
-- **[H26]** Clinical alarm management in intensive care units: A scoping review, 2025 : https://pubmed.ncbi.nlm.nih.gov/40289413/
+- **[H28]** IEC 60601-1-8, ISO catalogue — exigences et guidance sur les alarmes électromédicales : https://www.iso.org/standard/41986.html
+- **[H29]** Clinical alarm management in intensive care units: A scoping review, 2025 : https://pubmed.ncbi.nlm.nih.gov/40289413/
