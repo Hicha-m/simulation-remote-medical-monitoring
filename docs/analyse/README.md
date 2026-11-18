@@ -38,7 +38,7 @@ Les informations commerciales publiées par les fournisseurs sont identifiées c
 
 ## Reproductibilité
 
-Les prompts et instructions de recherche sont archivés dans le dossier prompts. Ils servent à reproduire, compléter ou actualiser les investigations. Un prompt n'est pas une source et ne transforme pas une piste générée en fait établi.
+Les prompts et instructions de recherche sont archivés dans le dossier [prompts](prompts/README.md). Ils servent à reproduire, compléter ou actualiser les investigations. Un prompt n'est pas une source et ne transforme pas une piste générée en fait établi.
 
 ## Principes de prudence
 
