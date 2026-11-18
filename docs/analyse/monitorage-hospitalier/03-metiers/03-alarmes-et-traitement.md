@@ -77,7 +77,15 @@ Une étude de télémétrie hospitalière a évalué un mécanisme rappelant aux
 
 Les études montrent donc que le volume, la pertinence et la réponse aux alarmes sont des problèmes d'organisation et d'usage, pas uniquement de programmation.
 
-## 7. Besoins métier candidats
+## 7. Retours d'expérience français sur les alarmes
+
+Le rapport ANSM publié en septembre 2019 repose notamment sur une enquête réalisée à l'été 2017 auprès de 631 services issus de 318 établissements. Il indique que 56 % des services répondants disposaient d'un système de report d'alarmes de monitorage en temps réel. Parmi les services disposant d'un report, le report sur centrale était indiqué à 92,44 %, l'inter-chevet à 40,34 %, les appareils mobiles dédiés à 3,64 % et les smartphones non dédiés à 0,84 % [H33].
+
+L'ANSM indique également que 16,32 % des services répondants disposaient d'un système de concentration des alarmes provenant de plusieurs dispositifs de différentes marques. Le rapport décrit des cas de mauvais paramétrage des reports, de fenêtres de centrale ne montrant pas tous les lits, d'escalade mobile mal comprise et de problèmes d'accessoires ou de batteries [H33].
+
+Ces résultats sont un état des lieux historique, pas une mesure du parc en 2026. Ils restent utiles pour identifier les problèmes métier à simuler et les modes de report présents dans les hôpitaux français.
+
+## 8. Besoins métier candidats
 
 - définir les catégories d'événements ;
 - distinguer alarme physiologique et alarme technique ;
@@ -92,7 +100,7 @@ Les études montrent donc que le volume, la pertinence et la réponse aux alarme
 - permettre la gestion de paramètres adaptée par personnel habilité ;
 - détecter l'indisponibilité du chemin d'alarme.
 
-## 8. Indicateurs observables à mesurer dans un POC
+## 9. Indicateurs observables à mesurer dans un POC
 
 Ces indicateurs sont techniques ou organisationnels ; ils ne mesurent pas une performance clinique.
 
@@ -110,8 +118,9 @@ Ces indicateurs sont techniques ou organisationnels ; ils ne mesurent pas une pe
 - durée de perte du réseau ;
 - nombre de changements de priorité ou de configuration.
 
-## 9. Sources
+## 10. Sources
 
+- **[H33]** ANSM, Gestion des alarmes des dispositifs médicaux dans les établissements de santé, septembre 2019 : https://ansm.sante.fr/uploads/2020/10/16/20201016-rapport-gestion-alarmes-dm.pdf
 - **[H02]** HAS, Flash Sécurité Patient — surveillance des patients en soins critiques : https://www.has-sante.fr/jcms/p_3511526/fr/flash-securite-patient-surveillance-des-patients-en-service-de-soins-critiques-une-veille-sans-faille-pour-qu-aucun-patient-ne-defaille
 - **[H15]** Technological Intervention to Improve Alarm Management in Acute Care Telemetry Units, 2023 : https://pubmed.ncbi.nlm.nih.gov/37343111/
 - **[H28]** IEC 60601-1-8, ISO catalogue — exigences et guidance sur les alarmes électromédicales : https://www.iso.org/standard/41986.html
