@@ -48,9 +48,9 @@
     },
     {
       "sourceCareUnit": "Coronary Care Unit (CCU)",
-      "targetUnitId": "UNIT-CARD-HOSP",
-      "mappingStatus": "manual-review",
-      "warning": "Ne pas assimiler automatiquement CCU et CVICU."
+      "targetUnitId": null,
+      "mappingStatus": "unconfigured",
+      "warning": "Mapping clinique à valider ; ne pas l'affecter automatiquement à cardiologie générale ou CVICU."
     },
     {
       "sourceCareUnit": "Medical Intensive Care Unit (MICU)",
