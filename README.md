@@ -18,6 +18,7 @@ Il est découpé par thèmes :
 - métiers et processus ;
 - besoins et scénarios ;
 - cadrage fonctionnel : services, personas, appareils, contrats de données, workflows et tests ;
+- maquette d'établissement : bâtiments, étages, services, chambres, lits et parcours MIMIC rejouables ;
 - normes, réglementation, cybersécurité et sources.
 
 Les documents de cadrage initiaux sont conservés dans [`docs/analyse/`](docs/analyse/README.md).
