@@ -17,7 +17,8 @@ Il est découpé par thèmes :
 - systèmes et équipements ;
 - métiers et processus ;
 - besoins et scénarios ;
-- sources.
+- cadrage fonctionnel : services, personas, appareils, contrats de données, workflows et tests ;
+- normes, réglementation, cybersécurité et sources.
 
 Les documents de cadrage initiaux sont conservés dans [`docs/analyse/`](docs/analyse/README.md).
 
