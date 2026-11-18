@@ -1,130 +1,203 @@
-# Workflows métier — définition et scénarios
+# Workflows métier dérivés de données hospitalières réelles
 
 **Date :** 18 novembre 2026  
-**Statut :** workflows génériques à valider avec le contexte de service choisi.
+**Statut :** workflows reconstruits à partir de données hospitalières dé-identifiées et de recommandations françaises. Ils ne sont pas des protocoles médicaux français.
 
-## 1. Qu'est-ce qu'un workflow ?
+## 1. Méthode : séparer le réel, l'officiel et le simulé
 
-Un workflow métier est une suite d'étapes qui décrit **qui fait quoi, à quel moment, à la suite de quel événement et avec quel résultat attendu**.
+Le POC doit conserver la provenance de chaque événement :
 
-Ce n'est pas :
-- une classe Java ;
-- une route HTTP ;
-- un protocole réseau ;
-- une maquette d'écran.
+| Provenance | Signification | Exemple |
+|---|---|---|
+| research_dataset | Donnée extraite d'un jeu de données hospitalier de recherche. | Admission, mouvement de service, mesure chartée. |
+| official_guidance | Étape ou mesure issue d'un texte ou guide institutionnel. | Organisation dégradée, continuité de surveillance. |
+| synthetic_scenario | Événement ajouté pour tester le logiciel. | Panne électrique, coupure réseau, perte de centrale, panne de groupe. |
+| user_action | Action effectuée par un utilisateur dans la simulation. | Association d'un appareil, acquittement d'une alarme. |
 
-C'est la description du fonctionnement réel à représenter. Elle sert ensuite à concevoir l'interface, le serveur, la base de données et les tests.
+Ne jamais présenter une association de lit générée pour notre maquette comme une donnée hospitalière réelle. Ne jamais présenter un événement synthétique de panne comme un événement trouvé dans MIMIC ou HiRID.
 
-Exemple simple : quand un patient arrive dans une unité, quelqu'un doit vérifier son identité, l'affecter à un lit, associer le moniteur, vérifier les mesures et s'assurer que la centrale reçoit les données.
+## 2. Données réelles consultables
 
-## 2. Workflow A — Admission et association patient / appareil
+### MIMIC-IV Demo 2.2
 
-**Déclencheur :** admission ou arrivée d'un patient dans un service.
+MIMIC-IV Demo est un sous-ensemble de démonstration de 100 patients anonymisés issus du Beth Israel Deaconess Medical Center. Les identifiants ont été remplacés et les dates décalées de façon cohérente pour protéger les personnes [H110].
 
-| Ordre | Acteur | Action | Résultat attendu |
-|---:|---|---|---|
-| 1 | Système administratif simulé | Crée ou retrouve le patient et le séjour. | Identifiants patient et séjour disponibles. |
-| 2 | Personnel du service | Affecte le patient à une unité et un lit. | Localisation de référence définie. |
-| 3 | Personnel du service | Sélectionne l'appareil destiné au patient. | Appareil connu, disponible et compatible avec le profil simulé. |
-| 4 | Personnel du service | Associe l'appareil à la session de surveillance. | Lien patient / séjour / lit / appareil / session créé. |
-| 5 | Appareil simulé | Envoie son état et ses premières observations. | La centrale reçoit les données avec le bon contexte. |
-| 6 | Personnel du service | Vérifie le bon patient, la bonne localisation et l'affichage. | Session utilisable et contrôle tracé. |
+| Table | Champs / contenu | Ce que nous pouvons reconstituer |
+|---|---|---|
+| admissions | Identifiants de séjour, heures d'admission et de sortie, origine et destination. | Ouverture et fermeture d'un séjour hospitalier. |
+| transfers | Patient, séjour, type d'événement, unité, heures d'entrée et sortie. | Présence dans une unité et transferts successifs. |
+| icustays | Séjour de soins intensifs, unité et période. | Ouverture et fermeture du profil de soins intensifs. |
+| chartevents | Item, valeur, unité, heure de mesure documentée et heure d'enregistrement. | Chronologie des observations chartées. |
+| inputevents / outputevents | Apports, sorties et événements documentés. | Éventuels événements de suivi et traitements, si le périmètre les inclut. |
 
-**Exceptions à simuler :** appareil déjà affecté, patient inconnu, identifiant ambigu, lit occupé, message envoyé avant association et session précédente non clôturée.
+La base distingue les données hospitalières générales des données issues du système clinique de soins intensifs. La présence d'une mesure dans chartevents ne signifie pas que nous possédons le paquet réseau brut émis par le moniteur [H112].
 
-## 3. Workflow B — Réception et affichage d'une mesure
+### Parcours réel MIMIC-IV Demo : urgences → Trauma SICU → Med/Surg/Trauma → sortie
 
-**Déclencheur :** un appareil produit une nouvelle mesure.
+Le séjour de démonstration identifié par subject_id 10019568 et hadm_id 28710730 contient les événements de mouvement suivants [H110, H111] :
 
-| Ordre | Acteur / composant | Action | Résultat attendu |
-|---:|---|---|---|
-| 1 | Appareil simulé | Produit une mesure horodatée. | Message avec identifiant, paramètre, valeur, unité et qualité. |
-| 2 | Serveur d'ingestion | Authentifie la source et valide le contrat. | Message accepté ou rejeté avec motif. |
-| 3 | Serveur de contexte | Vérifie l'association patient / séjour / appareil. | Pas de mélange entre patients. |
-| 4 | Traitement | Gère doublons, retards et ordre des mesures. | Historique cohérent. |
-| 5 | Persistance | Enregistre la mesure et sa provenance. | Mesure consultable après redémarrage contrôlé. |
-| 6 | Distribution | Publie la nouvelle donnée à l'interface. | Vue patient et vue multi-patients actualisées. |
-| 7 | Interface | Affiche valeur, unité, heure et fraîcheur. | L'utilisateur distingue donnée récente et donnée ancienne. |
+| Événement enregistré | Début (date décalée) | Fin (date décalée) | Durée calculée |
+|---|---|---|---:|
+| Emergency Department | 2120-01-30 19:44:00 | 2120-01-30 22:51:00 | 3 h 07 |
+| Trauma SICU | 2120-01-30 22:51:00 | 2120-01-31 18:25:12 | 19 h 34 min 12 s |
+| Med/Surg/Trauma | 2120-01-31 18:25:12 | 2120-02-02 15:40:32 | 45 h 15 min 20 s |
+| Discharge | 2120-02-02 15:40:32 | — | Fin du séjour |
 
-## 4. Workflow C — Déclenchement et traitement d'une alarme
+C'est une chronologie enregistrée dans la base de démonstration. Les dates sont déplacées pour l'anonymisation et ne sont pas des dates calendaires réelles de prise en charge.
 
-**Déclencheur :** un appareil ou une règle de simulation produit une alarme.
+Ce parcours prouve concrètement qu'un épisode hospitalier peut être constitué de plusieurs segments de localisation. Pour le POC, il fournit une base pour générer les événements d'admission, de transfert et de sortie.
 
-| Ordre | Acteur / composant | Action | Résultat attendu |
-|---:|---|---|---|
-| 1 | Appareil ou moteur de simulation | Déclenche l'alarme. | Événement unique avec origine et heure. |
-| 2 | Serveur | Valide et transmet l'événement. | Le bon contexte patient et appareil est conservé. |
-| 3 | Centrale | Affiche l'alarme selon la priorité simulée. | L'alarme est visible et non confondue avec une simple mesure. |
-| 4 | Personnel habilité | Prend connaissance de l'alarme. | Identité de l'acteur et heure enregistrées. |
-| 5 | Personnel habilité | Acquitte l'alarme. | L'état devient « acquittée », mais l'alarme peut rester active. |
-| 6 | Personnel / appareil simulé | La condition disparaît ou le défaut est corrigé. | Événement de résolution. |
-| 7 | Centrale | Archive le cycle de vie. | Déclenchement, affichage, acquittement et résolution consultables. |
+**Ce que cette trace ne fournit pas :** un plan d'étage, un numéro de chambre, un numéro de lit, l'identifiant exact d'un moniteur ou la totalité des actions des soignants. Les emplacements physiques et les associations appareil-lit seront créés dans notre hôpital fictif et marqués synthetic_scenario.
 
-Le rapport ANSM recommande que l'alarme appropriée soit déclenchée au bon moment, reçue par le bon opérateur et suivie d'une réponse appropriée dans un délai adapté [H95]. Il signale également le risque de fatigue lié aux fausses alarmes ou alarmes non pertinentes [H95].
+### Deuxième parcours réel : chirurgie cardiaque → CVICU → chirurgie cardiaque → sortie
 
-Pour le POC, il faut simuler les étapes et les états sans décider de seuils médicaux ni prétendre définir la conduite clinique.
+Un autre séjour de démonstration, subject_id 10005817 et hadm_id 20626031, montre les séquences [H110] :
 
-## 5. Workflow D — Transfert d'un patient
+| Événement enregistré | Début (date décalée) | Fin (date décalée) |
+|---|---|---|
+| Cardiac Surgery | 2132-12-12 01:44:24 | 2132-12-15 09:29:01 |
+| Cardiac Vascular Intensive Care Unit | 2132-12-15 09:29:01 | 2132-12-17 18:06:07 |
+| Cardiac Surgery | 2132-12-17 18:06:07 | 2132-12-20 15:04:14 |
+| Discharge | 2132-12-20 15:04:14 | — |
 
-**Déclencheur :** décision de déplacer le patient vers une autre chambre, un autre service ou une zone d'examen.
+Ce second exemple montre un transfert vers une unité de soins intensifs cardiovasculaires puis un retour dans le service de chirurgie. Les dates sont également décalées.
 
-| Ordre | Acteur | Action | Résultat attendu |
-|---:|---|---|---|
-| 1 | Personnel / système administratif | Déclare le transfert. | Événement de mouvement avec origine et destination. |
-| 2 | Personnel | Vérifie le moyen de surveillance utilisé pendant le mouvement. | Appareil de transport ou continuité explicitement définie. |
-| 3 | Système | Met à jour le lieu du patient et la session correspondante. | Localisation courante sans effacer l'historique. |
-| 4 | Appareil | Continue ou reprend la transmission selon le scénario. | Mesures rattachées à la session correcte. |
-| 5 | Personnel du service d'accueil | Reçoit le patient et vérifie le contexte. | Nouvelle affectation confirmée. |
-| 6 | Système | Clôture l'ancienne affectation et conserve la nouvelle. | Aucune donnée postérieure au transfert n'est attribuée à l'ancien lit. |
+Dans les données de monitorage chartées, les champs charttime et storetime sont distincts : l'heure associée à l'observation ne doit pas être confondue avec l'heure de son enregistrement [H110, H112]. Le mapping entre itemid et signification médicale doit passer par le dictionnaire officiel de la base ; si le code n'est pas mappé, le POC doit le laisser explicitement inconnu plutôt que deviner.
 
-Le parcours SSPI et les transports de patients de soins critiques donnent des exemples documentés où la continuité du monitorage pendant le déplacement est importante [H03, H106].
+## 3. Fréquences réellement observées dans les bases
 
-## 6. Workflow E — Déconnexion et reprise d'un appareil
+Il n'existe pas de fréquence universelle à reprendre pour chaque appareil :
 
-**Déclencheur :** perte du réseau, arrêt d'un appareil ou déconnexion d'un capteur.
+- eICU vitalPeriodic : les interfaces transmettent généralement des moyennes à la minute ; les valeurs sont stockées en médianes sur cinq minutes. Ces valeurs ne sont pas nécessairement validées par un soignant au moment de leur archivage [H113].
+- HiRID : la plupart des paramètres de monitorage au chevet sont enregistrés toutes les deux minutes [H115].
+- MIMIC-IV : cadence et présence dépendent de la mesure, du système source et de la façon dont l'information est chartée [H112].
 
-1. L'appareil signale son changement d'état si la liaison fonctionne encore.
-2. Si le serveur ne reçoit plus de message, il détecte l'absence de nouvelles données selon le délai défini par le profil.
-3. La centrale marque les données comme périmées et l'appareil comme potentiellement déconnecté.
-4. Elle conserve la dernière mesure avec son horodatage ; elle ne l'affiche pas comme valeur actuelle.
-5. L'appareil se reconnecte.
-6. Le système distingue nouvelles données, données retardées et doublons éventuels.
-7. La reprise est journalisée.
+**Décision proposée :** chaque profil d'appareil aura une cadence configurable. La simulation distinguera la fréquence d'acquisition, de calcul, d'émission, de réception et d'affichage. Un jeu de données charté ne doit pas être présenté comme un flux brut de capteur.
 
-La durée au-delà de laquelle un appareil est considéré comme silencieux reste un paramètre à fixer par profil ; ne pas la coder arbitrairement comme règle universelle.
+## 4. Workflow A — Admission, mouvement et affectation physique
 
-## 7. Workflow F — Sortie et remise à disposition d'un appareil
+### Partie issue des données réelles
 
-**Déclencheur :** transfert définitif ou sortie du patient.
+1. Créer ou retrouver le patient anonymisé.
+2. Ouvrir le séjour correspondant à l'admission.
+3. Créer le premier segment de localisation à l'heure indiquée par le dataset.
+4. Lorsqu'une nouvelle ligne transfers commence, clôturer le segment précédent et ouvrir le suivant.
+5. Conserver le type d'événement, le nom de l'unité et les heures source.
+6. Terminer le séjour à l'événement de sortie.
 
-1. Le séjour ou la session de surveillance est terminé.
-2. La relation patient / appareil est clôturée avec une date et un auteur.
-3. Les flux futurs de cet appareil ne sont plus associés à l'ancien patient.
-4. L'historique des observations et alarmes est conservé.
-5. L'appareil passe dans un état distinct : disponible, nettoyage, maintenance ou hors service.
-6. Une nouvelle affectation nécessite une nouvelle session.
+### Partie simulée pour la carte
 
-## 8. Workflow G — Changement d'équipe et configuration
+1. Mapper l'unité MIMIC vers un service de notre hôpital fictif.
+2. Affecter un bâtiment, étage, chambre et lit synthétiques.
+3. Afficher le lit et le patient sur la carte.
+4. En cas de transfert, choisir un lit destination compatible et libre.
+5. Enregistrer l'affectation physique dans une table séparée du mouvement source.
 
-**Déclencheur :** relève, changement d'affectation ou modification de configuration simulée.
+Le modèle doit conserver la source originale de l'événement et l'affectation de démonstration dans des champs séparés.
 
-- La liste des patients et appareils actifs est revue.
-- Les alarmes actives non résolues restent visibles.
-- Les changements de paramètres de simulation sont attribués à un acteur.
-- L'ancienne et la nouvelle configuration sont historisées.
-- La centrale ne doit pas effacer une alarme active simplement parce que l'utilisateur change.
+## 5. Workflow B — Activation du monitorage et rejeu des observations
 
-La HAS souligne l'importance de la vérification de la surveillance et de la formation en soins critiques [H02].
+### Partie issue des données réelles
 
-## 9. Comment transformer un workflow en logiciel
+1. Détecter l'entrée dans une unité de soins intensifs à partir de la table de mouvements et/ou icustays.
+2. Charger les observations chartées disponibles pendant la période.
+3. Mapper les itemid à des codes de paramètres à partir du dictionnaire MIMIC.
+4. Conserver la valeur, l'unité, charttime, storetime et l'item source.
+5. Trier les événements à partir de l'heure de mesure documentée, sans effacer l'heure d'enregistrement.
+6. Rejouer la chronologie en temps réel ou accélérée.
 
-Pour chaque workflow, on pourra ensuite produire :
+### Partie simulée
 
-1. un diagramme de séquence (acteurs et messages) ;
-2. un diagramme d'états (patient, appareil, session ou alarme) ;
-3. les données nécessaires ;
-4. les règles de validation ;
-5. les cas d'erreur ;
-6. les tests d'acceptation.
+1. Associer une source virtuelle de rejeu à une session de surveillance.
+2. Assigner un deviceId fictif et un profil de moniteur générique.
+3. Émettre les observations vers le serveur.
+4. Montrer sur la carte et le dashboard quelle source virtuelle est associée au lit.
+5. À la sortie de l'unité, clôturer la session et conserver l'historique.
 
-Il est prématuré de choisir les classes Java ou les endpoints avant d'avoir stabilisé ces workflows.
+**Important :** les appareils de la maquette sont des sources virtuelles. La présence de mesures dans un dossier de recherche ne prouve pas que le modèle de moniteur ou le protocole d'origine est connu.
+
+## 6. Workflow C — Transfert entre services
+
+### Partie issue des données réelles
+
+La chronologie source indique quand un patient quitte une unité et entre dans la suivante, par exemple Emergency Department → Trauma SICU → Med/Surg/Trauma [H111].
+
+### Partie simulée du système de monitorage
+
+1. Préparer la destination sur la carte.
+2. Identifier si le patient conserve son dispositif, utilise un moniteur de transport ou attend la nouvelle installation.
+3. Clôturer l'ancienne affectation physique.
+4. Déplacer le patient vers le lit synthétique de destination.
+5. Clôturer l'association de l'appareil précédent si un changement est simulé.
+6. Associer le nouvel appareil ou la source de transport.
+7. Ouvrir une nouvelle session de surveillance, avec des bornes temporelles explicites.
+8. Vérifier que les mesures antérieures restent rattachées à l'ancienne session.
+9. Afficher au dashboard une chronologie patient continue, mais segmentée par service et appareil.
+
+Les traces MIMIC indiquent les mouvements entre unités ; la continuité d'appareil ou le modèle exact de moniteur n'est pas déduit de ces traces.
+
+## 7. Workflow D — Alarmes
+
+### Ce qui vient des données réelles
+
+Les jeux MIMIC-IV, HiRID et eICU peuvent contenir des observations, des événements et des informations cliniques, mais ils ne fournissent pas un cycle complet et universel d'alarme centralisée : déclenchement sonore, report à la centrale, prise de connaissance, acquittement et résolution.
+
+### Ce qui vient des recommandations françaises
+
+La HAS et l'ANSM décrivent les risques associés au mauvais réglage, à la mauvaise transmission, à l'interprétation ou au traitement des alarmes [H02, H95].
+
+### Ce qui sera simulé
+
+1. Un appareil virtuel ou un scénario synthétique déclenche un événement.
+2. Le serveur le lie à la bonne session, au patient et à la localisation.
+3. La centrale affiche l'origine et l'état de l'événement.
+4. Un utilisateur prend connaissance et acquitte.
+5. L'événement reste actif tant qu'il n'est pas résolu par une nouvelle condition simulée.
+6. Le cycle complet est journalisé.
+
+Les seuils et priorités cliniques ne sont pas établis à partir des bases de données.
+
+## 8. Workflow E — Coupure électrique / mode dégradé
+
+### Sources
+
+Le guide ministériel du volet numérique du Plan blanc demande de prévoir un mode dégradé pour maintenir l'organisation de surveillance en soins critiques lorsque le réseau ou les systèmes sont indisponibles [H114]. La circulaire électrique DHOS de 2006 décrit les principes de continuité électrique, les sources de secours, les onduleurs et les groupes pour les activités critiques ; son actualité réglementaire doit être vérifiée avant tout usage prescriptif [H116]. Le manuel de centrale Mindray précise des conditions d'alimentation de secours de la centrale et avertit d'un risque en cas de perte brutale d'alimentation [H117].
+
+### Ce qui sera simulé
+
+1. Déclarer une panne de secteur sur un périmètre de la carte.
+2. Déterminer quels objets ont une batterie interne ou sont raccordés à un circuit secouru selon la configuration fictive.
+3. Faire passer les moniteurs sur batterie quand leur profil le prévoit.
+4. Faire basculer les UPS ou la source génératrice simulée.
+5. Vérifier séparément l'alimentation de la centrale, des switches, des points d'accès et du serveur.
+6. Si la centrale n'est plus joignable, passer la surveillance à l'état dégradé et marquer les mesures comme périmées.
+7. Afficher l'activation de la procédure locale de fonctionnement dégradé.
+8. Au retour des systèmes, vérifier les associations et rendre visibles les périodes sans données.
+
+Ce scénario est décrit intégralement dans [08 — Continuité électrique et mode dégradé](08-continuite-electrique-et-mode-degrade.md). Les temps de bascule et autonomies sont des paramètres fictifs de test, non des valeurs universelles.
+
+## 9. Rejouer des séjours réels avec des événements synthétiques
+
+La meilleure approche pour le POC est de combiner :
+
+- les admissions et transferts réels anonymisés de MIMIC-IV Demo ;
+- des observations temporelles réelles de MIMIC-IV, HiRID ou eICU ;
+- des lits, chambres et appareils virtuels, clairement identifiés comme simulés ;
+- des alarmes synthétiques fondées sur les recommandations HAS/ANSM ;
+- des défaillances électriques et réseau synthétiques fondées sur le guide du Plan blanc et les principes d'alimentation secourue ;
+- des actions utilisateur issues de la manipulation de la simulation.
+
+Chaque événement doit conserver un champ de provenance afin que la démonstration soit auditée et reproductible.
+
+## Sources
+
+- [H02] HAS — Surveillance des patients en soins critiques, 2024.
+- [H95] ANSM — Gestion des alarmes des dispositifs médicaux, 2019.
+- [H110] MIMIC-IV Clinical Database Demo 2.2.
+- [H111] Documentation MIMIC-IV — table transfers.
+- [H112] Documentation MIMIC-IV — schema overview.
+- [H113] eICU — vitalPeriodic.
+- [H114] Ministère de la Santé — guide du volet numérique du Plan blanc, 2023.
+- [H115] HiRID — Data details.
+- [H116] Circulaire DHOS/E4/2006/393 — alimentation électrique des établissements de santé.
+- [H117] Mindray — BeneVision Central Monitoring System, Operator's Manual.
