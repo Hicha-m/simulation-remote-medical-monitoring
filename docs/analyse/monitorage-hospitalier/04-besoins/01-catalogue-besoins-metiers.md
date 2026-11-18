@@ -59,6 +59,9 @@ Ce catalogue transforme les processus documentés en besoins analysables. Il ne 
 | ALM-08 | Analyser la fréquence et la durée des alarmes. | Soins critiques / télémétrie | Études sur volume et durée des alarmes [H15, H26]. |
 | ALM-09 | Identifier les alarmes répétitives ou non actionnables. | Soins critiques / télémétrie | Gestion de l'alarme et fatigue [H14, H15, H26]. |
 | ALM-10 | Documenter les limites d'alarme et leurs changements. | Tous | HAS demande des réglages adaptés et leur vérification [H02]. |
+| ALM-11 | Prévoir un fonctionnement dégradé si le report d'alarme ne fonctionne plus. | Soins critiques / télémétrie | L'ANSM rapporte que 35,29 % des services interrogés avaient prévu un fonctionnement dégradé [H33]. |
+| ALM-12 | Regrouper des alarmes provenant de plusieurs équipements ou fabricants. | Soins critiques / unités équipées | 16,32 % des services répondants disposaient d'une concentration d'alarmes multi-dispositifs [H33]. |
+| ALM-13 | Vérifier que la vue centrale présente tous les lits / patients attendus. | Centrale multi-patients | Le rapport ANSM décrit un incident où l'écran de centrale n'affichait qu'une partie des lits [H33]. |
 
 ## 5. Organisation du travail
 
