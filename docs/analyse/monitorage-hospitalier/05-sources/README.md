@@ -174,6 +174,8 @@ Les bases de recherche ci-dessous sont issues de véritables environnements hosp
 | H118 | [Philips — Medical Device Integration](https://www.philips.com/c-dam/b2bhc/br/marketing/mdi.pdf) | Documentation constructeur | Présente une architecture d'intégration des dispositifs médicaux et de distribution des données vers les systèmes cliniques. |
 | H119 | [Ministère de la Santé — Système d'information convergent du GHT](https://sante.gouv.fr/systeme-de-sante/numerique-en-sante/sih/si-ght) | Cadre institutionnel français | Décrit la convergence et la mutualisation de fonctions du système d'information à l'échelle des groupements hospitaliers de territoire. |
 
+| H120 | [MIMIC-IV Demo 2.2 — hosp/transfers.csv.gz](https://physionet.org/content/mimic-iv-demo/2.2/hosp/transfers.csv.gz) | Fichier source de données | Enregistre les segments de localisation et transferts. Les lignes publiques permettent de vérifier les subject_id, hadm_id, transfer_id, careunit, eventtype, intime et outtime utilisés dans la maquette. Les dates sont décalées pour l'anonymisation. |
+
 ## 11. Précautions d'interprétation
 
 - Les spécifications fabricants sont des sources primaires pour comprendre leurs produits, mais restent des documents commerciaux ou de documentation produit.
