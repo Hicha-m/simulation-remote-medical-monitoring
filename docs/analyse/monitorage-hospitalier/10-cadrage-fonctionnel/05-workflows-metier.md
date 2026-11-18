@@ -60,7 +60,7 @@ Le séjour de démonstration identifié par subject_id 10004422 et hadm_id 21255
 | Cardiac Surgery | 2111-01-23 18:18:46 | 2111-01-25 15:34:47 |
 | Discharge | 2111-01-25 15:34:47 | — |
 
-Les dates sont décalées pour l'anonymisation. Cette trace apporte un second parcours vérifié, distinct du parcours urgences → Trauma SICU → Med/Surg/Trauma. Les unités source seront reliées à des unités de la maquette, puis à des lits fictifs selon le dossier 11-maquette-etablissement.
+Les dates sont décalées pour l'anonymisation ; la chronologie et les intervalles d'un même patient sont conservés [H121]. Cette trace apporte un second parcours vérifié, distinct du parcours urgences → Trauma SICU → Med/Surg/Trauma. Les unités source seront reliées à des unités de la maquette, puis à des lits fictifs selon le dossier 11-maquette-etablissement.
 
 Dans les données de monitorage chartées, les champs charttime et storetime sont distincts : l'heure associée à l'observation ne doit pas être confondue avec l'heure de son enregistrement [H110, H112]. Le mapping entre itemid et signification médicale doit passer par le dictionnaire officiel de la base ; si le code n'est pas mappé, le POC doit le laisser explicitement inconnu plutôt que deviner.
 ## 3. Fréquences réellement observées dans les bases
