@@ -89,6 +89,8 @@ Les plans sont schématiques : ils ne prétendent pas représenter des distances
 | Poste / centrale USC | CENTRAL-USC-01 | BAT-A / A-R1 / USC-POSTE | Vue des patients USC. |
 | Centrale télémétrie | CENTRAL-CARD-01 | BAT-A / A-R2 / CARD-POSTE | Suivi des émetteurs mobiles. |
 | Centrale CVICU | CENTRAL-CVICU-01 | BAT-B / B-R1 / CVICU-POSTE | Vue multi-lits cardio-vasculaire. |
+| Centrale SSPI | CENTRAL-SSPI-01 | BAT-B / B-RDC / SSPI-POSTE | Vue des postes de réveil simulés. |
+| Zone de sortie | ZONE-SORTIE | BAT-A / A-RDC | Zone non clinique de sortie / attente, sans lit de service. |
 | Commutateur distribution A | NET-A-DIST-01 | BAT-A / A-S1 | Distribution réseau du bâtiment A. |
 | Commutateur distribution B | NET-B-DIST-01 | BAT-B / B-R1 / local technique | Distribution réseau du bâtiment B. |
 | Cœur réseau | NET-CORE-01 | BAT-A / A-S1 / ZONE-IT | Interconnexion des réseaux simulés. |
