@@ -21,7 +21,7 @@ Ne pas réduire tous ces objets à une colonne `value` et un nom de paramètre.
 | Paramètre | Ce que représente la donnée numérique | Signal ou origine possible | Unité usuelle d'affichage | Particularités à conserver |
 |---|---|---|---|---|
 | Fréquence cardiaque (FC / HR) | Nombre de battements estimé par unité de temps | ECG, parfois estimation dérivée d'un signal pulsatile | batt/min (bpm) | Indiquer la source de calcul ; ne pas la confondre avec le pouls SpO₂. |
-| ECG | Tracé électrique cardiaque et dérivations | Électrodes ECG | mV pour le signal calibré ; fréquence en Hz pour l'échantillonnage | Dérivation, gain, vitesse/échelle d'affichage si disponible, qualité du contact, événements dérivés éventuels. |
+| ECG | Tracé électrique cardiaque et dérivations | Électrodes ECG | mV pour le signal calibré ; fréquence en Hz pour l'échantillonnage | Dérivation, gain, vitesse/échelle d'affichage si disponible, qualité du contact. Les résultats dérivés (QRS, intervalles RR, QT/QTc, analyse ST, étiquettes de rythme/arythmie) doivent être séparés du signal et identifiés comme calculs/événements du dispositif. |
 | Fréquence du pouls (PULSE) | Fréquence des pulsations périphériques détectées | Pléthysmographie, parfois autre signal pulsatile | batt/min | Valeur distincte de HR ; un écart peut être informatif ou lié à la qualité du signal. |
 | Saturation périphérique en oxygène (SpO₂) | Estimation de la saturation en oxygène | Oxymètre et photopléthysmogramme (PPG) | % | Ajouter qualité du signal, indice de perfusion si fourni, site/capteur si connu. |
 | Pléthysmogramme (PLETH) | Forme d'onde pulsatile optique | Capteur d'oxymétrie | amplitude calibrée par l'appareil ou unité relative | L'amplitude n'est pas une saturation ; préserver l'échelle et la provenance du fabricant/source. |
@@ -37,7 +37,7 @@ Ne pas réduire tous ces objets à une colonne `value` et un nom de paramètre.
 
 **Attention :** les unités ci-dessus décrivent des unités usuelles et non une obligation d'affichage universelle. Le contrat logiciel devra normaliser les codes et unités sans perdre la valeur/unité source. UCUM peut servir à représenter les unités ; LOINC peut identifier les observations ; les profils HL7 FHIR Observation apportent des modèles pour plusieurs signes vitaux [H88, H130].
 
-## 3. Paramètres issus d'autres dispositifs
+### Mesures et événements ECG dérivés à traiter séparément\n\nSelon les capacités du moniteur et le profil clinique, certains appareils fournissent des valeurs ou événements calculés à partir de l'ECG : intervalle RR, durée QRS, QT/QTc, analyse du segment ST, battements ectopiques ou étiquettes d'arythmie. Ces sorties ne sont pas équivalentes au tracé ECG brut. Conserver le nom de l'algorithme ou du fabricant lorsqu'il est connu, sa version, les dérivations utilisées, l'heure source et le fait qu'il s'agit d'une interprétation automatique du moniteur. Ne pas implémenter de diagnostic de rythme ou de seuil d'alarme clinique sans demande explicite et validation appropriée.\n\n## 3. Paramètres issus d'autres dispositifs
 
 Ils ne doivent pas être artificiellement présentés comme des mesures du moniteur multiparamétrique si leur source est un respirateur ou un autre appareil.
 
