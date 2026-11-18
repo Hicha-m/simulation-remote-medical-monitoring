@@ -27,6 +27,12 @@ La maquette est volontairement petite. Elle doit soutenir une démonstration com
 - [03 — Correspondance MIMIC-IV vers la maquette](03-correspondance-mimic-vers-maquette.md)
 - [04 — Modèle d'organisation, objets et relations](04-modele-organisation-et-relations.md)
 - [05 — Scénarios de rejeu reproductibles](05-scenarios-rejouables.md)
+- [Configuration machine-readable de l'établissement](facility-map-v1.json) — bâtiments, étages, zones, unités, chambres et positions avec coordonnées relatives.
+- [Mapping machine-readable MIMIC → maquette](mimic-transfer-mapping-v1.json) — correspondances, parcours exemples, affectations de lits et politique déterministe.
+
+## Configuration utilisable par un futur plan interactif
+
+Les deux fichiers JSON ci-dessus constituent la configuration versionnée à charger pour rendre la carte. Les coordonnées sont relatives au plan de chaque étage ; les chambres disposent de positions de grille dans leur zone. La carte est une vue de ces données, pas la source de vérité du parcours.
 
 ## Réel et fictif : séparation obligatoire
 
