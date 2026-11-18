@@ -15,6 +15,8 @@
 | H19 | [HAS — Transport intrahospitalier des patients de soins critiques, 21 mars 2024](https://www.has-sante.fr/upload/docs/application/pdf/2024-03/flash_secrutie_patient_-transport_intrahospitalier_des_patients_de_soins_critiques_..._le_transport_lui_aussi_est_critique.pdf) | Autorité sanitaire / cas d'événements indésirables | Trois cas documentés de défaillances lors du transport et principes de continuité de surveillance. |
 | H20 | [HAS — Manuel de certification des établissements de santé, version 2024](https://www.has-sante.fr/upload/docs/application/pdf/2023-09/manuel_2024.pdf) | Autorité sanitaire | Critère 2.3-22 relatif à la maîtrise du transport intrahospitalier. |
 
+| H30 | [Légifrance — arrêté du 25 avril 2000 relatif aux dispositifs et examens en néonatologie et réanimation néonatale](https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000000582539) | Texte réglementaire historique | Équipements et organisation décrits pour la néonatologie ; version initiale consultée, état consolidé à confirmer. |
+
 ## 2. Fabricants — produits et capacités annoncées
 
 Ces pages établissent des fonctions ou capacités présentées par les fabricants. Elles ne prouvent pas le déploiement de chaque système dans un établissement français donné et ne constituent pas une comparaison indépendante.
@@ -44,6 +46,9 @@ Ces pages établissent des fonctions ou capacités présentées par les fabrican
 | H16 | [Nurses' experiences with inhospital continuous monitoring of vital signs in general wards: a systematic review, 2025](https://pmc.ncbi.nlm.nih.gov/articles/PMC12373230/) | Revue systématique qualitative | Expériences infirmières : bénéfices, charge, alarmes, formation et intégration au workflow. |
 | H22 | [Improving the Safety, Effectiveness, and Efficiency of Clinical Alarm Systems: Simulation-Based Usability Testing of Physiologic Monitors, 2021](https://nursing.jmir.org/2021/1/e20584) | Étude de simulation d'usage | Tâches d'admission, transfert, réglage, ECG et résolution d'alarmes techniques. |
 | H29 | [Clinical alarm management in intensive care units: A scoping review, 2025](https://pubmed.ncbi.nlm.nih.gov/40289413/) | Revue de portée | Approches de gestion des alarmes en soins intensifs ; besoin de preuves et d'approches plus systématiques. |
+
+| H31 | [Interventions to Reduce Monitor Alarms Across Pediatric Inpatient Settings: A Systematic Review, 2026](https://pubmed.ncbi.nlm.nih.gov/42442759/) | Revue systématique | 23 études sur la réduction des alarmes dans NICU, PICU et unités pédiatriques. |
+| H32 | [Optimisation of clinical workflow and monitor settings safely reduces alarms in the NICU, 2021](https://pmc.ncbi.nlm.nih.gov/articles/PMC7983880/) | Étude de centre unique | Réduction des alarmes après optimisation du workflow et réglages dans une NICU de 18 lits. |
 
 ## 4. Standards et interopérabilité
 
