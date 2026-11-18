@@ -23,3 +23,6 @@ Chaque domaine reçoit :
 - les décisions qui devront être prises ultérieurement.
 
 Cette matrice doit être actualisée au fur et à mesure. Elle sert à éviter les angles morts et non à imposer une solution technique.
+
+
+Pour une matrice plus détaillée qui couvre l'ensemble des domaines, normes, recommandations, scénarios et livrables avant conception, consulter le [dossier Normes et couverture intégrale](../09-normes-et-recommandations/README.md).
