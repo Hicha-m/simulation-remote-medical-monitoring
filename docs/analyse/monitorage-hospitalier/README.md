@@ -76,7 +76,7 @@ Ce dossier est volontairement découpé par thème. Chaque document traite un su
 - [Prévention, détection, réponse et continuité](07-cybersecurite/03-prevention-detection-reponse-continuite.md) — pratiques organisationnelles et techniques.
 - [Modèle de menace et matrice](07-cybersecurite/04-modele-de-menace-et-matrice.md) — menaces et scénarios non destructifs pour le POC.
 
-### 10. Normes, recommandations et couverture intégrale
+### 11. Normes, recommandations et couverture intégrale
 
 - [Registre des normes et textes](09-normes-et-recommandations/01-registre-normes-et-reglementation.md) — IEC/ISO, MDR, RGPD, HDS, PGSSI-S, CI-SIS et HAS.
 - [Recommandations](09-normes-et-recommandations/02-recommandations.md) — exigences métier, sécurité, ergonomie et continuité.
@@ -102,6 +102,17 @@ Le registre note aussi le projet de loi français de transposition NIS2, adopté
 - [Continuité électrique et fonctionnement dégradé](10-cadrage-fonctionnel/08-continuite-electrique-et-mode-degrade.md) — coupure de courant, batteries, onduleurs, groupe électrogène, panne réseau et tests PWR-01 à PWR-10.
 
 La proposition actuelle est de prendre une réanimation adulte polyvalente comme référence de travail, mais ce choix n'est pas encore validé.
+
+### 10. Stabiliser la maquette de l'établissement
+
+- [Index de la maquette](11-maquette-etablissement/README.md) — bâtiments, étages, unités et statut des données réelles / fictives.
+- [Plan physique et unités](11-maquette-etablissement/01-plan-physique-et-unites.md) — structure du site, services, centrales et zone technique.
+- [Inventaire des chambres et lits](11-maquette-etablissement/02-inventaire-chambres-lits-postes.md) — identifiants stables de chaque chambre, lit et poste.
+- [Correspondance MIMIC vers la maquette](11-maquette-etablissement/03-correspondance-mimic-vers-maquette.md) — parcours réellement enregistrés et affectations physiques synthétiques.
+- [Modèle d'organisation et relations](11-maquette-etablissement/04-modele-organisation-et-relations.md) — distinction entre hiérarchie physique et organisationnelle.
+- [Scénarios rejouables](11-maquette-etablissement/05-scenarios-rejouables.md) — deux parcours de référence et critères MAP-01 à MAP-10.
+
+La maquette est fictive et versionnée. Elle ne prétend pas reproduire le plan d'un hôpital français précis.
 
 ## Règles de preuve
 
