@@ -3,7 +3,7 @@
 **Version :** 0.1  
 **Date de mise à jour :** 18 novembre 2026  
 **Périmètre confirmé :** monitorage hospitalier.  
-**Statut :** analyse documentaire, aucun choix d'architecture ni de technologie validé.
+**Statut :** analyse, cadrage médical et fonctionnel ; les choix de services, fonctionnalités et technologies restent à valider.\n\n**Nature confirmée :** système de monitorage hospitalier reliant des moniteurs de chevet à une ou plusieurs centrales de surveillance. **Échéance de livraison : 8 janvier 2027.** Il s'agit du projet logiciel complet, et non d'une simple preuve de concept.
 
 ## Objectif
 
@@ -74,7 +74,7 @@ Ce dossier est volontairement découpé par thème. Chaque document traite un su
 - [Sécurité des dispositifs et des réseaux](07-cybersecurite/01-securite-dispositifs-reseaux.md) — protections documentées par les fabricants.
 - [Incidents, vulnérabilités et fuites](07-cybersecurite/02-incidents-vulnerabilites-et-fuites.md) — cas documentés des équipements et établissements.
 - [Prévention, détection, réponse et continuité](07-cybersecurite/03-prevention-detection-reponse-continuite.md) — pratiques organisationnelles et techniques.
-- [Modèle de menace et matrice](07-cybersecurite/04-modele-de-menace-et-matrice.md) — menaces et scénarios non destructifs pour le POC.
+- [Modèle de menace et matrice](07-cybersecurite/04-modele-de-menace-et-matrice.md) — menaces et scénarios non destructifs pour le projet.
 
 
 
@@ -83,7 +83,7 @@ Ce dossier est volontairement découpé par thème. Chaque document traite un su
 - [Matrice de couverture](08-couverture-du-sujet/01-matrice-de-couverture.md) — lien entre la consigne, les mots-clés et les domaines étudiés.
 - [Questions et arbitrages](08-couverture-du-sujet/02-questions-et-arbitrages.md) — éléments à résoudre avant la conception.
 
-### 9. Cadrer le fonctionnement réel du POC
+### 9. Cadrer le fonctionnement réel du projet
 
 - [Comparaison des services et choix de référence](10-cadrage-fonctionnel/01-choix-service-reference.md) — différences entre réanimation, USC, cardiologie, SSPI, urgences et unités conventionnelles.
 - [Parcours et personas](10-cadrage-fonctionnel/02-parcours-et-personas.md) — parcours composites, événements et bases de données hospitalières de recherche.
@@ -117,6 +117,22 @@ La maquette est fictive et versionnée. Elle ne prétend pas reproduire le plan 
 - [Checklist avant conception](09-normes-et-recommandations/04-checklist-avant-conception.md) — critères de sortie de l'analyse.
 
 Le registre note aussi le projet de loi français de transposition NIS2, adopté en première lecture à l'Assemblée nationale le 17 novembre 2026, mais non promulgué au 18 novembre 2026.
+
+### 12. Approfondir les domaines médicaux essentiels
+
+- [Dictionnaire médical des paramètres](12-domaines-medicaux-approfondis/01-dictionnaire-medical-parametres.md) — ECG, FC, SpO₂, PPG, PANI, PAI, respiration, CO₂, température et métadonnées.
+- [Courbes et données brutes](12-domaines-medicaux-approfondis/02-courbes-et-donnees-brutes.md) — WFDB, MIMIC-IV Waveform, VitalDB, Barcelona SICU Signals et données haute résolution.
+- [Qualité et fiabilité des mesures](12-domaines-medicaux-approfondis/03-qualite-et-fiabilite-mesures.md) — artefacts, valeurs périmées, qualité source et indicateurs calculés.
+- [Gestion des alarmes par les soignants](12-domaines-medicaux-approfondis/04-gestion-alarmes-et-workflow-soignant.md) — circuit humain, prise de connaissance, intervention, escalade et relève.
+- [Informations médicales associées au patient](12-domaines-medicaux-approfondis/05-contexte-medical-patient.md) — patient, séjour, affectation, identité et minimisation.
+- [Pratiques françaises](12-domaines-medicaux-approfondis/06-pratiques-francaises-etablissement.md) — organisation hospitalière, identitovigilance, interopérabilité et limites réglementaires.
+
+### 13. Piloter le projet jusqu'au 8 janvier 2027
+
+- [Questionnaire précis pour le tuteur](13-pilotage-projet/01-questionnaire-tuteur.md) — périmètre clinique, fonctionnalités, données médicales, Java et alternatives, interface, réseau, stockage, livrables.
+- [Questionnaire d'organisation de l'équipe de quatre](13-pilotage-projet/02-questionnaire-equipe.md) — disponibilités, compétences, responsabilités, Git, intégration et décisions.
+- [Gantt générique](13-pilotage-projet/03-gantt-generique.md) — macro-planning du 18 novembre 2026 au 8 janvier 2027.
+- [Stratégies et arbitrages critiques](13-pilotage-projet/04-strategies-et-arbitrages-critiques.md) — options d'architecture, scénarios de panne et mesures comparatives.
 
 ## Règles de preuve
 
