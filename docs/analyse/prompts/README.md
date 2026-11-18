@@ -15,6 +15,8 @@ Ce dossier conserve les prompts de travail qui ont servi ou pourront servir à p
 | [04 — Vérifier les affirmations](04-audit-des-sources.md) | Auditer les sources, les affirmations et les incertitudes. |
 | [05 — Architecture technique](05-architecture-technique-systemes-hospitaliers.md) | Reconstituer les technologies et architectures des systèmes de monitorage. |
 | [06 — Cybersécurité](06-cybersecurite-dispositifs-medicaux-hopitaux.md) | Rechercher les protections, vulnérabilités, attaques et mesures défensives. |
+| [07 — Normes et réglementation](07-normes-reglementation-sante.md) | Rechercher et qualifier les normes, textes et recommandations applicables. |
+| [08 — Couverture intégrale](08-coverage-integral-projet.md) | Vérifier que tous les domaines du sujet sont traités avant conception. |
 
 ## Règles d'utilisation
 
