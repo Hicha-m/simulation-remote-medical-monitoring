@@ -75,6 +75,17 @@ Ce catalogue transforme les processus documentés en besoins analysables. Il ne 
 | OPS-06 | Former les professionnels à l'utilisation des alarmes. | Soins critiques | HAS [H02]. |
 | OPS-07 | Gérer les transports avec une surveillance adaptée. | Transport | HAS [H19, H20]. |
 
+### Organisation du poste central et relèves
+
+| ID | Besoin métier | Contexte | Source / justification |
+|---|---|---|---|
+| ORG-01 | Définir le rôle responsable de chaque patient ou secteur. | Soins critiques / télémétrie | Les modèles d'observation diffèrent selon les établissements [H11, H14]. |
+| ORG-02 | Associer les alarmes à une destination et un destinataire. | Soins critiques / télémétrie | Report vers centrale, inter-chevet, répétiteur ou mobile [H02, H33]. |
+| ORG-03 | Confirmer la prise de connaissance d'une alarme. | Tous | Communication en boucle fermée [H11, H14]. |
+| ORG-04 | Transmettre les événements ouverts à la relève. | Soins critiques | Vérifications et relèves décrites par la HAS [H02]. |
+| ORG-05 | Couvrir les pauses et les absences. | Soins critiques | Organisation de présence à proximité de la centrale [H02]. |
+| ORG-06 | Détecter une défaillance du report d'alarme. | Tous | L'ANSM documente des systèmes de report et des incidents de configuration [H33]. |
+
 ## 6. Gestion technique et biomédicale
 
 | ID | Besoin métier | Contexte | Source / justification |
