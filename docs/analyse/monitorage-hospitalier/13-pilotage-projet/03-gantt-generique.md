@@ -35,6 +35,37 @@
 | Robustesse, sécurité et performance | | | | ░ | ░ | ░ | █ | █ |
 | Documentation, installation et démonstration | | | | | ░ | ░ | █ | █ |
 
+## 2 bis. Diagramme Gantt Mermaid modifiable
+
+Le diagramme ci-dessous est une représentation de départ. Les dates et durées sont volontairement génériques : elles devront être recalées en fonction des réponses du tuteur, des disponibilités réelles et des résultats des premiers essais.
+
+```mermaid
+gantt
+    title Projet de monitorage hospitalier — livraison du 8 janvier 2027
+    dateFormat YYYY-MM-DD
+    axisFormat %d/%m
+
+    section Cadrage
+    Questions tuteur et équipe       :a1, 2026-11-18, 2026-11-22
+    Exigences et périmètre v1        :a2, 2026-11-23, 2026-11-29
+
+    section Conception
+    Architecture et comparatifs      :b1, 2026-11-30, 2026-12-06
+    Contrats de données              :b2, 2026-11-30, 2026-12-06
+    Socle technique et CI            :b3, 2026-12-07, 2026-12-13
+
+    section Développement
+    Ingestion et simulateurs         :c1, 2026-12-14, 2026-12-20
+    Persistance et historique        :c2, 2026-12-14, 2026-12-27
+    Interface centrale               :c3, 2026-12-21, 2026-12-27
+    Alarmes et qualité                :c4, 2026-12-21, 2027-01-03
+
+    section Intégration et validation
+    Intégration multi-patients       :d1, 2026-12-28, 2027-01-03
+    Tests et corrections             :d2, 2027-01-04, 2027-01-07
+    Livraison finale                 :milestone, d3, 2027-01-08, 0d
+```
+
 ## 3. Jalons et livrables
 
 | Jalon | Date cible | Résultat attendu | Condition de passage |
