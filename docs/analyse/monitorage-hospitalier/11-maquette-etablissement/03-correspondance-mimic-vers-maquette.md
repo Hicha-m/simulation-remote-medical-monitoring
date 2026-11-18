@@ -50,7 +50,7 @@ Lignes observées dans le fichier transfers.csv.gz [H120] :
 | 30037221 | transfer | Med/Surg/Trauma | 2120-01-31 18:25:12 | 2120-02-02 15:40:32 |
 | 34768989 | discharge | — | 2120-02-02 15:40:32 | — |
 
-Les dates sont décalées dans le cadre de la dé-identification MIMIC. Il ne faut pas les traiter comme des dates de calendrier réelles.
+Les dates sont décalées dans le cadre de la dé-identification MIMIC ; leur chronologie relative au sein d'un même patient est conservée. Il ne faut pas les traiter comme des dates de calendrier réelles [H121].
 
 ### Affectation physique synthétique déterministe
 
@@ -128,3 +128,4 @@ Pour les deux parcours montrés ci-dessus, les lits sont figés explicitement da
 - [H110] MIMIC-IV Clinical Database Demo 2.2 : https://physionet.org/content/mimic-iv-demo/2.2/
 - [H111] Documentation de la table transfers : https://mimic.mit.edu/docs/iv/modules/hosp/transfers.html
 - [H120] Fichier source hosp/transfers.csv.gz de MIMIC-IV Demo 2.2 : https://physionet.org/content/mimic-iv-demo/2.2/hosp/transfers.csv.gz
+- [H121] Documentation MIMIC sur le décalage des dates et les types d'horodatage : https://github.com/MIT-LCP/mimic-iv-website/blob/master/content/basics/times.md
