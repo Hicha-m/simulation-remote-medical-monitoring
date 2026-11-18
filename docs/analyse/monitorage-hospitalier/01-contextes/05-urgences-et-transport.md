@@ -40,7 +40,19 @@ Philips positionne l'IntelliVue X3 comme moniteur utilisable en soins intensifs 
 
 Ces exemples illustrent le principe d'une surveillance qui suit le patient, plutôt qu'un patient qui doit rester relié à une station fixe.
 
-## 5. Besoins métiers candidats pour un transport
+## 5. Retours d'expérience documentés par la HAS
+
+Le flash de la HAS du 21 mars 2024 présente trois événements indésirables réels déclarés :
+
+1. **Bouteille d'oxygène épuisée pendant un transport vers l'IRM :** le patient était ventilé ; la réserve d'oxygène s'est vidée et le changement d'indication de FiO₂ sur l'écran n'a pas entraîné de perception des alarmes. La HAS relève notamment l'absence de formation à une nouvelle bouteille, l'absence de vérification des réserves, l'absence de procédure et des difficultés de compatibilité / raccordement du matériel.
+2. **Erreur de montage d'un circuit de ventilation :** le matériel et la procédure n'étaient pas suffisamment préparés et connus ; la vérification du montage et la disponibilité d'un circuit prêt à l'emploi étaient défaillantes.
+3. **Raccordement à un ventilateur à l'arrêt au retour du patient :** un changement d'équipe, une répartition des tâches non anticipée et une vérification absente ont contribué à l'événement. La surveillance cardiaque a également été débranchée au cours du transfert lit-brancard.
+
+La HAS rappelle que la surveillance continue ne doit pas être interrompue et que le transport doit être organisé avec personnel formé, procédure, matériel, liste de vérification et possibilité d'appel d'urgence [H19].
+
+Ces événements sont particulièrement pertinents pour un laboratoire de simulation : ils montrent des défaillances de coordination et d'équipement qu'un test de réseau seul ne couvrirait pas.
+
+## 6. Besoins métiers candidats pour un transport
 
 | ID | Besoin | Justification |
 |---|---|---|
@@ -55,7 +67,7 @@ Ces exemples illustrent le principe d'une surveillance qui suit le patient, plut
 
 Les besoins TR-03 à TR-06 constituent des exigences candidates déduites des systèmes portables et de la nécessité de continuité. Ils ne sont pas présentés comme des fonctions obligatoires de tous les moniteurs.
 
-## 6. Scénario opérationnel à étudier
+## 7. Scénario opérationnel à étudier
 
 1. Un transport est décidé et préparé.
 2. L'équipe vérifie le patient, la destination et le matériel.
@@ -68,7 +80,7 @@ Les besoins TR-03 à TR-06 constituent des exigences candidates déduites des sy
 
 Cette séquence est un scénario d'analyse informatique et organisationnelle, pas un protocole de transport clinique.
 
-## 7. Sources
+## 8. Sources
 
 - **[H03]** Code de la santé publique, surveillance postinterventionnelle : https://www.legifrance.gouv.fr/codes/section_lc/LEGITEXT000006072665/LEGISCTA000006198881/2026-07-22
 - **[H06]** Philips, gamme IntelliVue : https://www.philips.fr/healthcare/brand/intellivue-patient-monitors
