@@ -24,6 +24,10 @@ Ce dossier transforme l'analyse hospitalière en scénarios compréhensibles et 
 - Formaliser les workflows avant de choisir le découpage technique.
 - Utiliser les points critiques comme base de la stratégie de test.
 
+## Dossier spatial associé
+
+La maquette physique et la correspondance entre les parcours réels MIMIC-IV et les lits fictifs sont désormais dans [11 — Maquette de l'établissement](../11-maquette-etablissement/README.md).
+
 ## Principes de prudence
 
 - Les personas sont fictifs et composites ; ils ne reproduisent pas un dossier réel.
