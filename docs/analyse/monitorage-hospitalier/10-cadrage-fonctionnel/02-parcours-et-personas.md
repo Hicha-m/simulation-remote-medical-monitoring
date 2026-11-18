@@ -165,4 +165,4 @@ Séjour subject_id 10004422, hadm_id 21255400 [H120] :
 
 Les horaires proviennent des enregistrements du fichier public MIMIC-IV Demo ; les dates sont décalées pour l'anonymisation. La table donne les unités et les intervalles, mais pas les numéros de chambre, de lit ou les appareils utilisés. Les affectations physiques seront créées dans la maquette et signalées comme synthétiques.
 
-Source de référence : [H110] MIMIC-IV Demo, [H111] documentation de la table transfers et [H120] fichier transfers.csv.gz.
+Source de référence : [H110] MIMIC-IV Demo, [H111] documentation de la table transfers, [H120] fichier transfers.csv.gz et [H121] documentation du décalage des dates.
