@@ -76,7 +76,7 @@ Ce dossier est volontairement découpé par thème. Chaque document traite un su
 - [Prévention, détection, réponse et continuité](07-cybersecurite/03-prevention-detection-reponse-continuite.md) — pratiques organisationnelles et techniques.
 - [Modèle de menace et matrice](07-cybersecurite/04-modele-de-menace-et-matrice.md) — menaces et scénarios non destructifs pour le POC.
 
-### 9. Normes, recommandations et couverture intégrale
+### 10. Normes, recommandations et couverture intégrale
 
 - [Registre des normes et textes](09-normes-et-recommandations/01-registre-normes-et-reglementation.md) — IEC/ISO, MDR, RGPD, HDS, PGSSI-S, CI-SIS et HAS.
 - [Recommandations](09-normes-et-recommandations/02-recommandations.md) — exigences métier, sécurité, ergonomie et continuité.
@@ -89,6 +89,17 @@ Le registre note aussi le projet de loi français de transposition NIS2, adopté
 
 - [Matrice de couverture](08-couverture-du-sujet/01-matrice-de-couverture.md) — lien entre la consigne, les mots-clés et les domaines étudiés.
 - [Questions et arbitrages](08-couverture-du-sujet/02-questions-et-arbitrages.md) — éléments à résoudre avant la conception.
+
+### 9. Cadrer le fonctionnement réel du POC
+
+- [Comparaison des services et choix de référence](10-cadrage-fonctionnel/01-choix-service-reference.md) — différences entre réanimation, USC, cardiologie, SSPI, urgences et unités conventionnelles.
+- [Parcours et personas](10-cadrage-fonctionnel/02-parcours-et-personas.md) — parcours composites, événements et bases de données hospitalières de recherche.
+- [Appareils et profils par service](10-cadrage-fonctionnel/03-appareils-et-profils-par-service.md) — socle commun et équipements spécifiques aux unités.
+- [Contrats de données](10-cadrage-fonctionnel/04-contrats-de-donnees.md) — enveloppe commune, observations, alarmes et états techniques.
+- [Workflows métier](10-cadrage-fonctionnel/05-workflows-metier.md) — admission, mesure, alarme, transfert, déconnexion et sortie.
+- [Points critiques et critères d'acceptation](10-cadrage-fonctionnel/06-points-critiques-et-criteres-acceptation.md) — risques P0/P1/P2 et tests de bout en bout.
+
+La proposition actuelle est de prendre une réanimation adulte polyvalente comme référence de travail, mais ce choix n'est pas encore validé.
 
 ## Règles de preuve
 
