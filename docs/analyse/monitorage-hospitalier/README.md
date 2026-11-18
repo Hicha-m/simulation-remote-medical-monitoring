@@ -83,6 +83,8 @@ Ce dossier est volontairement découpé par thème. Chaque document traite un su
 - [Couverture intégrale du projet](09-normes-et-recommandations/03-couverture-integrale-du-projet.md) — 22 domaines du sujet et 16 scénarios de traçabilité.
 - [Checklist avant conception](09-normes-et-recommandations/04-checklist-avant-conception.md) — critères de sortie de l'analyse.
 
+Le registre note aussi le projet de loi français de transposition NIS2, adopté en première lecture à l'Assemblée nationale le 17 novembre 2026, mais non promulgué au 18 novembre 2026.
+
 ### 8. Vérifier la couverture du sujet initial
 
 - [Matrice de couverture](08-couverture-du-sujet/01-matrice-de-couverture.md) — lien entre la consigne, les mots-clés et les domaines étudiés.
