@@ -8,6 +8,8 @@ La PGSSI-S est un corpus de référentiels, guides et exigences de sécurité po
 
 Le CERT Santé publie un observatoire annuel et des retours d'expérience. Le rapport 2025 détaille notamment les mesures de confinement, d'investigation et de remédiation utilisées lors des incidents [H51].
 
+Le programme CaRE de l'ANS complète ce cadre par des actions de renforcement opérationnel, notamment autour des annuaires, des accès distants, de l'exposition Internet et de la continuité des systèmes de santé [H65]. Il s'agit d'un programme national ; les mesures opérationnelles concrètes doivent être étudiées dans les documents de chaque axe et selon l'éligibilité de l'établissement.
+
 ## 2. Prévention avant incident
 
 ### 2.1 Inventaire et maîtrise des actifs
@@ -146,6 +148,7 @@ Les simulations de cyberattaque doivent être non destructives : on simule un co
 
 - [H48] ANS — PGSSI-S : https://esante.gouv.fr/securite/politique-generale-de-securite-des-systemes-d-information-de-sante
 - [H51] ANS / CERT Santé — Observatoire 2025 : https://cyberveille.esante.gouv.fr/sites/default/files/media/document/2026-05/ANS_CERTSante_Rapport_Public_Observatoire_Signalements_ISSIS_2025_VF_0.pdf
+- [H65] ANS — Programme CaRE, axe sécurité opérationnelle : https://esante.gouv.fr/produits-services/cybersecurite/programme-care/programme-care-axe-4-securite-operationnelle
 - [H43] Dräger Infinity CentralStation VG6.0 : https://www.draeger.com/Content/Documents/Products/ics-ifu-3736474-fr.pdf
 - [H40] GE CARESCAPE Cybersecurity Fundamentals : https://www.gehealthcare.com/-/media/86efd534d0c94edb831beacde0c0f7eb.pdf
 - [H41] Philips IntelliVue network security instructions : https://www.documents.philips.com/assets/Instruction%20for%20Use/20241010/7d137e87854a40a5b843b205009e75dc.pdf
