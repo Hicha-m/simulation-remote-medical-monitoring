@@ -176,6 +176,8 @@ Les bases de recherche ci-dessous sont issues de véritables environnements hosp
 
 | H120 | [MIMIC-IV Demo 2.2 — hosp/transfers.csv.gz](https://physionet.org/content/mimic-iv-demo/2.2/hosp/transfers.csv.gz) | Fichier source de données | Enregistre les segments de localisation et transferts. Les lignes publiques permettent de vérifier les subject_id, hadm_id, transfer_id, careunit, eventtype, intime et outtime utilisés dans la maquette. Les dates sont décalées pour l'anonymisation. |
 
+| H121 | [MIMIC-IV — Time types and date shifting](https://github.com/MIT-LCP/mimic-iv-website/blob/master/content/basics/times.md) | Documentation de dé-identification et d'horodatage | Confirme le décalage des dates pour la confidentialité, la cohérence chronologique à l'intérieur d'un patient et la distinction entre CHARTTIME (heure attribuée à l'observation) et STORETIME (enregistrement / validation). |
+
 ## 11. Précautions d'interprétation
 
 - Les spécifications fabricants sont des sources primaires pour comprendre leurs produits, mais restent des documents commerciaux ou de documentation produit.
