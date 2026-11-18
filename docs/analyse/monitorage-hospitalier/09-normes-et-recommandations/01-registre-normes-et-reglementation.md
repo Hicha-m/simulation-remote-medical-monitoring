@@ -123,7 +123,19 @@ La Politique générale de sécurité des systèmes d'information de santé rass
 
 Le bon usage consiste à sélectionner les documents PGSSI-S correspondant au type de traitement, au rôle de l'acteur et au niveau de sécurité visé.
 
-### 6.5 Référentiels HAS et recommandations françaises
+### 6.5 Cybersécurité européenne : NIS2 et Cyber Resilience Act
+
+**NIS2 — Directive (UE) 2022/2555**
+
+Le secteur de la santé figure parmi les secteurs visés par NIS2, qui prévoit des obligations de gestion des risques cyber et de notification des incidents pour les entités entrant dans son champ. En France, au 18 novembre 2026, le projet de loi de transposition relatif à la résilience des infrastructures critiques et au renforcement de la cybersécurité a été adopté en première lecture par l'Assemblée nationale le 17 novembre 2026, mais il n'est pas encore une loi promulguée. Le champ précis des entités et les obligations nationales doivent donc être revérifiés après la suite de la procédure parlementaire [H97, H98].
+
+**Cyber Resilience Act — règlement (UE) 2024/2847**
+
+Le CRA s'applique en principe aux produits comportant des éléments numériques mis sur le marché, mais son article 2 exclut les produits déjà couverts par le règlement MDR 2017/745 et l'IVDR 2017/746. Les obligations générales s'appliquent à partir du 11 décembre 2027, tandis que l'obligation de signalement de vulnérabilités activement exploitées et d'incidents graves s'applique depuis le 11 septembre 2026 [H99].
+
+**Conséquence :** ne pas conclure que le CRA s'applique automatiquement à un moniteur médical soumis au MDR. En revanche, certains logiciels ou produits numériques génériques de l'écosystème hospitalier peuvent nécessiter une analyse distincte.
+
+### 6.6 Référentiels HAS et recommandations françaises
 
 Le référentiel HAS de certification des établissements de santé version 2027 inclut notamment :
 - critère 2.3-12 : surveillance visuelle et sonore des patients en soins critiques, procédure de gestion des systèmes de surveillance et des seuils d'alarme, report des alarmes de scopes et ventilateurs par des professionnels formés, continuité pendant le transport ;
@@ -183,6 +195,9 @@ Ces critères s'adressent aux établissements de santé ; ils servent ici de ré
 - **H94** HAS — Flash Sécurité Patient, surveillance des patients en soins critiques, 25 avril 2024 : https://www.has-sante.fr/jcms/p_3511526/fr/flash-securite-patient-surveillance-des-patients-en-service-de-soins-critiques-une-veille-sans-faille-pour-qu-aucun-patient-ne-defaille
 - **H95** ANSM — Gestion des alarmes des dispositifs médicaux dans les établissements de santé, septembre 2019 : https://ansm.sante.fr/uploads/2020/10/16/20201016-rapport-gestion-alarmes-dm.pdf
 - **H96** ANS — Programme CaRE, axe 4 Sécurité opérationnelle : https://esante.gouv.fr/produits-services/cybersecurite/programme-care/programme-care-axe-4-securite-operationnelle
+- **H97** Directive (UE) 2022/2555 (NIS2) : https://eur-lex.europa.eu/eli/dir/2022/2555
+- **H98** Assemblée nationale — adoption en première lecture du projet de loi de résilience, 17 novembre 2026 : https://www.assemblee-nationale.fr/dyn/actualites-accueil-hub/adoption-du-projet-de-loi-relatif-a-la-resilience-des-infrastructures-critiques-et-au-renforcement-de-la-cybersecurite
+- **H99** Règlement (UE) 2024/2847 (Cyber Resilience Act), article 2 et dates d'application : https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A02024R2847-20241120
 
 ## 9. Mise à jour nécessaire avant tout usage réglementaire
 
