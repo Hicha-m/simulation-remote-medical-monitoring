@@ -2,12 +2,12 @@
 
 **Version :** 0.1  
 **Date de référence :** 18 novembre 2026  
-**Périmètre :** monitorage hospitalier et POC logiciel de simulation.  
+**Périmètre :** monitorage hospitalier et logiciel de monitorage hospitalier simulé.  
 **Statut :** cartographie documentaire, pas une déclaration de conformité.
 
 ## Objectif
 
-Identifier les normes techniques, textes réglementaires, référentiels français et recommandations qui permettent d'étudier un système de monitorage hospitalier, puis déterminer lesquels sont pertinents pour le POC académique.
+Identifier les normes techniques, textes réglementaires, référentiels français et recommandations qui permettent d'étudier un système de monitorage hospitalier, puis déterminer lesquels sont pertinents pour le projet académique de monitorage hospitalier simulé.
 
 ## Documents
 
@@ -24,10 +24,10 @@ Identifier les normes techniques, textes réglementaires, référentiels frança
 - Une **norme** est un document technique. Elle n'est pas automatiquement obligatoire dans tout projet ; son rôle dépend du texte réglementaire, de son harmonisation, du produit et du marché visé.
 - Un **référentiel national** peut comprendre des exigences opposables, des règles d'interopérabilité ou des guides selon le document concerné.
 - Une **recommandation** oriente les pratiques, mais ne remplace pas la réglementation ni le jugement des professionnels.
-- Un POC pédagogique qui utilise des données entièrement synthétiques et n'est pas destiné à un usage médical réel n'a pas automatiquement les mêmes obligations qu'un moniteur ou un logiciel médical commercialisé.
+- Un projet de monitorage hospitalier simulé qui utilise des données entièrement synthétiques et n'est pas destiné à un usage médical réel n'a pas automatiquement les mêmes obligations qu'un moniteur ou un logiciel médical commercialisé.
 
 ## Décision de périmètre actuelle
 
 L'utilisateur a confirmé le monitorage hospitalier. Le projet reste en phase d'analyse. Aucune technologie, norme de conformité ou architecture n'est choisie.
 
-Le POC est étudié comme un simulateur pédagogique sans patient réel, sans dispositif médical réel connecté et sans usage dans le soin. Cette limite doit être maintenue et explicitée tant qu'aucune nouvelle finalité n'est décidée.
+Le projet vise un système logiciel de monitorage hospitalier à destination de simulation et de développement académique ; son éventuelle finalité d'utilisation clinique n'est pas établie. Il ne doit pas être raccordé à un patient, à un dispositif médical réel ou à un SIH en production sans autorisation, analyse de risques, validation clinique et clarification réglementaire. La qualification éventuelle au titre du MDR dépend de la finalité prévue et des fonctions effectivement développées.
