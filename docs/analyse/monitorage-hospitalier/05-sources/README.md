@@ -65,6 +65,9 @@ Ces pages établissent des fonctions ou capacités présentées par les fabrican
 | H36 | [RESAH — Gestion de parc en ventilation et monitorage 2025-R023](https://espace-acheteur.resah.fr/gestion-de-parc-en-ventilation-et-monitorage) | Offre de centrale d'achat | Offre 2025–2029 ; lot de recueil de données Philips : PIC iX, moniteurs, notification, intégration et logiciels cliniques. |
 | H37 | [BOAMP / France Marchés — Avis d'attribution 25-102326, procédure 24U009](https://www.francemarches.com/files/BOAMP/25-102326.html) | Avis d'attribution de marché public | Lots attribués à Spacelabs, Mindray, Philips, GE et Dräger pour des environnements de monitorage, néonatalogie et péri-opératoire. Les valeurs par lot sont estimatives, pas des dépenses constatées. |
 
+| H38 | [Mindray — Meilleure qualité de vie en soins intensifs, CHU de Toulouse](https://www.mindray.com/fr/innovation/customer-stories/better-living-quality-for-intensive-care) | Retour d'expérience fournisseur / client | BeneVision présenté comme utilisé au CHU de Toulouse, avec postes de visualisation déportés en soins intensifs. |
+| H39 | [Images & Réseaux — Rapport moral 2025, projet Engage 5G & Beyond](https://www.images-et-reseaux.com/voy_content/uploads/2026/06/ir_rm_2025-def.pdf) | Rapport d'un pôle de compétitivité / démonstrateur | Démonstrateur 5G de quatre lits avec mannequins, moniteurs Philips MP60, respirateurs Dräger/Getinge, routeurs 5G et centrale Philips PIC iX. Non clinique. |
+
 ## 5. Précautions d'interprétation
 
 - Les spécifications fabricants sont des sources primaires pour comprendre leurs produits, mais restent des documents commerciaux ou de documentation produit.
