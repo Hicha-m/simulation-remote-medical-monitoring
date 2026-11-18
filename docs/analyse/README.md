@@ -8,7 +8,7 @@
 
 Ce répertoire conserve la trace structurée de l'analyse du sujet, des sources consultées, des questions encore ouvertes, des pistes de valeur ajoutée et des prompts utilisés pour reproduire la recherche.
 
-Le dossier ne constitue ni une spécification finale, ni une recommandation médicale, ni une preuve de conformité réglementaire.
+Le projet est une réalisation logicielle académique complète. Le présent dossier ne constitue ni une spécification finale, ni une recommandation médicale, ni une preuve de conformité réglementaire.
 
 ## Règles de lecture
 
@@ -46,7 +46,7 @@ Les prompts et instructions de recherche sont archivés dans le dossier [prompts
 
 ## Principes de prudence
 
-1. Ne pas utiliser de données réelles de patients dans le POC.
+1. Ne pas intégrer de données personnelles directement identifiantes ; utiliser des jeux de recherche dé-identifiés seulement selon leurs conditions d'accès et de réutilisation, et des scénarios synthétiques clairement étiquetés.
 2. Ne pas connecter le projet à un dispositif médical réel ni à un système d'information hospitalier sans cadre et autorisation explicites.
 3. Ne pas présenter une valeur simulée, une alerte ou un seuil comme un avis ou une recommandation médicale.
 4. Distinguer la simulation logicielle d'un dispositif médical destiné à être utilisé en situation de soins.
