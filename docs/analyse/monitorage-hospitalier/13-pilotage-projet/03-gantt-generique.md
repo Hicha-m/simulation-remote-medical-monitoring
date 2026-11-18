@@ -27,11 +27,11 @@ Le planning de référence d'Intern comporte aussi un déploiement sur machines 
 | DEV — ingestion, simulateurs et backend | | ░ | █ | █ | | | |
 | DEV — interface centrale | | | █ | █ | | | |
 | DEV — intégration et recette locale | | | ░ | █ | | | |
-| **Docker** — images, volumes, réseaux | | | | ░ | █ | | |
+| **Docker** — images, volumes, réseaux | | | | | █ | | |
 | Docker — Compose, santé et installation | | | | | █ | ░ | |
 | Docker — vérification et référence | | | | | | █ | |
 | Instrumentation élémentaire (préparée pendant DEV) | ░ | ░ | ░ | ░ | ░ | ░ | ░ |
-| **Metrics** — plan de test et étalonnage | | | | | | █ | ░ |\n| Metrics — campagnes et analyse | | | | | | ░ | █ |
+| **Metrics** — plan de test et étalonnage | | | | | | █ | ░ |
 | Metrics — analyse et rapport | | | | | | ░ | █ |
 | **CI/CD** — tests et qualité à chaque PR | █ | █ | █ | █ | █ | █ | █ |
 | CI/CD — build images, scan et publication | | | | ░ | █ | █ | █ |
@@ -69,7 +69,7 @@ gantt
 
     section CI CD transversal
     CI tests et qualité                   :d1, 2026-11-18, 2027-01-08
-    Build, scan et publication Docker     :d2, 2026-12-18, 2027-01-08
+    Build, scan et publication Docker     :d2, 2026-12-21, 18d
 
     section Livraison
     Gel et validation finale              :e1, 2027-01-05, 2027-01-07
