@@ -56,8 +56,8 @@ Ce catalogue transforme les processus documentés en besoins analysables. Il ne 
 | ALM-05 | Distinguer acquittement et résolution. | Tous | Besoin fonctionnel à valider. |
 | ALM-06 | Transmettre ou escalader un événement non pris en charge. | Tous | Organisations de surveillance centralisée [H14]. |
 | ALM-07 | Consulter l'historique d'une alarme. | Tous | Historique d'événements dans les centrales [H04, H08]. |
-| ALM-08 | Analyser la fréquence et la durée des alarmes. | Soins critiques / télémétrie | Études sur volume et durée des alarmes [H15, H26]. |
-| ALM-09 | Identifier les alarmes répétitives ou non actionnables. | Soins critiques / télémétrie | Gestion de l'alarme et fatigue [H14, H15, H26]. |
+| ALM-08 | Analyser la fréquence et la durée des alarmes. | Soins critiques / télémétrie | Études sur volume et durée des alarmes [H15, H29]. |
+| ALM-09 | Identifier les alarmes répétitives ou non actionnables. | Soins critiques / télémétrie | Gestion de l'alarme et fatigue [H14, H15, H29]. |
 | ALM-10 | Documenter les limites d'alarme et leurs changements. | Tous | HAS demande des réglages adaptés et leur vérification [H02]. |
 | ALM-11 | Prévoir un fonctionnement dégradé si le report d'alarme ne fonctionne plus. | Soins critiques / télémétrie | L'ANSM rapporte que 35,29 % des services interrogés avaient prévu un fonctionnement dégradé [H33]. |
 | ALM-12 | Regrouper des alarmes provenant de plusieurs équipements ou fabricants. | Soins critiques / unités équipées | 16,32 % des services répondants disposaient d'une concentration d'alarmes multi-dispositifs [H33]. |
