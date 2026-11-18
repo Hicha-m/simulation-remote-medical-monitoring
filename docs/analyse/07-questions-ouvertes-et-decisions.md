@@ -105,7 +105,7 @@ Les questions doivent porter sur les processus de travail, pas sur des dossiers 
 
 | ID | Sujet | État | Décision | Justification / preuve | Date |
 |---|---|---|---|---|---|
-| DEC-001 | Contexte d'utilisation | Ouvert | Aucune | Les interprétations hospitalier / domicile / hybride sont à départager. | 18/11/2026 |
+| DEC-001 | Contexte d'utilisation | Validé | Monitorage hospitalier | Périmètre confirmé par l'utilisateur le 18/11/2026. Les environnements hospitaliers précis restent à sélectionner. | 18/11/2026 |
 | DEC-002 | Paramètres médicaux | Ouvert | Aucune | Les mesures attendues ne sont pas détaillées. | 18/11/2026 |
 | DEC-003 | Protocoles réseau | Ouvert | Aucune | Le sujet ne prescrit aucun protocole. | 18/11/2026 |
 | DEC-004 | Base de données | Ouvert | Aucune | Volumes, requêtes et rétention non définis. | 18/11/2026 |
