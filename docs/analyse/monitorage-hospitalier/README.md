@@ -38,6 +38,7 @@ Ce dossier est volontairement découpé par thème. Chaque document traite un su
 - [Acteurs et responsabilités](03-metiers/01-acteurs-et-responsabilites.md)
 - [Cycle de vie patient, lit et appareil](03-metiers/02-cycle-patient-lit-appareil.md)
 - [Alarmes, événements et traitement](03-metiers/03-alarmes-et-traitement.md)
+- [Organisation du poste central et relèves](03-metiers/04-organisation-poste-central-et-releves.md)
 
 ### 4. Transformer le terrain en besoins testables
 
@@ -68,17 +69,17 @@ Ce dossier est volontairement découpé par thème. Chaque document traite un su
 - [Données et intégration SIH](06-architecture-technique/04-donnees-et-integration-sih.md) — identité, ADT, observations, archives et provenance.
 - [Informations publiques et privées](06-architecture-technique/05-limites-documentaires-et-informations-privees.md) — limites des détails d'implémentation accessibles.
 
-### 8. Vérifier la couverture du sujet initial
-
-- [Matrice de couverture](08-couverture-du-sujet/01-matrice-de-couverture.md) — lien entre la consigne, les mots-clés et les domaines étudiés.
-- [Questions et arbitrages](08-couverture-du-sujet/02-questions-et-arbitrages.md) — éléments à résoudre avant la conception.
-
 ### 7. Comprendre la cybersécurité
 
 - [Sécurité des dispositifs et des réseaux](07-cybersecurite/01-securite-dispositifs-reseaux.md) — protections documentées par les fabricants.
 - [Incidents, vulnérabilités et fuites](07-cybersecurite/02-incidents-vulnerabilites-et-fuites.md) — cas documentés des équipements et établissements.
 - [Prévention, détection, réponse et continuité](07-cybersecurite/03-prevention-detection-reponse-continuite.md) — pratiques organisationnelles et techniques.
 - [Modèle de menace et matrice](07-cybersecurite/04-modele-de-menace-et-matrice.md) — menaces et scénarios non destructifs pour le POC.
+
+### 8. Vérifier la couverture du sujet initial
+
+- [Matrice de couverture](08-couverture-du-sujet/01-matrice-de-couverture.md) — lien entre la consigne, les mots-clés et les domaines étudiés.
+- [Questions et arbitrages](08-couverture-du-sujet/02-questions-et-arbitrages.md) — éléments à résoudre avant la conception.
 
 ## Règles de preuve
 
