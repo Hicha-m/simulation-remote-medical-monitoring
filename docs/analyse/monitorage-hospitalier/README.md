@@ -98,6 +98,8 @@ Le registre note aussi le projet de loi français de transposition NIS2, adopté
 - [Contrats de données](10-cadrage-fonctionnel/04-contrats-de-donnees.md) — enveloppe commune, observations, alarmes et états techniques.
 - [Workflows métier](10-cadrage-fonctionnel/05-workflows-metier.md) — admission, mesure, alarme, transfert, déconnexion et sortie.
 - [Points critiques et critères d'acceptation](10-cadrage-fonctionnel/06-points-critiques-et-criteres-acceptation.md) — risques P0/P1/P2 et tests de bout en bout.
+- [Cartographie hospitalière et architecture du SI](10-cadrage-fonctionnel/07-cartographie-hospitaliere-et-architecture-du-si.md) — bâtiments, étages, services, lits, centrales, réseau et systèmes partagés.
+- [Continuité électrique et fonctionnement dégradé](10-cadrage-fonctionnel/08-continuite-electrique-et-mode-degrade.md) — coupure de courant, batteries, onduleurs, groupe électrogène, panne réseau et tests PWR-01 à PWR-10.
 
 La proposition actuelle est de prendre une réanimation adulte polyvalente comme référence de travail, mais ce choix n'est pas encore validé.
 
