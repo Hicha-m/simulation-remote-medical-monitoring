@@ -29,6 +29,9 @@ Ce dossier est volontairement découpé par thème. Chaque document traite un su
 - [Centrales de surveillance et systèmes centralisés](02-systemes/02-centrales-de-surveillance.md)
 - [Télémétrie hospitalière sans fil](02-systemes/03-telemetrie-hospitaliere.md)
 - [Intégration et interopérabilité](02-systemes/04-integration-et-interoperabilite.md)
+- [Écosystème et marchés publics en France](02-systemes/05-ecosysteme-et-marches-publics-france.md) — enquête ANSM, achats hospitaliers récents et familles de systèmes référencées.
+- [Retour d'expérience CHU de Toulouse / BeneVision](02-systemes/06-retour-experience-chu-toulouse-benevision.md) — cas hospitalier décrit par Mindray.
+- [Démonstrateur 5G de réanimation éphémère](02-systemes/07-demonstrateur-5g-hopital-de-campagne.md) — quatre lits de mannequins, moniteurs, respirateurs, routeurs 5G et centrale.
 
 ### 3. Comprendre les métiers et opérations
 
