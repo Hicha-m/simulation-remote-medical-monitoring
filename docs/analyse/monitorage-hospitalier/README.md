@@ -76,6 +76,13 @@ Ce dossier est volontairement découpé par thème. Chaque document traite un su
 - [Prévention, détection, réponse et continuité](07-cybersecurite/03-prevention-detection-reponse-continuite.md) — pratiques organisationnelles et techniques.
 - [Modèle de menace et matrice](07-cybersecurite/04-modele-de-menace-et-matrice.md) — menaces et scénarios non destructifs pour le POC.
 
+### 9. Normes, recommandations et couverture intégrale
+
+- [Registre des normes et textes](09-normes-et-recommandations/01-registre-normes-et-reglementation.md) — IEC/ISO, MDR, RGPD, HDS, PGSSI-S, CI-SIS et HAS.
+- [Recommandations](09-normes-et-recommandations/02-recommandations.md) — exigences métier, sécurité, ergonomie et continuité.
+- [Couverture intégrale du projet](09-normes-et-recommandations/03-couverture-integrale-du-projet.md) — 22 domaines du sujet et 16 scénarios de traçabilité.
+- [Checklist avant conception](09-normes-et-recommandations/04-checklist-avant-conception.md) — critères de sortie de l'analyse.
+
 ### 8. Vérifier la couverture du sujet initial
 
 - [Matrice de couverture](08-couverture-du-sujet/01-matrice-de-couverture.md) — lien entre la consigne, les mots-clés et les domaines étudiés.
