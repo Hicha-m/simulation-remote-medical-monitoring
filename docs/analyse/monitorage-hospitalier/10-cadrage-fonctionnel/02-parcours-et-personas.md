@@ -152,17 +152,17 @@ Séjour subject_id 10019568, hadm_id 28710730 :
 
 Ce parcours permet de tester une succession réelle de segments de localisation. La chambre, le lit et les appareils exacts ne sont pas connus dans cette trace ; ils devront être générés dans notre maquette.
 
-### Trace réelle B — Chirurgie cardiaque, CVICU, chirurgie cardiaque, sortie
+### Trace réelle B — Cardiologie, CVICU, chirurgie cardiaque, sortie
 
-Séjour subject_id 10005817, hadm_id 20626031 :
+Séjour subject_id 10004422, hadm_id 21255400 [H120] :
 
-| Segment réel enregistré | Début | Fin |
+| Segment réel enregistré | Début (date décalée) | Fin (date décalée) |
 |---|---|---|
-| Cardiac Surgery | 2132-12-12 01:44:24 | 2132-12-15 09:29:01 |
-| Cardiac Vascular Intensive Care Unit | 2132-12-15 09:29:01 | 2132-12-17 18:06:07 |
-| Cardiac Surgery | 2132-12-17 18:06:07 | 2132-12-20 15:04:14 |
-| Discharge | 2132-12-20 15:04:14 | — |
+| Medicine/Cardiology | 2111-01-15 14:55:58 | 2111-01-17 09:44:50 |
+| Cardiac Vascular Intensive Care Unit (CVICU) | 2111-01-17 09:44:50 | 2111-01-23 18:18:46 |
+| Cardiac Surgery | 2111-01-23 18:18:46 | 2111-01-25 15:34:47 |
+| Discharge | 2111-01-25 15:34:47 | — |
 
-Les horaires proviennent des enregistrements MIMIC-IV Demo ; ce ne sont pas des dates de soins réelles à utiliser comme calendrier. Ces traces décrivent les mouvements enregistrés, pas la totalité des actions de soignants ou des alarmes.
+Les horaires proviennent des enregistrements du fichier public MIMIC-IV Demo ; les dates sont décalées pour l'anonymisation. La table donne les unités et les intervalles, mais pas les numéros de chambre, de lit ou les appareils utilisés. Les affectations physiques seront créées dans la maquette et signalées comme synthétiques.
 
-Source de référence : [H110] MIMIC-IV Demo et [H111] documentation de la table transfers.
+Source de référence : [H110] MIMIC-IV Demo, [H111] documentation de la table transfers et [H120] fichier transfers.csv.gz.
