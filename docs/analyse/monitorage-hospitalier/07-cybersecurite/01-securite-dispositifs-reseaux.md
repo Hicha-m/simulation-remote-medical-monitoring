@@ -100,7 +100,15 @@ La brochure n'expose pas les détails de toutes les options cryptographiques, la
 
 Ne pas interpréter une case « à vérifier » comme une absence de protection : cela signifie que la source publique consultée ne permet pas de confirmer le mécanisme pour le système et la version considérés.
 
-## 4. Menaces à considérer
+## 4. Gestion des risques des réseaux intégrant des dispositifs médicaux
+
+La norme IEC 80001-1:2021 porte sur l'application de la gestion des risques aux réseaux informatiques qui intègrent des dispositifs médicaux. Elle met en balance la sécurité, l'efficacité et la sûreté de fonctionnement du réseau, et implique les parties prenantes responsables du réseau et des dispositifs [H64].
+
+C'est une distinction importante pour notre sujet : une modification réseau ne se juge pas uniquement sur la cybersécurité informatique. Elle peut aussi affecter la disponibilité des mesures, le fonctionnement des alarmes et la capacité des professionnels à utiliser leurs dispositifs.
+
+Pour un environnement hospitalier réel, l'analyse nécessite la participation des acteurs cliniques, biomédicaux, informatiques, sécurité et fournisseurs concernés. Cette norme est une référence d'étude ; le POC académique ne revendiquera pas une conformité à IEC 80001-1.
+
+## 5. Menaces à considérer
 
 | Menace | Actif concerné | Conséquence possible |
 |---|---|---|
@@ -115,7 +123,7 @@ Ne pas interpréter une case « à vérifier » comme une absence de protection 
 | Rançongiciel | Serveurs, postes, annuaire | Indisponibilité des applications et données. |
 | Exfiltration | SIH, partage de fichiers, archives | Fuite de données personnelles et de santé. |
 
-## 5. Sécurité et sûreté clinique
+## 6. Sécurité et sûreté clinique
 
 Une défaillance cyber peut avoir plusieurs effets qui doivent être séparés :
 
@@ -126,7 +134,7 @@ Une défaillance cyber peut avoir plusieurs effets qui doivent être séparés :
 
 Le risque n'est pas limité à la fuite de données. Une interruption du monitorage, une valeur fausse ou une alarme non transmise peut avoir une conséquence opérationnelle et potentiellement clinique.
 
-## 8. Sources
+## 7. Sources
 
 - [H40] GE CARESCAPE Cybersecurity Fundamentals : https://www.gehealthcare.com/-/media/86efd534d0c94edb831beacde0c0f7eb.pdf
 - [H41] Philips IntelliVue MX400/MX450/MX500/MX550 Instructions for Use : https://www.documents.philips.com/assets/Instruction%20for%20Use/20241010/7d137e87854a40a5b843b205009e75dc.pdf
