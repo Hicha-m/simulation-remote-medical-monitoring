@@ -22,7 +22,11 @@ Chaque information doit être interprétée selon son statut :
 
 Les informations commerciales publiées par les fournisseurs sont identifiées comme telles et ne sont pas assimilées à des évaluations indépendantes.
 
-## Documents
+## Périmètre désormais confirmé
+
+Le sujet est recentré sur le **monitorage hospitalier**. Le dossier de référence à jour est [monitorage-hospitalier](monitorage-hospitalier/README.md), organisé en sous-répertoires par environnement de soins, famille de systèmes, métier et besoins. Les anciens documents génériques ci-dessous conservent la trace de l'exploration initiale ; certaines parties concernent encore la télésurveillance à domicile et ne constituent plus le périmètre principal.
+
+## Documents de cadrage initiaux
 
 | Document | Objet |
 |---|---|
