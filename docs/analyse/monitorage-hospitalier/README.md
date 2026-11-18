@@ -59,6 +59,22 @@ Ce dossier est volontairement découpé par thème. Chaque document traite un su
 7. Des marchés publics français 2023–2029 détaillent les moniteurs, centrales, logiciels, alarmes, intégration, maintenance et formation recherchés par les établissements [H34–H37].
 8. Des retours d'expérience documentent un système BeneVision au CHU de Toulouse et un démonstrateur 5G à quatre lits de mannequins ; ces deux cas sont de nature différente et ne doivent pas être confondus avec une installation clinique standard [H38, H39].
 
+
+### 6. Comprendre l'architecture technique
+
+- [Architectures de référence](06-architecture-technique/01-architectures-de-reference.md) — GE, Philips, Dräger et Mindray.
+- [Technologies et protocoles](06-architecture-technique/02-technologies-et-protocoles.md) — Ethernet, VLAN, TCP/IP, HL7, IHE PCD, NTP, TLS et flux propriétaires.
+- [Infrastructure, serveurs et déploiement](06-architecture-technique/03-infrastructure-serveurs-et-deploiement.md) — centrales, passerelles, virtualisation, disponibilité et maintenance.
+- [Données et intégration SIH](06-architecture-technique/04-donnees-et-integration-sih.md) — identité, ADT, observations, archives et provenance.
+- [Informations publiques et privées](06-architecture-technique/05-limites-documentaires-et-informations-privees.md) — limites des détails d'implémentation accessibles.
+
+### 7. Comprendre la cybersécurité
+
+- [Sécurité des dispositifs et des réseaux](07-cybersecurite/01-securite-dispositifs-reseaux.md) — protections documentées par les fabricants.
+- [Incidents, vulnérabilités et fuites](07-cybersecurite/02-incidents-vulnerabilites-et-fuites.md) — cas documentés des équipements et établissements.
+- [Prévention, détection, réponse et continuité](07-cybersecurite/03-prevention-detection-reponse-continuite.md) — pratiques organisationnelles et techniques.
+- [Modèle de menace et matrice](07-cybersecurite/04-modele-de-menace-et-matrice.md) — menaces et scénarios non destructifs pour le POC.
+
 ## Règles de preuve
 
 Chaque document distingue :
