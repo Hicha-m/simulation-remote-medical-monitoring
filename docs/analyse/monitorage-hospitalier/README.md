@@ -21,6 +21,8 @@ Ce dossier est volontairement découpé par thème. Chaque document traite un su
 - [Unités de soins conventionnelles](01-contextes/04-unites-conventionnelles.md)
 - [Urgences et transport intrahospitalier](01-contextes/05-urgences-et-transport.md)
 
+- [Néonatologie et pédiatrie](01-contextes/06-neonatologie-et-pediatrie.md) — surveillance cardiorespiratoire néonatale, alarmes et profils pédiatriques.
+
 ### 2. Comprendre les équipements et systèmes actuels
 
 - [Moniteurs de chevet et moniteurs de transport](02-systemes/01-moniteurs-de-chevet.md)
