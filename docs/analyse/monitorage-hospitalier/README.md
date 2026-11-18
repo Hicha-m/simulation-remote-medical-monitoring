@@ -68,6 +68,11 @@ Ce dossier est volontairement découpé par thème. Chaque document traite un su
 - [Données et intégration SIH](06-architecture-technique/04-donnees-et-integration-sih.md) — identité, ADT, observations, archives et provenance.
 - [Informations publiques et privées](06-architecture-technique/05-limites-documentaires-et-informations-privees.md) — limites des détails d'implémentation accessibles.
 
+### 8. Vérifier la couverture du sujet initial
+
+- [Matrice de couverture](08-couverture-du-sujet/01-matrice-de-couverture.md) — lien entre la consigne, les mots-clés et les domaines étudiés.
+- [Questions et arbitrages](08-couverture-du-sujet/02-questions-et-arbitrages.md) — éléments à résoudre avant la conception.
+
 ### 7. Comprendre la cybersécurité
 
 - [Sécurité des dispositifs et des réseaux](07-cybersecurite/01-securite-dispositifs-reseaux.md) — protections documentées par les fabricants.
