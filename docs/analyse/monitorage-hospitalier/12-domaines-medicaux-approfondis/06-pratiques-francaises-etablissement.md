@@ -11,7 +11,7 @@ Les sources françaises disponibles permettent d'affirmer les principes suivants
 - Le réglage des alarmes doit être adapté au patient et vérifié à l'admission et à la prise de poste dans le cadre décrit par la HAS [H128].
 - Les alarmes techniques, le report, la concentration d'alarmes et la fatigue liée aux alarmes sont des enjeux de sécurité documentés par l'ANSM [H129].
 - L'identification fiable du patient est un enjeu transversal à toutes les étapes du parcours ; l'INS et le RNIV structurent les règles françaises d'identitovigilance [H126, H127].
-- Le dossier patient comporte des dimensions administratives et médicales ; le monitorage ne doit pas se substituer à l'ensemble du DPI [H126].
+- Le dossier patient comporte des dimensions administratives et médicales ; le monitorage ne doit pas se substituer à l'ensemble du DPI [H136].
 - Les systèmes d'information hospitaliers doivent intégrer des contraintes de disponibilité, de sécurité, de continuité, d'interopérabilité et de traçabilité ; le contexte d'établissement doit être étudié avec la DSI, le biomédical et les équipes de soins.
 
 ## 2. Organisation fonctionnelle à documenter avec le service
@@ -73,8 +73,8 @@ Avant toute connexion à un dispositif réel, à un DPI ou à un réseau hospita
 
 ## 6. Références
 
-- [H126] Ministère de la Santé, identité/identitovigilance et dossier patient.
-- [H127] ANS, INS/RNIV.
+- [H126] Ministère de la Santé, identitovigilance.
+- [H127] ANS, INS/RNIV.\n- [H136] Ministère de la Santé, parcours et dossier patient.
 - [H128] HAS, Flash sécurité patient du 25 avril 2024.
 - [H129] ANSM, rapport alarmes 2019.
 - [H130] HL7 FHIR Observation Profiles.
