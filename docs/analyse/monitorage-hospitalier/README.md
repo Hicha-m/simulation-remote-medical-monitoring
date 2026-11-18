@@ -111,6 +111,8 @@ La proposition actuelle est de prendre une réanimation adulte polyvalente comme
 - [Correspondance MIMIC vers la maquette](11-maquette-etablissement/03-correspondance-mimic-vers-maquette.md) — parcours réellement enregistrés et affectations physiques synthétiques.
 - [Modèle d'organisation et relations](11-maquette-etablissement/04-modele-organisation-et-relations.md) — distinction entre hiérarchie physique et organisationnelle.
 - [Scénarios rejouables](11-maquette-etablissement/05-scenarios-rejouables.md) — deux parcours de référence et critères MAP-01 à MAP-10.
+- [Configuration de la carte](11-maquette-etablissement/facility-map-v1.json) — source JSON versionnée pour le futur plan interactif.
+- [Mapping MIMIC versionné](11-maquette-etablissement/mimic-transfer-mapping-v1.json) — unités, parcours réels et lits fictifs.
 
 La maquette est fictive et versionnée. Elle ne prétend pas reproduire le plan d'un hôpital français précis.
 
