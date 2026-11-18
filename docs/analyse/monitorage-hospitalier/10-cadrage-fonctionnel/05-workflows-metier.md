@@ -49,21 +49,20 @@ Ce parcours prouve concrètement qu'un épisode hospitalier peut être constitu�
 
 **Ce que cette trace ne fournit pas :** un plan d'étage, un numéro de chambre, un numéro de lit, l'identifiant exact d'un moniteur ou la totalité des actions des soignants. Les emplacements physiques et les associations appareil-lit seront créés dans notre hôpital fictif et marqués synthetic_scenario.
 
-### Deuxième parcours réel : chirurgie cardiaque → CVICU → chirurgie cardiaque → sortie
+### Deuxième parcours réel — Cardiologie → CVICU → chirurgie cardiaque → sortie
 
-Un autre séjour de démonstration, subject_id 10005817 et hadm_id 20626031, montre les séquences [H110] :
+Le séjour de démonstration identifié par subject_id 10004422 et hadm_id 21255400 présente les séquences suivantes dans transfers.csv.gz [H120] :
 
-| Événement enregistré | Début (date décalée) | Fin (date décalée) |
+| Événement enregistré | Début | Fin |
 |---|---|---|
-| Cardiac Surgery | 2132-12-12 01:44:24 | 2132-12-15 09:29:01 |
-| Cardiac Vascular Intensive Care Unit | 2132-12-15 09:29:01 | 2132-12-17 18:06:07 |
-| Cardiac Surgery | 2132-12-17 18:06:07 | 2132-12-20 15:04:14 |
-| Discharge | 2132-12-20 15:04:14 | — |
+| Medicine/Cardiology | 2111-01-15 14:55:58 | 2111-01-17 09:44:50 |
+| Cardiac Vascular Intensive Care Unit (CVICU) | 2111-01-17 09:44:50 | 2111-01-23 18:18:46 |
+| Cardiac Surgery | 2111-01-23 18:18:46 | 2111-01-25 15:34:47 |
+| Discharge | 2111-01-25 15:34:47 | — |
 
-Ce second exemple montre un transfert vers une unité de soins intensifs cardiovasculaires puis un retour dans le service de chirurgie. Les dates sont également décalées.
+Les dates sont décalées pour l'anonymisation. Cette trace apporte un second parcours vérifié, distinct du parcours urgences → Trauma SICU → Med/Surg/Trauma. Les unités source seront reliées à des unités de la maquette, puis à des lits fictifs selon le dossier 11-maquette-etablissement.
 
 Dans les données de monitorage chartées, les champs charttime et storetime sont distincts : l'heure associée à l'observation ne doit pas être confondue avec l'heure de son enregistrement [H110, H112]. Le mapping entre itemid et signification médicale doit passer par le dictionnaire officiel de la base ; si le code n'est pas mappé, le POC doit le laisser explicitement inconnu plutôt que deviner.
-
 ## 3. Fréquences réellement observées dans les bases
 
 Il n'existe pas de fréquence universelle à reprendre pour chaque appareil :
