@@ -41,7 +41,13 @@ Le sujet ne précise pas, à ce stade :
 
 Ces points sont des questions à instruire, pas des lacunes à combler arbitrairement.
 
-## 4. Trois interprétations à départager
+## 4. Périmètre sélectionné : monitorage hospitalier
+
+Le cadrage a été confirmé le 18 novembre 2026 : le projet porte sur le **monitorage hospitalier**. L'interprétation retenue est celle des patients pris en charge dans un établissement, avec des moniteurs au chevet, des centrales de surveillance, de la télémétrie hospitalière et des transferts entre unités selon les contextes retenus.
+
+La télésurveillance à domicile n'est pas le périmètre de référence. Le dossier spécialisé [monitorage-hospitalier](monitorage-hospitalier/README.md) devient la référence opérationnelle de l'analyse.
+
+Le choix du contexte hospitalier ne signifie pas que tous les services seront simulés. La sélection entre réanimation, bloc/SSPI, cardiologie/télémétrie, unités conventionnelles et urgences reste ouverte.
 
 ### A — Monitorage de patients hospitalisés
 
@@ -55,7 +61,7 @@ Le patient se trouve en dehors de l'établissement. Il transmet des mesures via 
 
 Le système couvre plusieurs lieux et modalités de collecte : établissement, domicile, appareils médicaux, saisie patient et passerelles. Il faut alors étudier les frontières de confiance, les différences de fréquence, l'identité des appareils, les droits d'accès et la continuité du suivi.
 
-**Aucune de ces interprétations n'est retenue dans cette version.** Le vocabulaire réglementaire français de « télésurveillance médicale » ne suffit pas à lui seul à déterminer le contexte opérationnel visé par le sujet. Voir les références [S08] et [S09].
+**Décision actuelle :** l'interprétation A est retenue comme périmètre général. Les interprétations B et C sont écartées du périmètre principal pour la suite de l'analyse. Certaines fonctions de télémétrie sans fil restent pertinentes car elles concernent des patients mobiles à l'intérieur de l'hôpital. Le vocabulaire réglementaire français de « télésurveillance médicale » ne doit pas être confondu avec la télémétrie hospitalière. Voir les références [S08] et [S09].
 
 ## 5. Pourquoi cette distinction est structurante
 
