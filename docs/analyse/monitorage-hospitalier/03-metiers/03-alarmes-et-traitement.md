@@ -39,7 +39,7 @@ La norme ne décide pas à elle seule :
 - quelle priorité clinique attribuer à chaque condition ;
 - par quel mécanisme technique le signal est généré.
 
-Ces points sont décrits dans le champ de la norme elle-même et dépendent des équipements et de leur destination [H28]. Les règles cliniques ne doivent donc pas être reconstituées arbitrairement dans un POC.
+Ces points sont décrits dans le champ de la norme elle-même et dépendent des équipements et de leur destination [H28]. Les règles cliniques ne doivent donc pas être reconstituées arbitrairement dans un projet.
 
 ## 4. Le report d'alarme dans un service de soins critiques
 
@@ -100,7 +100,7 @@ Ces résultats sont un état des lieux historique, pas une mesure du parc en 202
 - permettre la gestion de paramètres adaptée par personnel habilité ;
 - détecter l'indisponibilité du chemin d'alarme.
 
-## 9. Indicateurs observables à mesurer dans un POC
+## 9. Indicateurs observables à mesurer dans un projet
 
 Ces indicateurs sont techniques ou organisationnels ; ils ne mesurent pas une performance clinique.
 
