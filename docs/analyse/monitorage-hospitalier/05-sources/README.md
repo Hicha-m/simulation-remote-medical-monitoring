@@ -142,6 +142,10 @@ Ces pages établissent des fonctions ou capacités présentées par les fabrican
 | H95 | [ANSM — Gestion des alarmes des dispositifs médicaux, septembre 2019](https://ansm.sante.fr/uploads/2020/10/16/20201016-rapport-gestion-alarmes-dm.pdf) | Rapport institutionnel | Enquête française sur les pratiques, les systèmes de report et les difficultés de gestion des alarmes. |
 | H96 | [ANS — Programme CaRE, axe 4 Sécurité opérationnelle](https://esante.gouv.fr/produits-services/cybersecurite/programme-care/programme-care-axe-4-securite-operationnelle) | Programme national | Actions sur annuaires, exposition Internet, continuité/reprise et accès distants dans les établissements. |
 
+| H97 | [Directive (UE) 2022/2555 — NIS2](https://eur-lex.europa.eu/eli/dir/2022/2555) | Directive européenne | Obligations de cybersécurité pour certains secteurs essentiels et importants, dont la santé ; application nationale selon transposition et champ. |
+| H98 | [Assemblée nationale — adoption en première lecture du projet de loi de résilience, 17 novembre 2026](https://www.assemblee-nationale.fr/dyn/actualites-accueil-hub/adoption-du-projet-de-loi-relatif-a-la-resilience-des-infrastructures-critiques-et-au-renforcement-de-la-cybersecurite) | Actualité parlementaire officielle | Le projet de loi français de transposition NIS2 a été adopté en première lecture le 17/11/2026 ; il n'est pas encore promulgué à cette date. |
+| H99 | [Règlement (UE) 2024/2847 — Cyber Resilience Act, article 2 et dates d'application](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A02024R2847-20241120) | Règlement européen | Exigences de cybersécurité des produits numériques ; exclusion des produits déjà couverts par MDR/IVDR ; application générale en décembre 2027 et signalement à partir de septembre 2026. |
+
 ## 10. Précautions d'interprétation
 
 - Les spécifications fabricants sont des sources primaires pour comprendre leurs produits, mais restent des documents commerciaux ou de documentation produit.
