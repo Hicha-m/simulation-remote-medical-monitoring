@@ -28,10 +28,10 @@ Le planning de référence d'Intern comporte aussi un déploiement sur machines 
 | DEV — interface centrale | | | █ | █ | | | |
 | DEV — intégration et recette locale | | | ░ | █ | | | |
 | **Docker** — images, volumes, réseaux | | | | ░ | █ | | |
-| Docker — Compose, santé et installation | | | | ░ | █ | ░ | |
-| Docker — vérification et référence | | | | | ░ | █ | |
-| **Metrics** — instrumentation et plan de test | ░ | ░ | ░ | ░ | ░ | █ | |
-| Metrics — étalonnage et campagnes | | | | | | █ | █ |
+| Docker — Compose, santé et installation | | | | | █ | ░ | |
+| Docker — vérification et référence | | | | | | █ | |
+| Instrumentation élémentaire (préparée pendant DEV) | ░ | ░ | ░ | ░ | ░ | ░ | ░ |
+| **Metrics** — plan de test et étalonnage | | | | | | █ | ░ |\n| Metrics — campagnes et analyse | | | | | | ░ | █ |
 | Metrics — analyse et rapport | | | | | | ░ | █ |
 | **CI/CD** — tests et qualité à chaque PR | █ | █ | █ | █ | █ | █ | █ |
 | CI/CD — build images, scan et publication | | | | ░ | █ | █ | █ |
@@ -58,14 +58,14 @@ gantt
     Intégration et recette locale         :a6, 2026-12-14, 2026-12-20
 
     section Docker
-    Images et volumes                     :b1, 2026-12-18, 2026-12-23
-    Réseaux et Compose                    :b2, 2026-12-21, 2026-12-26
-    Vérification et installation          :b3, 2026-12-26, 2026-12-28
+    Images et volumes                     :b1, 2026-12-21, 3d
+    Réseaux et Compose                    :b2, 2026-12-24, 3d
+    Vérification et installation          :b3, 2026-12-27, 1d
 
     section Metrics
-    Plan de test et étalonnage            :c1, 2026-12-28, 2026-12-30
-    Campagnes de charge et de reprise     :c2, 2026-12-30, 2027-01-03
-    Analyse et rapport                    :c3, 2027-01-02, 2027-01-05
+    Plan de test et étalonnage            :c1, 2026-12-28, 2d
+    Campagnes de charge et de reprise     :c2, 2026-12-30, 4d
+    Analyse et rapport                    :c3, 2027-01-02, 3d
 
     section CI CD transversal
     CI tests et qualité                   :d1, 2026-11-18, 2027-01-08
