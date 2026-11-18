@@ -52,6 +52,9 @@ Ce dossier est volontairement découpé par thème. Chaque document traite un su
 3. Des systèmes commerciaux de surveillance centralisée existent chez plusieurs fabricants : Philips, GE HealthCare, Dräger et Mindray. Leurs fonctions et capacités annoncées ne sont pas identiques [H06–H09].
 4. La télémétrie hospitalière désigne notamment le suivi sans fil de patients mobiles, avec des mesures transmises vers une infrastructure centrale. Les pratiques d'organisation et de surveillance humaine varient selon les établissements [H10, H11].
 5. En unités conventionnelles, le monitorage continu portable constitue une évolution et/ou une modalité sélective ; il ne faut pas le confondre avec les contrôles intermittents habituels [H12, H13].
+6. L'enquête ANSM réalisée en 2017 auprès de 631 services a documenté les modes de report d'alarmes et leurs difficultés ; cette photographie est historique et ne doit pas être présentée comme une mesure de 2026 [H33].
+7. Des marchés publics français 2023–2029 détaillent les moniteurs, centrales, logiciels, alarmes, intégration, maintenance et formation recherchés par les établissements [H34–H37].
+8. Des retours d'expérience documentent un système BeneVision au CHU de Toulouse et un démonstrateur 5G à quatre lits de mannequins ; ces deux cas sont de nature différente et ne doivent pas être confondus avec une installation clinique standard [H38, H39].
 
 ## Règles de preuve
 
