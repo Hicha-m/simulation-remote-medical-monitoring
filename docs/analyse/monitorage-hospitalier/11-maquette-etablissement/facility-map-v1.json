@@ -1,0 +1,958 @@
+{
+  "schemaVersion": "1.0",
+  "facilityMapVersion": "1.0",
+  "facilityId": "HOSP-DEMO-01",
+  "displayName": "Hôpital de démonstration",
+  "disclaimer": "Maquette fictive de POC. Les bâtiments, étages, chambres, lits, positions et coordonnées ne représentent pas un établissement réel.",
+  "coordinateSystem": {
+    "type": "relative-floor-canvas",
+    "width": 1000,
+    "height": 600,
+    "unit": "arbitrary-pixel"
+  },
+  "buildings": [
+    {
+      "id": "BAT-A",
+      "name": "Bâtiment A — clinique principale",
+      "floorIds": [
+        "A-S1",
+        "A-RDC",
+        "A-R1",
+        "A-R2"
+      ]
+    },
+    {
+      "id": "BAT-B",
+      "name": "Bâtiment B — interventionnel et chirurgie",
+      "floorIds": [
+        "B-RDC",
+        "B-R1"
+      ]
+    },
+    {
+      "id": "EXT-ENERGIE",
+      "name": "Zone technique extérieure",
+      "floorIds": [
+        "EXT-01"
+      ]
+    }
+  ],
+  "floors": [
+    {
+      "id": "A-S1",
+      "buildingId": "BAT-A",
+      "label": "Sous-sol technique",
+      "levelOrder": -1
+    },
+    {
+      "id": "A-RDC",
+      "buildingId": "BAT-A",
+      "label": "Rez-de-chaussée",
+      "levelOrder": 0
+    },
+    {
+      "id": "A-R1",
+      "buildingId": "BAT-A",
+      "label": "R+1 — soins critiques",
+      "levelOrder": 1
+    },
+    {
+      "id": "A-R2",
+      "buildingId": "BAT-A",
+      "label": "R+2 — hospitalisation",
+      "levelOrder": 2
+    },
+    {
+      "id": "B-RDC",
+      "buildingId": "BAT-B",
+      "label": "Rez-de-chaussée — interventionnel",
+      "levelOrder": 0
+    },
+    {
+      "id": "B-R1",
+      "buildingId": "BAT-B",
+      "label": "R+1 — cardio-vasculaire",
+      "levelOrder": 1
+    },
+    {
+      "id": "EXT-01",
+      "buildingId": "EXT-ENERGIE",
+      "label": "Zone technique extérieure",
+      "levelOrder": 0
+    }
+  ],
+  "careServices": [
+    {
+      "id": "SERVICE-URG",
+      "name": "Urgences"
+    },
+    {
+      "id": "SERVICE-CRITIQUE",
+      "name": "Soins critiques adultes"
+    },
+    {
+      "id": "SERVICE-CARDIO",
+      "name": "Cardiologie"
+    },
+    {
+      "id": "SERVICE-MEDECINE",
+      "name": "Médecine / traumatologie"
+    },
+    {
+      "id": "SERVICE-ANESTH",
+      "name": "Anesthésie et secteur interventionnel"
+    },
+    {
+      "id": "SERVICE-CARDIOCHIR",
+      "name": "Cardio-vasculaire et chirurgie cardiaque"
+    }
+  ],
+  "zones": [
+    {
+      "id": "ZONE-IT",
+      "floorId": "A-S1",
+      "name": "Local informatique",
+      "zoneType": "technical",
+      "rect": {
+        "x": 80,
+        "y": 80,
+        "width": 330,
+        "height": 230
+      }
+    },
+    {
+      "id": "ZONE-ELEC",
+      "floorId": "A-S1",
+      "name": "Local électrique / UPS",
+      "zoneType": "technical",
+      "rect": {
+        "x": 520,
+        "y": 80,
+        "width": 330,
+        "height": 230
+      }
+    },
+    {
+      "id": "ZONE-URG",
+      "floorId": "A-RDC",
+      "name": "Urgences / SAUV",
+      "zoneType": "care",
+      "rect": {
+        "x": 80,
+        "y": 70,
+        "width": 420,
+        "height": 390
+      }
+    },
+    {
+      "id": "ZONE-IMG",
+      "floorId": "A-RDC",
+      "name": "Imagerie",
+      "zoneType": "diagnostic",
+      "rect": {
+        "x": 570,
+        "y": 70,
+        "width": 330,
+        "height": 250
+      }
+    },
+    {
+      "id": "ZONE-REA",
+      "floorId": "A-R1",
+      "name": "Réanimation adulte",
+      "zoneType": "care",
+      "rect": {
+        "x": 70,
+        "y": 70,
+        "width": 430,
+        "height": 400
+      }
+    },
+    {
+      "id": "ZONE-USC",
+      "floorId": "A-R1",
+      "name": "USC",
+      "zoneType": "care",
+      "rect": {
+        "x": 560,
+        "y": 70,
+        "width": 330,
+        "height": 300
+      }
+    },
+    {
+      "id": "ZONE-CARD",
+      "floorId": "A-R2",
+      "name": "Cardiologie hospitalisation",
+      "zoneType": "care",
+      "rect": {
+        "x": 70,
+        "y": 70,
+        "width": 400,
+        "height": 360
+      }
+    },
+    {
+      "id": "ZONE-MED-TR",
+      "floorId": "A-R2",
+      "name": "Médecine / traumatologie",
+      "zoneType": "care",
+      "rect": {
+        "x": 530,
+        "y": 70,
+        "width": 400,
+        "height": 360
+      }
+    },
+    {
+      "id": "ZONE-BLOC",
+      "floorId": "B-RDC",
+      "name": "Bloc opératoire",
+      "zoneType": "procedure",
+      "rect": {
+        "x": 70,
+        "y": 70,
+        "width": 420,
+        "height": 340
+      }
+    },
+    {
+      "id": "ZONE-SSPI",
+      "floorId": "B-RDC",
+      "name": "SSPI",
+      "zoneType": "care",
+      "rect": {
+        "x": 560,
+        "y": 70,
+        "width": 350,
+        "height": 300
+      }
+    },
+    {
+      "id": "ZONE-CVICU",
+      "floorId": "B-R1",
+      "name": "CVICU",
+      "zoneType": "care",
+      "rect": {
+        "x": 70,
+        "y": 70,
+        "width": 400,
+        "height": 360
+      }
+    },
+    {
+      "id": "ZONE-CHIR-CARD",
+      "floorId": "B-R1",
+      "name": "Chirurgie cardiaque",
+      "zoneType": "care",
+      "rect": {
+        "x": 530,
+        "y": 70,
+        "width": 400,
+        "height": 360
+      }
+    },
+    {
+      "id": "ZONE-GEN",
+      "floorId": "EXT-01",
+      "name": "Groupe électrogène",
+      "zoneType": "technical",
+      "rect": {
+        "x": 250,
+        "y": 150,
+        "width": 300,
+        "height": 220
+      }
+    }
+  ],
+  "careUnits": [
+    {
+      "id": "UNIT-URG",
+      "serviceId": "SERVICE-URG",
+      "name": "Urgences",
+      "zoneId": "ZONE-URG",
+      "bedPositionIds": [
+        "URG-BED-01",
+        "URG-BED-02",
+        "URG-BED-03",
+        "URG-BED-04",
+        "SAUV-BED-01",
+        "SAUV-BED-02"
+      ]
+    },
+    {
+      "id": "UNIT-REA-ADU",
+      "serviceId": "SERVICE-CRITIQUE",
+      "name": "Réanimation adulte polyvalente",
+      "zoneId": "ZONE-REA",
+      "profileId": "PROFILE-REA-ADULT",
+      "centralStationId": "CENTRAL-REA-01",
+      "bedPositionIds": [
+        "REA-BED-01",
+        "REA-BED-02",
+        "REA-BED-03",
+        "REA-BED-04",
+        "REA-BED-05",
+        "REA-BED-06"
+      ]
+    },
+    {
+      "id": "UNIT-USC",
+      "serviceId": "SERVICE-CRITIQUE",
+      "name": "Unité de soins continus",
+      "zoneId": "ZONE-USC",
+      "profileId": "PROFILE-USC-ADULT",
+      "centralStationId": "CENTRAL-USC-01",
+      "bedPositionIds": [
+        "USC-BED-01",
+        "USC-BED-02",
+        "USC-BED-03",
+        "USC-BED-04"
+      ]
+    },
+    {
+      "id": "UNIT-CARD-HOSP",
+      "serviceId": "SERVICE-CARDIO",
+      "name": "Cardiologie hospitalisation",
+      "zoneId": "ZONE-CARD",
+      "profileId": "PROFILE-CARDIO-WARD",
+      "centralStationId": "CENTRAL-CARD-01",
+      "bedPositionIds": [
+        "CARD-BED-01",
+        "CARD-BED-02",
+        "CARD-BED-03",
+        "CARD-BED-04"
+      ]
+    },
+    {
+      "id": "UNIT-MED-TRAUMA",
+      "serviceId": "SERVICE-MEDECINE",
+      "name": "Médecine / traumatologie",
+      "zoneId": "ZONE-MED-TR",
+      "profileId": "PROFILE-GENERAL-WARD",
+      "bedPositionIds": [
+        "MED-TR-BED-01",
+        "MED-TR-BED-02",
+        "MED-TR-BED-03",
+        "MED-TR-BED-04",
+        "MED-TR-BED-05",
+        "MED-TR-BED-06"
+      ]
+    },
+    {
+      "id": "UNIT-BLOC",
+      "serviceId": "SERVICE-ANESTH",
+      "name": "Bloc opératoire",
+      "zoneId": "ZONE-BLOC",
+      "positionIds": [
+        "OR-TABLE-01",
+        "OR-TABLE-02"
+      ]
+    },
+    {
+      "id": "UNIT-SSPI",
+      "serviceId": "SERVICE-ANESTH",
+      "name": "SSPI",
+      "zoneId": "ZONE-SSPI",
+      "profileId": "PROFILE-SSPI-ADULT",
+      "centralStationId": "CENTRAL-SSPI-01",
+      "bedPositionIds": [
+        "SSPI-BED-01",
+        "SSPI-BED-02",
+        "SSPI-BED-03",
+        "SSPI-BED-04"
+      ]
+    },
+    {
+      "id": "UNIT-CVICU",
+      "serviceId": "SERVICE-CARDIOCHIR",
+      "name": "Soins intensifs cardio-vasculaires",
+      "zoneId": "ZONE-CVICU",
+      "profileId": "PROFILE-CVICU",
+      "centralStationId": "CENTRAL-CVICU-01",
+      "bedPositionIds": [
+        "CVICU-BED-01",
+        "CVICU-BED-02",
+        "CVICU-BED-03",
+        "CVICU-BED-04"
+      ]
+    },
+    {
+      "id": "UNIT-CHIR-CARD",
+      "serviceId": "SERVICE-CARDIOCHIR",
+      "name": "Chirurgie cardiaque",
+      "zoneId": "ZONE-CHIR-CARD",
+      "profileId": "PROFILE-CARDIAC-SURGERY",
+      "bedPositionIds": [
+        "CHIR-CARD-BED-01",
+        "CHIR-CARD-BED-02",
+        "CHIR-CARD-BED-03",
+        "CHIR-CARD-BED-04"
+      ]
+    }
+  ],
+  "rooms": [
+    {
+      "id": "URG-BOX-01",
+      "unitId": "UNIT-URG",
+      "zoneId": "ZONE-URG",
+      "name": "Box urgence 01",
+      "positions": [
+        {
+          "id": "URG-BED-01",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "URG-BOX-02",
+      "unitId": "UNIT-URG",
+      "zoneId": "ZONE-URG",
+      "name": "Box urgence 02",
+      "positions": [
+        {
+          "id": "URG-BED-02",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "URG-BOX-03",
+      "unitId": "UNIT-URG",
+      "zoneId": "ZONE-URG",
+      "name": "Box urgence 03",
+      "positions": [
+        {
+          "id": "URG-BED-03",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "URG-BOX-04",
+      "unitId": "UNIT-URG",
+      "zoneId": "ZONE-URG",
+      "name": "Box urgence 04",
+      "positions": [
+        {
+          "id": "URG-BED-04",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "URG-SAUV-01",
+      "unitId": "UNIT-URG",
+      "zoneId": "ZONE-URG",
+      "name": "Poste SAUV 01",
+      "positions": [
+        {
+          "id": "SAUV-BED-01",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "URG-SAUV-02",
+      "unitId": "UNIT-URG",
+      "zoneId": "ZONE-URG",
+      "name": "Poste SAUV 02",
+      "positions": [
+        {
+          "id": "SAUV-BED-02",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "REA-CH-01",
+      "unitId": "UNIT-REA-ADU",
+      "zoneId": "ZONE-REA",
+      "name": "Chambre réanimation 01",
+      "positions": [
+        {
+          "id": "REA-BED-01",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "REA-CH-02",
+      "unitId": "UNIT-REA-ADU",
+      "zoneId": "ZONE-REA",
+      "name": "Chambre réanimation 02",
+      "positions": [
+        {
+          "id": "REA-BED-02",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "REA-CH-03",
+      "unitId": "UNIT-REA-ADU",
+      "zoneId": "ZONE-REA",
+      "name": "Chambre réanimation 03",
+      "positions": [
+        {
+          "id": "REA-BED-03",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "REA-CH-04",
+      "unitId": "UNIT-REA-ADU",
+      "zoneId": "ZONE-REA",
+      "name": "Chambre réanimation 04",
+      "positions": [
+        {
+          "id": "REA-BED-04",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "REA-CH-05",
+      "unitId": "UNIT-REA-ADU",
+      "zoneId": "ZONE-REA",
+      "name": "Chambre réanimation 05",
+      "positions": [
+        {
+          "id": "REA-BED-05",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "REA-CH-06",
+      "unitId": "UNIT-REA-ADU",
+      "zoneId": "ZONE-REA",
+      "name": "Chambre réanimation 06",
+      "positions": [
+        {
+          "id": "REA-BED-06",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "USC-CH-01",
+      "unitId": "UNIT-USC",
+      "zoneId": "ZONE-USC",
+      "name": "Chambre USC 01",
+      "positions": [
+        {
+          "id": "USC-BED-01",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "USC-CH-02",
+      "unitId": "UNIT-USC",
+      "zoneId": "ZONE-USC",
+      "name": "Chambre USC 02",
+      "positions": [
+        {
+          "id": "USC-BED-02",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "USC-CH-03",
+      "unitId": "UNIT-USC",
+      "zoneId": "ZONE-USC",
+      "name": "Chambre USC 03",
+      "positions": [
+        {
+          "id": "USC-BED-03",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "USC-CH-04",
+      "unitId": "UNIT-USC",
+      "zoneId": "ZONE-USC",
+      "name": "Chambre USC 04",
+      "positions": [
+        {
+          "id": "USC-BED-04",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "CARD-CH-01",
+      "unitId": "UNIT-CARD-HOSP",
+      "zoneId": "ZONE-CARD",
+      "name": "Chambre cardiologie 01",
+      "positions": [
+        {
+          "id": "CARD-BED-01",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "CARD-CH-02",
+      "unitId": "UNIT-CARD-HOSP",
+      "zoneId": "ZONE-CARD",
+      "name": "Chambre cardiologie 02",
+      "positions": [
+        {
+          "id": "CARD-BED-02",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "CARD-CH-03",
+      "unitId": "UNIT-CARD-HOSP",
+      "zoneId": "ZONE-CARD",
+      "name": "Chambre cardiologie 03",
+      "positions": [
+        {
+          "id": "CARD-BED-03",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "CARD-CH-04",
+      "unitId": "UNIT-CARD-HOSP",
+      "zoneId": "ZONE-CARD",
+      "name": "Chambre cardiologie 04",
+      "positions": [
+        {
+          "id": "CARD-BED-04",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "MED-TR-CH-01",
+      "unitId": "UNIT-MED-TRAUMA",
+      "zoneId": "ZONE-MED-TR",
+      "name": "Chambre médecine / traumatologie 01",
+      "positions": [
+        {
+          "id": "MED-TR-BED-01",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "MED-TR-CH-02",
+      "unitId": "UNIT-MED-TRAUMA",
+      "zoneId": "ZONE-MED-TR",
+      "name": "Chambre médecine / traumatologie 02",
+      "positions": [
+        {
+          "id": "MED-TR-BED-02",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "MED-TR-CH-03",
+      "unitId": "UNIT-MED-TRAUMA",
+      "zoneId": "ZONE-MED-TR",
+      "name": "Chambre médecine / traumatologie 03",
+      "positions": [
+        {
+          "id": "MED-TR-BED-03",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "MED-TR-CH-04",
+      "unitId": "UNIT-MED-TRAUMA",
+      "zoneId": "ZONE-MED-TR",
+      "name": "Chambre médecine / traumatologie 04",
+      "positions": [
+        {
+          "id": "MED-TR-BED-04",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "MED-TR-CH-05",
+      "unitId": "UNIT-MED-TRAUMA",
+      "zoneId": "ZONE-MED-TR",
+      "name": "Chambre médecine / traumatologie 05",
+      "positions": [
+        {
+          "id": "MED-TR-BED-05",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "MED-TR-CH-06",
+      "unitId": "UNIT-MED-TRAUMA",
+      "zoneId": "ZONE-MED-TR",
+      "name": "Chambre médecine / traumatologie 06",
+      "positions": [
+        {
+          "id": "MED-TR-BED-06",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "OR-01",
+      "unitId": "UNIT-BLOC",
+      "zoneId": "ZONE-BLOC",
+      "name": "Salle opératoire 01",
+      "positions": [
+        {
+          "id": "OR-TABLE-01",
+          "positionType": "operating_table"
+        }
+      ]
+    },
+    {
+      "id": "OR-02",
+      "unitId": "UNIT-BLOC",
+      "zoneId": "ZONE-BLOC",
+      "name": "Salle opératoire 02",
+      "positions": [
+        {
+          "id": "OR-TABLE-02",
+          "positionType": "operating_table"
+        }
+      ]
+    },
+    {
+      "id": "SSPI-POST-01",
+      "unitId": "UNIT-SSPI",
+      "zoneId": "ZONE-SSPI",
+      "name": "Poste SSPI 01",
+      "positions": [
+        {
+          "id": "SSPI-BED-01",
+          "positionType": "recovery_position"
+        }
+      ]
+    },
+    {
+      "id": "SSPI-POST-02",
+      "unitId": "UNIT-SSPI",
+      "zoneId": "ZONE-SSPI",
+      "name": "Poste SSPI 02",
+      "positions": [
+        {
+          "id": "SSPI-BED-02",
+          "positionType": "recovery_position"
+        }
+      ]
+    },
+    {
+      "id": "SSPI-POST-03",
+      "unitId": "UNIT-SSPI",
+      "zoneId": "ZONE-SSPI",
+      "name": "Poste SSPI 03",
+      "positions": [
+        {
+          "id": "SSPI-BED-03",
+          "positionType": "recovery_position"
+        }
+      ]
+    },
+    {
+      "id": "SSPI-POST-04",
+      "unitId": "UNIT-SSPI",
+      "zoneId": "ZONE-SSPI",
+      "name": "Poste SSPI 04",
+      "positions": [
+        {
+          "id": "SSPI-BED-04",
+          "positionType": "recovery_position"
+        }
+      ]
+    },
+    {
+      "id": "CVICU-CH-01",
+      "unitId": "UNIT-CVICU",
+      "zoneId": "ZONE-CVICU",
+      "name": "Chambre CVICU 01",
+      "positions": [
+        {
+          "id": "CVICU-BED-01",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "CVICU-CH-02",
+      "unitId": "UNIT-CVICU",
+      "zoneId": "ZONE-CVICU",
+      "name": "Chambre CVICU 02",
+      "positions": [
+        {
+          "id": "CVICU-BED-02",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "CVICU-CH-03",
+      "unitId": "UNIT-CVICU",
+      "zoneId": "ZONE-CVICU",
+      "name": "Chambre CVICU 03",
+      "positions": [
+        {
+          "id": "CVICU-BED-03",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "CVICU-CH-04",
+      "unitId": "UNIT-CVICU",
+      "zoneId": "ZONE-CVICU",
+      "name": "Chambre CVICU 04",
+      "positions": [
+        {
+          "id": "CVICU-BED-04",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "CHIR-CARD-CH-01",
+      "unitId": "UNIT-CHIR-CARD",
+      "zoneId": "ZONE-CHIR-CARD",
+      "name": "Chambre chirurgie cardiaque 01",
+      "positions": [
+        {
+          "id": "CHIR-CARD-BED-01",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "CHIR-CARD-CH-02",
+      "unitId": "UNIT-CHIR-CARD",
+      "zoneId": "ZONE-CHIR-CARD",
+      "name": "Chambre chirurgie cardiaque 02",
+      "positions": [
+        {
+          "id": "CHIR-CARD-BED-02",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "CHIR-CARD-CH-03",
+      "unitId": "UNIT-CHIR-CARD",
+      "zoneId": "ZONE-CHIR-CARD",
+      "name": "Chambre chirurgie cardiaque 03",
+      "positions": [
+        {
+          "id": "CHIR-CARD-BED-03",
+          "positionType": "patient_bed"
+        }
+      ]
+    },
+    {
+      "id": "CHIR-CARD-CH-04",
+      "unitId": "UNIT-CHIR-CARD",
+      "zoneId": "ZONE-CHIR-CARD",
+      "name": "Chambre chirurgie cardiaque 04",
+      "positions": [
+        {
+          "id": "CHIR-CARD-BED-04",
+          "positionType": "patient_bed"
+        }
+      ]
+    }
+  ],
+  "infrastructureNodes": [
+    {
+      "id": "CENTRAL-REA-01",
+      "type": "central_monitoring_station",
+      "zoneId": "ZONE-REA",
+      "networkDomain": "NET-CLINICAL-A",
+      "powerDomain": "PWR-REA"
+    },
+    {
+      "id": "CENTRAL-USC-01",
+      "type": "central_monitoring_station",
+      "zoneId": "ZONE-USC",
+      "networkDomain": "NET-CLINICAL-A",
+      "powerDomain": "PWR-USC"
+    },
+    {
+      "id": "CENTRAL-CARD-01",
+      "type": "telemetry_central",
+      "zoneId": "ZONE-CARD",
+      "networkDomain": "NET-CLINICAL-A",
+      "powerDomain": "PWR-CARD"
+    },
+    {
+      "id": "CENTRAL-CVICU-01",
+      "type": "central_monitoring_station",
+      "zoneId": "ZONE-CVICU",
+      "networkDomain": "NET-CLINICAL-B",
+      "powerDomain": "PWR-CVICU"
+    },
+    {
+      "id": "CENTRAL-SSPI-01",
+      "type": "central_monitoring_station",
+      "zoneId": "ZONE-SSPI",
+      "networkDomain": "NET-CLINICAL-B",
+      "powerDomain": "PWR-SSPI"
+    },
+    {
+      "id": "NET-A-DIST-01",
+      "type": "network_switch",
+      "zoneId": "ZONE-IT",
+      "networkDomain": "NET-CLINICAL-A",
+      "powerDomain": "PWR-IT"
+    },
+    {
+      "id": "NET-B-DIST-01",
+      "type": "network_switch",
+      "zoneId": "ZONE-CVICU",
+      "networkDomain": "NET-CLINICAL-B",
+      "powerDomain": "PWR-CVICU"
+    },
+    {
+      "id": "NET-CORE-01",
+      "type": "network_core",
+      "zoneId": "ZONE-IT",
+      "networkDomain": "NET-CORE",
+      "powerDomain": "PWR-IT"
+    },
+    {
+      "id": "SRV-POC-01",
+      "type": "simulation_server",
+      "zoneId": "ZONE-IT",
+      "networkDomain": "NET-CORE",
+      "powerDomain": "PWR-IT"
+    },
+    {
+      "id": "UPS-IT-01",
+      "type": "ups",
+      "zoneId": "ZONE-ELEC",
+      "powerDomain": "PWR-IT"
+    },
+    {
+      "id": "GEN-01",
+      "type": "generator",
+      "zoneId": "ZONE-GEN",
+      "powerDomain": "PWR-BACKUP"
+    }
+  ],
+  "notes": [
+    "Capacities and physical layout are fictional POC choices, not clinical or regulatory reference values.",
+    "CareUnit and room mappings are separate from source dataset labels.",
+    "All current device assignments are expected to be generated by scenarios, not permanently embedded in the map."
+  ]
+}
