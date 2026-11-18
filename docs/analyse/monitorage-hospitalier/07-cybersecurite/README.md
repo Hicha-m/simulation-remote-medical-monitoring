@@ -28,3 +28,6 @@
 - PGSSI-S : référentiels et guides de sécurité des systèmes d'information de santé [H48].
 - Observatoire CERT Santé : données annuelles sur les incidents déclarés et retours d'expérience [H51].
 - Guides et alertes du CERT Santé : confinement, analyse, correction et surveillance [H49–H51].
+
+
+Les cadres de sécurité applicables et recommandations françaises sont regroupés dans le [registre Normes et réglementation](../09-normes-et-recommandations/01-registre-normes-et-reglementation.md) et les [recommandations](../09-normes-et-recommandations/02-recommandations.md).
