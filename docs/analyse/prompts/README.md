@@ -13,6 +13,8 @@ Ce dossier conserve les prompts de travail qui ont servi ou pourront servir à p
 | [02 — Benchmark open source et marché](02-benchmark-open-source-marche.md) | Identifier projets existants, produits, standards et limites. |
 | [03 — Construire les scénarios](03-scenarios-et-cas-limites.md) | Construire des parcours et cas limites sans inventer de règle clinique. |
 | [04 — Vérifier les affirmations](04-audit-des-sources.md) | Auditer les sources, les affirmations et les incertitudes. |
+| [05 — Architecture technique](05-architecture-technique-systemes-hospitaliers.md) | Reconstituer les technologies et architectures des systèmes de monitorage. |
+| [06 — Cybersécurité](06-cybersecurite-dispositifs-medicaux-hopitaux.md) | Rechercher les protections, vulnérabilités, attaques et mesures défensives. |
 
 ## Règles d'utilisation
 
