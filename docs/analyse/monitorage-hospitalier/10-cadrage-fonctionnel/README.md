@@ -31,7 +31,7 @@ La maquette physique et la correspondance entre les parcours réels MIMIC-IV et 
 ## Principes de prudence
 
 - Les personas sont fictifs et composites ; ils ne reproduisent pas un dossier réel.
-- Les données doivent être synthétiques dans le POC.
-- Les seuils, alarmes et conduites à tenir médicales ne sont pas définis ici.
+- Les scénarios de démonstration doivent utiliser des données synthétiques ou des données publiques dé-identifiées autorisées, en conservant leur provenance.
+- Les seuils, alarmes et conduites à tenir médicales ne sont pas validés ici et doivent provenir de sources documentées ou d'une validation professionnelle.
 - Une fonction décrite par un fabricant n'est pas nécessairement déployée dans tous les hôpitaux.
-- Un flux simulé n'est pas un dispositif de surveillance clinique et ne doit jamais être connecté à un patient réel.
+- Le logiciel décrit ici ne doit pas être considéré comme un dispositif clinique validé ni être connecté à un patient réel sans autorisations et validations préalables.
