@@ -1,7 +1,7 @@
 # Points critiques, stratégie de test et critères d'acceptation
 
-**Date :** 18 novembre 2026  
-**Statut :** critères fonctionnels proposés pour le POC ; les seuils de performance et règles cliniques restent à valider.
+**Date de mise à jour :** 25 novembre 2026  
+**Statut :** critères d'acceptation de la première version du système ; les seuils de performance et règles cliniques restent à valider. La priorisation F-01 à F-22 est consignée dans le cahier de décisions.
 
 ## 1. Quels sont les points critiques du système ?
 
@@ -21,7 +21,7 @@ Les points critiques sont les suivants :
 
 La HAS cite des défauts de surveillance associés à des moniteurs mal configurés, des alarmes techniques mal interprétées, une organisation insuffisante et des difficultés de report [H02]. L'ANSM insiste sur le déclenchement, la transmission au bon opérateur et la réponse adaptée aux alarmes [H95].
 
-## 2. Priorisation des risques pour le POC
+## 2. Priorisation des risques pour la première version
 
 | Priorité | Risque | Conséquence simulée | Principe de maîtrise |
 |---|---|---|---|
@@ -117,7 +117,7 @@ Les résultats devront préciser la machine, la configuration, le nombre de pati
 
 ## 6. Ce qui doit rester hors de l'acceptation clinique
 
-Le POC ne doit pas être évalué sur sa capacité à diagnostiquer, prédire ou recommander un traitement. Les critères portent sur :
+La première version ne doit pas être évalué sur sa capacité à diagnostiquer, prédire ou recommander un traitement. Les critères portent sur :
 
 - la bonne réception et association des données synthétiques ;
 - leur intégrité, leur fraîcheur et leur persistance ;
@@ -128,9 +128,9 @@ Le POC ne doit pas être évalué sur sa capacité à diagnostiquer, prédire ou
 
 Les seuils physiologiques et les priorités médicales devront être issus d'un protocole validé par des professionnels si le projet les inclut ultérieurement.
 
-## 7. Critère global de réussite du POC
+## 7. Critère global de réussite de la première version
 
-Le POC sera convaincant lorsqu'il pourra jouer un parcours patient complet avec plusieurs appareils et plusieurs patients, recevoir des données à intervalles configurés, gérer une alarme et un transfert, faire apparaître une coupure technique, reprendre sans corrompre l'historique et démontrer qu'aucune donnée n'est attribuée au mauvais patient.
+La première version sera convaincant lorsqu'il pourra jouer un parcours patient complet avec plusieurs appareils et plusieurs patients, recevoir des données à intervalles configurés, gérer une alarme et un transfert, faire apparaître une coupure technique, reprendre sans corrompre l'historique et démontrer qu'aucune donnée n'est attribuée au mauvais patient.
 
 La réussite ne se mesure donc pas au nombre de courbes affichées, mais à la fiabilité de toute la chaîne.
 
@@ -139,4 +139,4 @@ La réussite ne se mesure donc pas au nombre de courbes affichées, mais à la f
 - [H02] HAS — surveillance des patients en soins critiques, 2024.
 - [H95] ANSM — gestion des alarmes des dispositifs médicaux, 2019.
 - [H106] SFAR — surveillance des patients pendant le transport intrahospitalier.
-- [H73–H77] Références ISO/IEC sur gestion des risques, logiciels, réseaux et cybersécurité, pour orienter la démarche sans prétendre à une certification du POC.
+- [H73–H77] Références ISO/IEC sur gestion des risques, logiciels, réseaux et cybersécurité, pour orienter la démarche sans prétendre à une certification de la première version.
