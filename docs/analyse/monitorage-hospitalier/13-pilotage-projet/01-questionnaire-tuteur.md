@@ -132,6 +132,16 @@ L'organisation cible comporte des centrales locales par service et une supervisi
 
 Cette exigence décrit le comportement logique attendu ; elle ne présume pas encore du choix monolithe, SOA ou microservices, ni du nombre de serveurs physiques. L'architecture et les frontières réseau restent à étudier.
 
+**Scénario de validation réseau associé :**
+
+1. Plusieurs moniteurs simulés envoient simultanément les mesures de leurs patients.
+2. Les centrales locales reçoivent et affichent les données correspondant à leurs services.
+3. La supervision transversale reçoit les informations des deux services simulés.
+4. Une connexion réseau entre composants est interrompue ; l'incident et l'état dégradé deviennent visibles.
+5. La connexion est rétablie ; les transmissions reprennent, l'interruption reste traçable dans l'historique et aucune mesure ne se retrouve attribuée au mauvais patient.
+
+Ce scénario doit devenir un test d'intégration reproductible. Il reste à définir si le deuxième service est entièrement développé ou représenté par une centrale secondaire minimale dans la première version ; le périmètre clinique complet initial reste la réanimation adulte.
+
 ## 2. Fonctionnalités attendues — comportements du système
 
 > Ici, « fonctionnalité » signifie une action ou un comportement que le logiciel doit offrir à ses utilisateurs. Cela ne désigne pas une technologie, un framework ou un langage.
