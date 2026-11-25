@@ -1,6 +1,6 @@
 # 04 — Stratégies et arbitrages critiques
 
-**Version :** 1.0 — **Date :** 18 novembre 2026  
+**Version :** 1.1 — **Date :** 25 novembre 2026  
 **Objectif :** lister les décisions qui peuvent modifier profondément la direction du projet et imposer une méthode mesurable pour les trancher.
 
 ## 1. Principe d'arbitrage
@@ -26,7 +26,7 @@ Une option qui échoue à un critère bloquant de sûreté ou d'intégrité ne d
 | DEC-01 | Périmètre des services | Un service complet | Deux ou trois services reliés | Plusieurs services de l'établissement | Profils médicaux, modèle d'organisation, nombre de centrales, charge, workflows |
 | DEC-02 | Nature des données | Valeurs numériques | Valeurs + quelques courbes | Flux multiparamétriques haute résolution | Réseau, stockage, rendu, synchronisation, charge et compétences requises |
 | DEC-03 | Source des données | Synthétiques | Datasets réels rejoués | Hybride réel + scénarios synthétiques | Fidélité, droits d'accès, variabilité, reproductibilité, scénarios de panne |
-| DEC-04 | Langages | Java partout | Java backend + autre UI/outils | Stack libre multi-langages | Compétences, intégration, maintenance, déploiement, performance |
+| DEC-04 | Répartition des langages | Java partout | Réseau Java + backend/UI dans un autre langage | Réseau Java + architecture multi-langages | Compétences, intégration, contrats inter-langages, maintenance, déploiement et performance |
 | DEC-05 | Architecture logicielle | Monolithe modulaire | Services séparés | Architecture distribuée événementielle | Déploiement, complexité réseau, robustesse, intégration |
 | DEC-06 | Interface | Desktop | Web | Hybride / plusieurs clients | Accessibilité, distribution, multi-postes, latence d'affichage |
 | DEC-07 | Communication | TCP/WebSocket direct | Broker MQTT/AMQP | gRPC / flux spécialisés | Latence, débit, garantie de livraison, reprise, observabilité |
@@ -57,7 +57,7 @@ Ces options ne sont pas toutes mutuellement exclusives. La décision doit être 
 | Maintenabilité | Couplage et changements | Nombre de modules touchés pour une évolution et temps de changement |
 | Fiabilité métier | Résultat des scénarios P0 | Tests réussis / tests P0, avec liste des échecs |
 
-Les valeurs cibles ne sont pas inventées dans ce document. Elles seront fixées après les réponses du tuteur et une mesure de référence.
+Les valeurs cibles ne sont pas inventées dans ce document. Elles seront proposées par l'équipe, justifiées par les besoins, puis confrontées à une mesure de référence.
 
 ## 4. Arbitrages de direction détaillés
 
@@ -102,17 +102,18 @@ Les valeurs cibles ne sont pas inventées dans ce document. Elles seront fixées
 
 **Bascule :** si un dataset ne permet pas de créer une condition précise ou si ses conditions de réutilisation ne conviennent pas, le garder comme source de référence et créer un scénario synthétique clairement identifié. Ne jamais modifier la source réelle sans conserver la version originale.
 
-### DEC-04 — Java partout ou architecture multi-langages ?
+### DEC-04 — Programmation réseau Java et liberté technologique du reste
 
 **Options :**
-- A : Java pour serveur, simulateurs et interface JavaFX.
-- B : Java pour serveur et simulateurs, interface web TypeScript.
-- C : Java serveur, outils de rejeu/traitement Python, interface web.
-- D : autre stack autorisée par le tuteur (Kotlin/JVM, C#/.NET, Python, TypeScript/Node, etc.).
+Contrainte non négociable : la programmation réseau est réalisée en Java. Les choix suivants concernent le reste de l'application :
+- A : Java pour la majorité des composants, y compris backend et interface JavaFX.
+- B : composant réseau Java, backend métier Java, interface web TypeScript.
+- C : composant réseau Java, backend métier dans un autre langage, outils de rejeu/traitement Python, interface web.
+- D : architecture multi-langages, avec contrats/API documentés autour du composant réseau Java.
 
 **Essai :** réaliser le même vertical slice minimal : un client émet une mesure, serveur reçoit et persiste, UI affiche.
 
-**Métriques :** délai de développement, latence p95, débit, consommation, simplicité de déploiement, couverture de tests, intégration entre langages et facilité de reprise par les quatre membres.
+**Métriques :** délai de développement, latence p95, débit, consommation, simplicité de déploiement, couverture de tests, intégration entre langages et facilité de reprise par les trois membres.
 
 **Bascule :** une stack plus rapide à prototyper n'est pas forcément meilleure si elle complique les tests ou la livraison. Une contrainte académique de Java prévaut sur le benchmark.
 
@@ -244,7 +245,7 @@ L'équipe et le tuteur fixent les poids avant le comparatif.
 | Intégrité et sûreté | | | | | |
 | Latence / débit | | | | | |
 | Fiabilité / reprise | | | | | |
-| Facilité d'intégration à quatre | | | | | |
+| Facilité d'intégration à trois | | | | | |
 | Simplicité de déploiement | | | | | |
 | Maintenabilité / évolution | | | | | |
 | Coût de réalisation dans le délai | | | | | |
