@@ -30,7 +30,7 @@ La référence Intern comporte aussi une phase de déploiement sur machines virt
 | **Metrics** | 29 décembre 2026 – 4 janvier 2027 | Instrumentation, étalonnage, campagnes de charge/reprise et analyse |
 | **Stabilisation / livraison** | 5 – 8 janvier 2027 | Corrections critiques, documentation, répétition de démonstration et livraison |
 
-Ces dates constituent un calendrier cible resserré pour trois personnes. Elles devront être réévaluées après saisie des disponibilités, notamment pendant les fêtes. La réduction de l'équipe de quatre à trois ne justifie pas de retirer les étapes d'intégration ou de test ; elle oblige à limiter le périmètre et à éviter le travail en silos.
+Ces dates constituent un calendrier cible resserré pour trois personnes. Elles devront être réévaluées après saisie des disponibilités, notamment pendant les fêtes. Avec trois personnes, il faut limiter le périmètre initial et éviter le travail en silos, sans retirer les étapes d'intégration ou de test.
 
 ## 3. Gantt macro
 
