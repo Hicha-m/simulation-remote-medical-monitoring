@@ -1,6 +1,6 @@
 # 01 — Cahier de décisions et questions de cadrage
 
-**Version :** 1.1 — **Date de mise à jour :** 25 novembre 2026  
+**Version :** 1.2 — **Date de mise à jour :** 25 novembre 2026  
 **Objet :** guider les choix de conception de l'équipe et consigner les validations utiles.  
 **Contexte confirmé :** système de monitorage hospitalier reliant des moniteurs de chevet à une ou plusieurs centrales de surveillance.
 
@@ -10,7 +10,7 @@
 - **La partie programmation réseau doit être réalisée en Java.** Cette contrainte ne signifie pas que toute l'application doit être écrite en Java.
 - Les choix restant dans ce document sont donc d'abord des décisions à prendre par Hicham, Omar et Nawfel. Ils peuvent ensuite être présentés au tuteur pour validation ou avis, sans lui demander de choisir à la place de l'équipe.
 
-> Consigne d'utilisation : Hicham souhaite répondre lui-même aux questions de conception. Les champs « Réponse / décision de l'équipe » sont donc laissés vierges. Les questions cliniques ou réglementaires qui dépassent les connaissances de l'équipe devront être documentées et, si nécessaire, soumises à un professionnel compétent.
+> Consigne d'utilisation : Hicham répond progressivement aux questions de conception. Les réponses déjà communiquées sont enregistrées ci-dessous ; les questions qui n'ont pas encore reçu de réponse restent ouvertes. Les recommandations présentées comme telles ne deviennent pas des décisions tant que Hicham ne les a pas explicitement retenues. Les questions cliniques ou réglementaires qui dépassent les connaissances de l'équipe devront être documentées et, si nécessaire, soumises à un professionnel compétent.
 
 ## Statut de ce cahier : baseline initiale évolutive
 
@@ -148,30 +148,30 @@ Ce scénario doit devenir un test d'intégration reproductible. Il reste à déf
 
 Pour chaque ligne, demander : **obligatoire**, **souhaitée** ou **hors périmètre**, puis préciser les critères de réussite.
 
-| ID | Fonctionnalité concrète à valider | Obligatoire / souhaitée / exclue | Précisions / justification de l'équipe |
+| ID | Fonctionnalité | Priorité provisoire | Précisions / critères de réussite |
 |---|---|---|---|
-| F-01 | Créer et clôturer un séjour patient | | |
-| F-02 | Affecter un patient à un service, une chambre et un lit | | |
-| F-03 | Associer/dissocier un moniteur à un patient et à une session de surveillance | | |
-| F-04 | Gérer l'inventaire et l'état de connexion des moniteurs | | |
-| F-05 | Recevoir automatiquement les mesures des moniteurs | | |
-| F-06 | Afficher les valeurs numériques en temps réel | | |
-| F-07 | Afficher les courbes ECG, PPG, pression, respiration ou CO₂ | | |
-| F-08 | Afficher les tendances et l'historique d'un patient | | |
-| F-09 | Détecter et afficher les alarmes physiologiques | | |
-| F-10 | Détecter et afficher les alarmes techniques des appareils | | |
-| F-11 | Reporter une alarme vers une centrale et/ou un terminal | | |
-| F-12 | Acquitter une alarme sans la clôturer automatiquement | | |
-| F-13 | Gérer le silence temporaire, la pause et la réactivation d'une alarme | | |
-| F-14 | Escalader une alarme non prise en compte | | |
-| F-15 | Gérer les affectations des soignants et la relève | | |
-| F-16 | Transférer un patient et sa surveillance entre services | | |
-| F-17 | Gérer les états dégradés : capteur, moniteur, réseau, centrale, serveur | | |
-| F-18 | Conserver l'historique et les traces d'audit | | |
-| F-19 | Gérer les comptes, rôles et droits utilisateurs | | |
-| F-20 | Rejouer un scénario médical ou une trace de données | | |
-| F-21 | Exporter un historique ou un rapport | | |
-| F-22 | Administrer les profils de paramètres, alarmes et appareils | | |
+| **F-01** | Créer et clôturer un séjour patient | **Obligatoire** | Créer un séjour avec un identifiant patient, une date d'admission et un état. La clôture du séjour ne supprime pas son historique. |
+| **F-02** | Affecter un patient à un service, une chambre et un lit | **Obligatoire** | Gérer l'affectation du patient à un service, une chambre et un lit. Empêcher les affectations incompatibles, notamment deux patients présents simultanément sur le même lit. |
+| **F-03** | Associer/dissocier un moniteur à un patient et à une session de surveillance | **Obligatoire** | Associer un moniteur à un patient et à une session de monitorage. Pouvoir le dissocier ou le réaffecter sans perdre les mesures antérieures ni l'historique de l'association. |
+| **F-04** | Identifier les moniteurs et afficher leur état | **Obligatoire** | Identifier chaque moniteur et afficher un état explicite : disponible, associé, connecté, déconnecté ou en panne. |
+| **F-05** | Recevoir automatiquement les mesures des moniteurs | **Obligatoire** | Recevoir sur le réseau les mesures émises par les moniteurs simulés, sans import manuel. Identifier l'appareil source, le patient/session auxquels elles sont rattachées et leur horodatage. |
+| **F-06** | Afficher les valeurs numériques en temps réel | **Obligatoire** | Afficher les constantes numériques sans actualisation manuelle. Indiquer la date/heure de dernière réception et permettre de suivre leur évolution. |
+| **F-07** | Afficher les courbes physiologiques | **Souhaitée** | Prévoir l'affichage de courbes. Commencer éventuellement par l'ECG ; ajouter PPG, pression, respiration ou CO₂ selon le temps et les équipements simulés. |
+| **F-08** | Consulter l'historique des mesures, événements et alarmes | **Obligatoire** | Retrouver, pour un patient et une période déterminée, les mesures, événements et alarmes associés. |
+| **F-09** | Détecter les alarmes physiologiques | **Obligatoire** | Détecter les dépassements des seuils configurés dans les scénarios simulés et déclencher une alarme physiologique identifiable. Les seuils restent configurés/documentés et ne sont pas présentés comme des recommandations cliniques. |
+| **F-10** | Détecter les alarmes et incidents techniques | **Obligatoire** | Détecter les problèmes techniques : perte de connexion, appareil indisponible, absence de données ou capteur simulé défaillant. Les distinguer des alarmes physiologiques. |
+| **F-11** | Transmettre les alarmes aux centrales concernées | **Obligatoire** | Transmettre automatiquement les alarmes à la centrale du service concerné et à la supervision transversale. Le terminal mobile est hors périmètre initial. |
+| **F-12** | Acquitter une alarme | **Obligatoire** | Autoriser un utilisateur habilité à acquitter une alarme et enregistrer l'action. L'acquittement ne résout pas la condition à l'origine de l'alarme et ne doit pas la faire disparaître automatiquement. |
+| **F-13** | Mettre temporairement une alarme en silence puis la réactiver | **Souhaitée** | Permettre un silence temporaire et la réactivation de l'alarme. La durée et l'état du silence doivent être visibles. |
+| **F-14** | Escalader une alarme non acquittée | **Souhaitée** | Prévoir une escalade simple : après un délai défini, une alarme non acquittée est signalée à la supervision. |
+| **F-15** | Gérer les plannings, rotations et relèves du personnel | **Hors périmètre** | Ne pas développer la gestion des plannings, des rotations de personnel et des relèves. La gestion des comptes utilisateurs reste couverte par F-19. |
+| **F-16** | Transférer un patient entre deux services simulés | **Obligatoire** | Transférer un patient entre services en conservant son identité et son historique, en actualisant son affectation et en réorganisant sa surveillance au niveau des centrales concernées. |
+| **F-17** | Gérer les états dégradés et la reprise | **Obligatoire** | Simuler au minimum une déconnexion réseau, une indisponibilité de moniteur et une perte de communication avec une centrale. Afficher l'incident, détecter la reconnexion et reprendre la transmission sans confondre données anciennes et nouvelles. |
+| **F-18** | Conserver l'historique et les traces d'audit | **Obligatoire** | Conserver les mesures utiles, alarmes, transferts et actions utilisateurs. Enregistrer également les événements techniques et les actions importantes afin de reconstituer ce qui s'est passé. |
+| **F-19** | Authentifier les utilisateurs et appliquer des habilitations | **Obligatoire** | Authentifier les utilisateurs et appliquer des rôles/permissions simples (administrateur technique, soignant, supervision), affinés selon les responsabilités et le périmètre de patients autorisé. |
+| **F-20** | Rejouer des scénarios prédéfinis | **Souhaitée** | Rejouer des scénarios avec des données reproductibles afin de tester et démontrer les comportements du système. |
+| **F-21** | Exporter un historique ou un rapport patient | **Souhaitée** | Exporter un historique ou un rapport dans un format exploitable, par exemple CSV ou PDF. |
+| **F-22** | Gérer des profils de paramètres, alarmes et appareils | **Souhaitée** | Prévoir des profils préconfigurés. Une configuration fixe au départ suffit ; une interface complète d'administration peut être ajoutée ultérieurement. |
 
 **Les trois fonctionnalités considérées comme les plus importantes :**  
 1. ____________________  2. ____________________  3. ____________________
@@ -187,29 +187,48 @@ Pour chaque ligne, demander : **obligatoire**, **souhaitée** ou **hors périmè
 
 L'IA prédictive n'est pas exclue comme perspective expérimentale future, mais elle ne doit pas être une dépendance de l'architecture ni une condition de fonctionnement du système de monitorage.
 
-### TUT-06 — Actions utilisateur par rôle
+### TUT-06 — Actions utilisateur par rôle et périmètre de visibilité
 
-« Quels rôles doivent exister et quelles actions chaque rôle peut-il effectuer ? »
+**Question à trancher par l'équipe :**  
+« Quels rôles doivent exister, quels niveaux de responsabilité faut-il distinguer et sur quels patients chaque utilisateur peut-il agir ? »
 
-| Rôle | Visualiser | Acquitter | Modifier profil/limites | Affecter appareil/lit | Administrer comptes |
-|---|---|---|---|---|---|
-| Infirmier/ère | ✓ | ✓ | — | ✓ | — |
-| Médecin | ✓ | ✓ | ✓ | ✓ | — |
-| Personnel de centrale | ✓ | ✓ | Selon droits | ✓ | — |
-| Biomédical | Limité | — | — | ✓ | — |
-| Administrateur technique | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Autre : | | | | | |
+**Statut : Décidé provisoirement — modèle de rôles et règles de visibilité retenus ; matrice détaillée des permissions à affiner avant implémentation.**
 
-**Réponse / règles d'autorisation :**
+#### Rôles et niveaux de responsabilité
 
-Première proposition de rôles :
-- **Infirmier / infirmière :** surveillance quotidienne des patients et gestion des alarmes.
-- **Médecin :** consultation des données et historiques ; modification des profils et limites selon les habilitations qui seront définies.
-- **Personnel de centrale :** surveillance simultanée des lits et coordination des alarmes du service.
-- **Biomédical :** inventaire, état, diagnostic et maintenance des équipements ; accès limité aux informations patient.
-- **Administrateur technique :** gestion des comptes, droits et configuration technique.
+| Famille de rôle | Niveaux / déclinaisons à prévoir | Responsabilités générales |
+|---|---|---|
+| **Médecin** | Interne ; praticien confirmé ; chef de service | Consultation des patients, mesures, historiques et alarmes autorisés. Les actions cliniques, la gestion des paramètres et la supervision des autres médecins dépendent du niveau de responsabilité et des délégations accordées. |
+| **Personnel infirmier** | Infirmier/ère ; possibilité de distinguer les responsabilités d'encadrement | Surveillance des patients, suivi et acquittement des alarmes selon les droits. Les responsabilités d'encadrement pourront ouvrir des périmètres de supervision supplémentaires. |
+| **Personnel de centrale** | Opérateur d'une centrale locale ; personnel autorisé à la supervision transversale | Surveillance multi-lits du service, coordination et traitement des alarmes selon les habilitations. La visibilité multi-services est réservée aux personnes explicitement autorisées. |
+| **Personnel biomédical** | Personnel de maintenance / biomédical | Accès limité aux informations patient ; gestion et suivi des équipements, de leur état, de leur affectation technique et de leur maintenance. Pas d'acquittement clinique par défaut. |
+| **Administrateur technique** | Administration des comptes, rôles et configuration technique | Gestion des comptes et des droits, administration technique et diagnostic. Les privilèges techniques ne donnent pas automatiquement des droits cliniques. |
 
-**À préciser avant implémentation :** séparer les permissions techniques et médicales. En particulier, les droits d'administration technique ne doivent pas donner automatiquement accès à la modification des seuils cliniques ou à l'acquittement des alarmes. Les droits d'affectation d'un moniteur, d'un patient et d'un lit devront également être définis précisément. Les actions sensibles devront être journalisées. La matrice ci-dessus est une première proposition, à affiner.
+#### Exemple de niveaux pour le rôle médecin
+
+- **Interne :** consultation des patients autorisés ; actions cliniques selon les délégations ; configuration soumise à supervision.
+- **Praticien confirmé :** consultation des patients du service ; gestion des paramètres autorisés ; supervision des internes selon l'organisation et les droits accordés.
+- **Chef de service :** responsabilités médicales du service ; gestion des profils et règles du service selon les droits attribués ; consultation de l'activité de son service.
+
+Le modèle devra permettre une granularité comparable pour les responsabilités infirmières, notamment lorsqu'un rôle d'encadrement est nécessaire, sans imposer dès maintenant une hiérarchie hospitalière exhaustive.
+
+#### Règles de visibilité des patients
+
+La visibilité ne doit pas dépendre uniquement du titre du rôle. Elle combine le rôle, le service, la prise en charge et les autorisations particulières.
+
+1. **Accès normal :** un professionnel consulte les patients de son service et ceux dont il assure la prise en charge, dans les limites de ses permissions.
+2. **Accès étendu :** certains responsables peuvent consulter plusieurs unités lorsque leurs responsabilités et leurs autorisations le justifient.
+3. **Supervision transversale :** le personnel explicitement habilité à cette fonction peut consulter les patients et événements de plusieurs services.
+
+Lorsqu'un patient est transféré, son affectation et les règles de visibilité doivent être actualisées pour les équipes concernées. Le transfert ne doit ni effacer l'historique ni rendre les actions antérieures incompréhensibles.
+
+#### Principes de sécurité à respecter
+
+- Séparer les privilèges techniques des privilèges cliniques. Un administrateur technique ne peut pas, par défaut, modifier les limites d'alarme cliniques ou acquitter une alarme clinique.
+- Définir séparément les droits de consultation, acquittement, modification des profils/limites, affectation patient-lit-équipement et administration des comptes.
+- Appliquer les permissions côté serveur, pas uniquement dans l'interface.
+- Journaliser les accès et actions sensibles, en particulier les modifications de droits, de profils, de seuils et d'affectations.
+- Affiner la matrice de permissions pendant le cadrage fonctionnel avant de coder les contrôles.
 
 ## 3. Réalisme médical, paramètres et données
 
