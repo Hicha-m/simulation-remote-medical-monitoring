@@ -24,7 +24,13 @@ L'application doit permettre de comprendre :
 - quelles alarmes sont actives, signalées, acquittées ou résolues ;
 - quels événements de transfert, déconnexion ou reprise ont eu lieu.
 
-Le périmètre des services, paramètres, utilisateurs et fonctionnalités est défini par l'équipe, qui dispose de liberté de choix. La réanimation adulte polyvalente est retenue comme premier périmètre fonctionnel. La cible du système est multi-services, avec centrales locales et supervision transversale ; les autres services seront intégrés progressivement.
+Le périmètre des services, paramètres, utilisateurs et fonctionnalités est défini par l'équipe. La réanimation adulte polyvalente est retenue comme premier périmètre clinique. La cible du système est multi-services, avec centrales locales et supervision transversale ; les autres services seront intégrés progressivement.
+
+La priorisation fonctionnelle provisoire est enregistrée dans le [cahier de décisions](../analyse/monitorage-hospitalier/13-pilotage-projet/01-questionnaire-tuteur.md#2-fonctionnalités-attendues--comportements-du-système) :
+- **Obligatoires :** F-01 à F-06, F-08 à F-12 et F-16 à F-19.
+- **Souhaitées :** F-07, F-13, F-14 et F-20 à F-22.
+- **Hors périmètre :** F-15 (plannings, rotations et relèves du personnel).
+Les fonctionnalités souhaitées sont à planifier après sécurisation du socle obligatoire ; elles ne doivent pas fragiliser la date de livraison.
 
 ## 2. Architecture logique à réaliser
 
@@ -95,10 +101,10 @@ Règles non négociables proposées :
 
 **Travail à faire :**
 1. figer les services concernés et les populations ;
-2. lister les acteurs : personnel au chevet, poste central, médecin, biomédical, administrateur ;
+2. lister les acteurs : personnel infirmier, médecins avec plusieurs niveaux de responsabilité, personnel de centrale locale, superviseur transversal autorisé, biomédical et administrateur technique ;
 3. décrire les parcours admission, association moniteur, surveillance, alarme, relève, transfert et sortie ;
 4. rédiger les cas d'utilisation avec acteur, déclencheur, déroulement nominal, préconditions, erreurs et résultat attendu ;
-5. construire la matrice des droits par rôle ;
+5. construire la matrice des droits en séparant rôle, niveau de responsabilité et périmètre de patients autorisé (service, prise en charge, accès étendu, supervision transversale) ;
 6. identifier les cas d'erreur : patient inconnu, appareil inconnu, mauvaise association, signal absent, retard, doublon, alarme non acquittée, centrale indisponible, utilisateur non habilité ;
 7. transformer les besoins prioritaires en critères d'acceptation.
 
