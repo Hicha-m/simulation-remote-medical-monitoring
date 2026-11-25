@@ -6,9 +6,12 @@ Projet académique de conception et de développement d'un système logiciel com
 
 **Phase actuelle :** analyse du domaine, cadrage médical et fonctionnel, préparation de l'architecture et des arbitrages. Le développement applicatif n'a pas encore commencé.
 
-**Nature du système confirmée :** des moniteurs de chevet transmettent des mesures et des événements vers une ou plusieurs centrales de surveillance hospitalières.
+**Nature du système confirmée :** des moniteurs de chevet transmettent des mesures et des événements vers une ou plusieurs centrales de surveillance hospitalières.  
+**Équipe :** Hicham, Omar et Nawfel (3 personnes).  
+**Contrainte technique confirmée :** la programmation réseau doit être réalisée en Java ; les autres technologies sont libres.  
+**Planning recalé :** à partir du 25 novembre 2026, avec livraison le **8 janvier 2027**.
 
-Le service de référence, le nombre de services, les fonctionnalités exactes, les profils médicaux, les langages et l'architecture doivent être validés avec le tuteur. L'échéance de livraison prévue est le **8 janvier 2027**.
+Le service de référence, les fonctionnalités exactes, les profils médicaux et l'architecture sont des choix de conception à effectuer par l'équipe. Le tuteur laisse le périmètre et les choix technologiques libres, sous réserve de la contrainte Java pour le réseau.
 
 ## Méthode de réalisation
 
@@ -30,13 +33,13 @@ Il est organisé par thèmes :
 - cadrage fonctionnel, parcours patient, appareils, données et tests ;
 - maquette d'établissement ;
 - domaines médicaux approfondis : dictionnaire des paramètres, courbes et données brutes, qualité des mesures, alarmes, contexte patient et pratiques françaises ;
-- pilotage : questionnaire tuteur, organisation des quatre membres, Gantt et arbitrages mesurés.
+- pilotage : cahier de décisions, organisation de Hicham, Omar et Nawfel, Gantt recalé et arbitrages mesurés.
 
 **Accès directs :**
 - [Dossier médical approfondi](docs/analyse/monitorage-hospitalier/12-domaines-medicaux-approfondis/README.md)
 - [Pilotage et cadrage du projet](docs/analyse/monitorage-hospitalier/13-pilotage-projet/README.md)
-- [Questionnaire à poser au tuteur](docs/analyse/monitorage-hospitalier/13-pilotage-projet/01-questionnaire-tuteur.md)
-- [Planning Gantt jusqu'au 8 janvier 2027](docs/analyse/monitorage-hospitalier/13-pilotage-projet/03-gantt-generique.md)
+- [Cahier de décisions à compléter par l'équipe](docs/analyse/monitorage-hospitalier/13-pilotage-projet/01-questionnaire-tuteur.md)
+- [Planning Gantt recalé au 25 novembre — livraison le 8 janvier 2027](docs/analyse/monitorage-hospitalier/13-pilotage-projet/03-gantt-generique.md)
 - [Stratégies et arbitrages critiques](docs/analyse/monitorage-hospitalier/13-pilotage-projet/04-strategies-et-arbitrages-critiques.md)
 - [Méthode DEV → Docker → Metrics](docs/consignes/README.md)
 
