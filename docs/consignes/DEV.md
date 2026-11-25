@@ -8,7 +8,7 @@
 
 Suivre les étapes dans l'ordre des dépendances. Chaque étape possède un objectif, un travail à faire, des vérifications et des livrables. Les décisions médicales doivent venir de sources documentées ou être validées par un professionnel compétent. Une donnée synthétique ne devient jamais un seuil clinique ou un protocole médical.
 
-Les noms des technologies ne sont pas figés dans ce document. Java est une contrainte à confirmer auprès du tuteur ; la répartition du langage par composant doit être décidée avant l'implémentation.
+La programmation réseau doit être réalisée en Java : c'est la contrainte technique confirmée par le tuteur. Cela ne rend pas Java obligatoire pour toute l'application. L'équipe choisira explicitement quels composants portent le code réseau Java (serveur, clients simulateurs, passerelle ou combinaison), puis définira les contrats permettant aux autres composants, éventuellement développés dans d'autres langages, de communiquer avec eux. Les autres choix technologiques sont libres.
 
 ## 1. Contexte et objectif
 
@@ -24,7 +24,7 @@ L'application doit permettre de comprendre :
 - quelles alarmes sont actives, signalées, acquittées ou résolues ;
 - quels événements de transfert, déconnexion ou reprise ont eu lieu.
 
-Le périmètre exact des services, paramètres, utilisateurs et fonctionnalités obligatoires doit être celui validé avec le tuteur. La réanimation adulte ne reste qu'une hypothèse de service de référence tant qu'elle n'a pas été approuvée.
+Le périmètre exact des services, paramètres, utilisateurs et fonctionnalités obligatoires doit être celui validé avec le tuteur. La réanimation adulte ne reste qu'une hypothèse de service de référence tant que l'équipe ne l'a pas retenue.
 
 ## 2. Architecture logique à réaliser
 
@@ -158,7 +158,7 @@ Tous les écrans ne sont pas nécessairement obligatoires : ils dépendent des f
 - parcours cliquables entre les vues ;
 - cas d'erreur accessibles ;
 - cohérence entre chaque fonctionnalité et son élément d'interface ;
-- revue par les quatre membres et validation du tuteur.
+- revue par les trois membres et validation du tuteur.
 
 **Livrables :**
 - maquettes ou prototype interactif ;
