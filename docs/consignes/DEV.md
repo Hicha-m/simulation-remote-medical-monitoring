@@ -24,7 +24,7 @@ L'application doit permettre de comprendre :
 - quelles alarmes sont actives, signalées, acquittées ou résolues ;
 - quels événements de transfert, déconnexion ou reprise ont eu lieu.
 
-Le périmètre exact des services, paramètres, utilisateurs et fonctionnalités obligatoires doit être celui validé avec le tuteur. La réanimation adulte ne reste qu'une hypothèse de service de référence tant que l'équipe ne l'a pas retenue.
+Le périmètre des services, paramètres, utilisateurs et fonctionnalités est défini par l'équipe, qui dispose de liberté de choix. La réanimation adulte reste une hypothèse de service de référence tant que Hicham, Omar et Nawfel ne l'ont pas retenue.
 
 ## 2. Architecture logique à réaliser
 
@@ -115,7 +115,7 @@ Règles non négociables proposées :
 - règles métier versionnées ;
 - matrice de traçabilité exigences → tests.
 
-**Jalon :** validation du périmètre avec le tuteur.
+**Jalon :** décision documentée du périmètre par l'équipe ; présentation au tuteur pour retour si utile.
 
 ### Étape 2 — Prototype d'interface et parcours
 
