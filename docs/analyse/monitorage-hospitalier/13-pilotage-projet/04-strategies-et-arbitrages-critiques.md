@@ -115,7 +115,7 @@ Contrainte non négociable : la programmation réseau est réalisée en Java. Le
 
 **Métriques :** délai de développement, latence p95, débit, consommation, simplicité de déploiement, couverture de tests, intégration entre langages et facilité de reprise par les trois membres.
 
-**Bascule :** une stack plus rapide à prototyper n'est pas forcément meilleure si elle complique les tests ou la livraison. Une contrainte académique de Java prévaut sur le benchmark.
+**Bascule :** une stack plus rapide à prototyper n'est pas forcément meilleure si elle complique les tests ou la livraison. La contrainte Java s'applique à la programmation réseau ; elle ne doit pas être étendue par défaut au reste de l'application. Les autres composants sont comparés librement selon les critères définis.
 
 ### DEC-05 — Monolithe modulaire ou services distribués ?
 
@@ -282,7 +282,7 @@ Une note élevée n'annule pas un échec à une exigence bloquante.
 | 1 | Services, population, fonctionnalités | 29 nov. 2026 | Fixe le domaine métier et la charge. |
 | 2 | Paramètres, courbes, sources de données | 29 nov. 2026 | Fixe les débits, le stockage et les simulateurs. |
 | 3 | Contrats patient/appareil/observation/alarme | 6 déc. 2026 | Bloque ou débloque tous les développements parallèles. |
-| 4 | Java, UI, protocole et architecture | 6 déc. 2026 | Oriente les compétences, les outils et le déploiement. |
+| 4 | Périmètre du composant réseau Java, UI, protocole et architecture | 7 déc. 2026 | Oriente les compétences, les contrats, les outils et le déploiement. |
 | 5 | Stockage et stratégie qualité | 13 déc. 2026 | Détermine les performances et la fidélité des données. |
 | 6 | Routage, escalade et mode dégradé | 13 déc. 2026 | Détermine le workflow humain et les tests critiques. |
 
