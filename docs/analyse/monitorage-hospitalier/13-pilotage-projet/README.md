@@ -1,8 +1,10 @@
 # Pilotage du projet — cadrage, organisation, planning et arbitrages
 
-**Version :** 1.1 — **Date :** 18 novembre 2026  
+**Version :** 1.2 — **Date :** 25 novembre 2026  
 **Échéance de livraison :** vendredi 8 janvier 2027.  
-**État :** projet logiciel complet en cours de cadrage ; ce dossier n'est pas un cahier des charges validé.
+**Équipe :** Hicham, Omar et Nawfel (3 personnes).  
+**Contrainte technique connue :** programmation réseau en Java ; autres choix libres.  
+**État :** projet logiciel complet en cours de conception ; ce dossier reste un support de décisions de l'équipe.
 
 ## Objectif
 
@@ -10,8 +12,8 @@ Rendre les décisions explicites et faciles à faire évoluer. Ce dossier est co
 
 ## Documents
 
-1. [Questionnaire à faire remplir par le tuteur](01-questionnaire-tuteur.md) — périmètre clinique, services, fonctionnalités, réalisme médical, technologie, livrables et évaluation.
-2. [Questionnaire d'organisation de l'équipe de quatre](02-questionnaire-equipe.md) — compétences, disponibilité, responsabilités, méthode Git, décisions, réunions et règles d'intégration.
+1. [Cahier de décisions et questions de cadrage](01-questionnaire-tuteur.md) — périmètre clinique, fonctionnalités, données, architecture, choix technologiques et points à faire valider.
+2. [Questionnaire d'organisation de l'équipe de trois](02-questionnaire-equipe.md) — compétences, disponibilité, responsabilités, méthode Git, décisions, réunions et règles d'intégration.
 3. [Planning Gantt générique](03-gantt-generique.md) — séquence DEV → Docker → Metrics et échéance du 8 janvier 2027.
 4. [Stratégies et arbitrages critiques](04-strategies-et-arbitrages-critiques.md) — orientations possibles, situations critiques, expérimentations, métriques et journal de décision.
 
@@ -30,7 +32,7 @@ La référence Intern inclut une phase VM intermédiaire ; elle n'est pas obliga
 
 - Une question n'est pas une décision tant qu'une réponse n'est pas obtenue et enregistrée.
 - Une proposition de l'équipe reste une hypothèse tant qu'elle n'est pas validée.
-- Les choix qui modifient la nature du produit (services, fonctionnalités, sources médicales, architecture, interface, données, sécurité) sont arbitrés explicitement.
+- Les choix qui modifient la nature du produit (services, fonctionnalités, sources médicales, architecture, interface, données, sécurité) sont arbitrés explicitement par les trois membres. Le tuteur laisse ces choix ouverts, sauf la programmation réseau qui doit être en Java.
 - Quand plusieurs approches sont plausibles, construire un essai comparatif avant de choisir.
 - Définir les métriques et les critères de réussite avant de regarder les résultats.
 - Conserver les résultats bruts des essais : charge, latence, pertes, volume, erreurs, temps d'intégration et limites observées.
@@ -45,9 +47,9 @@ La référence Intern inclut une phase VM intermédiaire ; elle n'est pas obliga
 | DIR-02 | Services cliniques exacts | Ouvert : service principal et extensions à préciser. |
 | DIR-03 | Fonctionnalités fonctionnelles attendues | Ouvert : liste à faire valider. |
 | DIR-04 | Niveau de réalisme médical et signaux | Ouvert : paramètres, courbes et données sources à sélectionner. |
-| DIR-05 | Langages, frameworks, UI et stockage | Ouvert : à comparer, Java reste à faire préciser. |
+| DIR-05 | Technologies | Partiellement confirmé : programmation réseau en Java ; technologies des autres composants libres. |
 | DIR-06 | Architecture réseau et déploiement | Ouvert : à choisir après les besoins et essais. |
-| DIR-07 | Livrables et barème | Ouvert : à confirmer. |
-| DIR-08 | Répartition de l'équipe | Ouvert : à décider en réunion à quatre. |
-| DIR-09 | Séquence DEV → Docker → Metrics | Proposition de travail retenue ; dates à confirmer avec les disponibilités. |
+| DIR-07 | Livrables et barème | À préciser par l'équipe et à faire valider si nécessaire. |
+| DIR-08 | Répartition de l'équipe | À décider par Hicham, Omar et Nawfel. |
+| DIR-09 | Séquence DEV → Docker → Metrics | Séquence retenue ; planning recalé au 25 novembre avec échéance au 8 janvier. |
 | DIR-10 | CI/CD | À mettre en place dès DEV, puis enrichir avec Docker et Metrics. |
