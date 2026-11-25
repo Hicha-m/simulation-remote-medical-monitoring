@@ -254,9 +254,14 @@ Une note élevée n'annule pas un échec à une exigence bloquante.
 
 ## 7. Fiche de décision à copier pour chaque arbitrage
 
+Les décisions initiales constituent une baseline de départ, pas des choix définitifs. Lorsqu'une décision évolue, créer une nouvelle entrée ou une nouvelle version et conserver le lien vers la décision remplacée. Ne pas supprimer l'historique.
+
 ### [DEC-XX] — [Titre de la décision]
 
 - **Date :**
+- **Version de baseline :**
+- **Statut :** Ouvert / Hypothèse / Décidé provisoirement / Vérifié / À réexaminer / Abandonné
+- **Décision remplacée (ID / version) :**
 - **Responsable de l'étude :**
 - **Décideurs / validation :**
 - **Question exacte :**
@@ -274,6 +279,8 @@ Une note élevée n'annule pas un échec à une exigence bloquante.
 - **Options rejetées et raisons :**
 - **Conséquences sur planning, données, API et équipe :**
 - **Date de réévaluation si hypothèse invalidée :**
+- **Impact de la décision (architecture, données, API, code, tests, planning, rapport) :**
+- **Documents / diagrammes à mettre à jour :**
 
 ## 8. Ordre de priorité des arbitrages
 
