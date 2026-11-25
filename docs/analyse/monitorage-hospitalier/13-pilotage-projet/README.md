@@ -1,6 +1,6 @@
 # Pilotage du projet — cadrage, organisation, planning et arbitrages
 
-**Version :** 1.3 — **Date :** 25 novembre 2026  
+**Version :** 1.4 — **Date :** 25 novembre 2026  
 **Échéance de livraison :** vendredi 8 janvier 2027.  
 **Équipe :** Hicham, Omar et Nawfel (3 personnes).  
 **Contrainte technique connue :** programmation réseau en Java ; autres choix libres.  
@@ -48,7 +48,7 @@ La référence Intern inclut une phase VM intermédiaire ; elle n'est pas obliga
 |---|---|---|
 | DIR-01 | Nature du système | Confirmé : monitorage hospitalier, moniteurs de chevet vers centrale(s). |
 | DIR-02 | Services cliniques exacts | Première décision prise : réanimation adulte polyvalente comme service initial ; USC, cardiologie/télémétrie, urgences/SAUV et SSPI comme extensions possibles. |
-| DIR-03 | Fonctionnalités fonctionnelles attendues | Ouvert : liste à faire valider. |
+| DIR-03 | Fonctionnalités fonctionnelles attendues | Décidé provisoirement : F-01 à F-06, F-08 à F-12 et F-16 à F-19 obligatoires ; F-07, F-13, F-14 et F-20 à F-22 souhaitées ; F-15 hors périmètre. Critères détaillés dans le cahier de décisions. Le top 3, le dimensionnement et la faisabilité restent à préciser. |
 | DIR-04 | Niveau de réalisme médical et signaux | Ouvert : paramètres, courbes et données sources à sélectionner. |
 | DIR-05 | Technologies | Partiellement confirmé : programmation réseau en Java ; technologies des autres composants libres. |
 | DIR-06 | Architecture réseau et déploiement | Exigence fonctionnelle décidée : centrales locales par service et supervision transversale réelle ; topologie technique, hébergement et mécanismes réseau encore ouverts. |
