@@ -117,7 +117,7 @@ Les résultats devront préciser la machine, la configuration, le nombre de pati
 
 ## 6. Ce qui doit rester hors de l'acceptation clinique
 
-La première version ne doit pas être évalué sur sa capacité à diagnostiquer, prédire ou recommander un traitement. Les critères portent sur :
+La première version ne doit pas être évaluée sur sa capacité à diagnostiquer, prédire ou recommander un traitement. Les critères portent sur :
 
 - la bonne réception et association des données synthétiques ;
 - leur intégrité, leur fraîcheur et leur persistance ;
@@ -130,7 +130,7 @@ Les seuils physiologiques et les priorités médicales devront être issus d'un 
 
 ## 7. Critère global de réussite de la première version
 
-La première version sera convaincant lorsqu'il pourra jouer un parcours patient complet avec plusieurs appareils et plusieurs patients, recevoir des données à intervalles configurés, gérer une alarme et un transfert, faire apparaître une coupure technique, reprendre sans corrompre l'historique et démontrer qu'aucune donnée n'est attribuée au mauvais patient.
+La première version sera convaincante lorsqu'il pourra jouer un parcours patient complet avec plusieurs appareils et plusieurs patients, recevoir des données à intervalles configurés, gérer une alarme et un transfert, faire apparaître une coupure technique, reprendre sans corrompre l'historique et démontrer qu'aucune donnée n'est attribuée au mauvais patient.
 
 La réussite ne se mesure donc pas au nombre de courbes affichées, mais à la fiabilité de toute la chaîne.
 
