@@ -5,7 +5,7 @@
 **Périmètre confirmé :** monitorage hospitalier.  
 **Équipe :** Hicham, Omar et Nawfel (3 personnes).  
 **Contrainte technique connue :** programmation réseau en Java ; autres technologies libres.  
-**Statut :** analyse et cadrage ; les choix de services, fonctionnalités et architecture restent à définir par l'équipe.
+**Statut :** analyse et cadrage ; le service initial, la cible multi-services et une première priorisation des fonctionnalités sont désormais décidés provisoirement. Les choix techniques détaillés et le niveau de réalisation des fonctionnalités souhaitées restent à arbitrer.
 
 **Nature confirmée :** système de monitorage hospitalier reliant des moniteurs de chevet à une ou plusieurs centrales de surveillance. **Échéance de livraison : 8 janvier 2027.** Il s'agit du projet logiciel complet, et non d'une simple preuve de concept.
 
@@ -98,7 +98,7 @@ Ce dossier est volontairement découpé par thème. Chaque document traite un su
 - [Cartographie hospitalière et architecture du SI](10-cadrage-fonctionnel/07-cartographie-hospitaliere-et-architecture-du-si.md) — bâtiments, étages, services, lits, centrales, réseau et systèmes partagés.
 - [Continuité électrique et fonctionnement dégradé](10-cadrage-fonctionnel/08-continuite-electrique-et-mode-degrade.md) — coupure de courant, batteries, onduleurs, groupe électrogène, panne réseau et tests PWR-01 à PWR-10.
 
-La réanimation adulte polyvalente est retenue comme premier périmètre fonctionnel. La cible d'architecture est multi-services, avec centrales locales et supervision transversale ; les extensions prévues sont l'USC, la cardiologie avec télémétrie, les urgences / SAUV et la SSPI.
+La réanimation adulte polyvalente est retenue comme premier périmètre clinique. La cible d'architecture est multi-services, avec centrales locales et supervision transversale ; les extensions prévues sont l'USC, la cardiologie avec télémétrie, les urgences / SAUV et la SSPI. La priorisation des 22 fonctionnalités et les règles d'accès TUT-06 sont enregistrées dans le cahier de décisions.
 
 ### 10. Stabiliser la maquette de l'établissement
 
