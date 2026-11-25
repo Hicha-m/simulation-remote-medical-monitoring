@@ -1,7 +1,7 @@
 # Cadrage fonctionnel — services, parcours, appareils et tests
 
-**Date :** 18 novembre 2026  
-**Statut :** proposition issue de la recherche documentaire ; aucun service ni protocole clinique n'est encore validé par un établissement partenaire.
+**Date de mise à jour :** 25 novembre 2026  
+**Statut :** première baseline fonctionnelle enregistrée. La réanimation adulte polyvalente est le service initial ; la priorisation F-01 à F-22 est consignée dans le cahier de décisions. Les protocoles et seuils cliniques ne sont pas validés par un établissement partenaire.
 
 Ce dossier transforme l'analyse hospitalière en scénarios compréhensibles et testables. Il ne constitue ni un protocole de soins, ni un cahier des charges clinique.
 
@@ -18,11 +18,12 @@ Ce dossier transforme l'analyse hospitalière en scénarios compréhensibles et 
 
 ## Proposition de lecture
 
-- Commencer par la comparaison des services. La réanimation adulte est recommandée comme référence de travail, mais le choix reste à valider.
+- Le service initial est désormais retenu : réanimation adulte polyvalente. La cible est multi-services avec centrales locales et supervision transversale.
 - Lire les personas pour comprendre que le patient peut traverser plusieurs services et changer plusieurs fois d'appareils.
 - Définir ensuite les appareils et les contrats logiques de données.
 - Formaliser les workflows avant de choisir le découpage technique.
 - Utiliser les points critiques comme base de la stratégie de test.
+- Utiliser la priorisation F-01 à F-22 du [cahier de décisions](../13-pilotage-projet/01-questionnaire-tuteur.md#2-fonctionnalités-attendues--comportements-du-système) comme baseline fonctionnelle provisoire ; les fonctionnalités souhaitées pourront être réduites selon la charge et les résultats des essais.
 
 ## Dossier spatial associé
 
