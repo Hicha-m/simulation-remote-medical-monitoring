@@ -6,7 +6,8 @@ Projet académique de conception et de développement d'un système logiciel com
 
 **Phase actuelle :** analyse du domaine, cadrage médical et fonctionnel, préparation de l'architecture et des arbitrages. Le développement applicatif n'a pas encore commencé.
 
-**Nature du système confirmée :** des moniteurs de chevet transmettent des mesures et des événements vers une ou plusieurs centrales de surveillance hospitalières.  
+**Nature du système confirmée :** des moniteurs de chevet transmettent des mesures et des événements vers des centrales locales et une supervision transversale.  
+**Premier service retenu :** réanimation adulte polyvalente ; les autres services sont des extensions progressives.  
 **Équipe :** Hicham, Omar et Nawfel (3 personnes).  
 **Contrainte technique confirmée :** la programmation réseau doit être réalisée en Java ; les autres technologies sont libres.  
 **Planning recalé :** à partir du 25 novembre 2026, avec livraison le **8 janvier 2027**.
