@@ -146,7 +146,7 @@ Ce scénario doit devenir un test d'intégration reproductible. Il reste à déf
 
 > Ici, « fonctionnalité » signifie une action ou un comportement que le logiciel doit offrir à ses utilisateurs. Cela ne désigne pas une technologie, un framework ou un langage.
 
-Pour chaque ligne, demander : **obligatoire**, **souhaitée** ou **hors périmètre**, puis préciser les critères de réussite.
+La priorisation provisoire ci-dessous distingue les fonctionnalités **obligatoires** (15), **souhaitées** (6) et **hors périmètre** (1). Les critères de réussite sont consignés pour chacune. Le choix des trois fonctionnalités les plus critiques reste à préciser.
 
 | ID | Fonctionnalité | Priorité provisoire | Précisions / critères de réussite |
 |---|---|---|---|
