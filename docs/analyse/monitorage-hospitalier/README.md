@@ -1,7 +1,7 @@
 # Monitorage hospitalier — dossier de référence
 
 **Version :** 0.1  
-**Date de mise à jour :** 18 novembre 2026  
+**Date de mise à jour :** 25 novembre 2026  
 **Périmètre confirmé :** monitorage hospitalier.  
 **Statut :** analyse, cadrage médical et fonctionnel ; les choix de services, fonctionnalités et technologies restent à valider.
 
@@ -129,11 +129,11 @@ Le registre note aussi le projet de loi français de transposition NIS2, adopté
 - [Informations médicales associées au patient](12-domaines-medicaux-approfondis/05-contexte-medical-patient.md) — patient, séjour, affectation, identité et minimisation.
 - [Pratiques françaises](12-domaines-medicaux-approfondis/06-pratiques-francaises-etablissement.md) — organisation hospitalière, identitovigilance, interopérabilité et limites réglementaires.
 
-### 13. Piloter le projet jusqu'au 8 janvier 2027
+### 13. Piloter le projet à trois jusqu'au 8 janvier 2027
 
-- [Questionnaire précis pour le tuteur](13-pilotage-projet/01-questionnaire-tuteur.md) — périmètre clinique, fonctionnalités, données médicales, Java et alternatives, interface, réseau, stockage, livrables.
-- [Questionnaire d'organisation de l'équipe de quatre](13-pilotage-projet/02-questionnaire-equipe.md) — disponibilités, compétences, responsabilités, Git, intégration et décisions.
-- [Gantt générique](13-pilotage-projet/03-gantt-generique.md) — macro-planning du 18 novembre 2026 au 8 janvier 2027.
+- [Cahier de décisions et questions de cadrage](13-pilotage-projet/01-questionnaire-tuteur.md) — questions à trancher par l'équipe ; programmation réseau en Java, autres choix libres.
+- [Questionnaire d'organisation de l'équipe de trois](13-pilotage-projet/02-questionnaire-equipe.md) — disponibilités, compétences, responsabilités, Git, intégration et décisions.
+- [Gantt](13-pilotage-projet/03-gantt-generique.md) — planning recalé du 25 novembre 2026 au 8 janvier 2027 pour trois personnes.
 - [Stratégies et arbitrages critiques](13-pilotage-projet/04-strategies-et-arbitrages-critiques.md) — options d'architecture, scénarios de panne et mesures comparatives.
 
 ### 14. Méthode de réalisation et livraison
@@ -145,7 +145,7 @@ Le développement suivra les trois phases définies dans [docs/consignes](../con
 - [Metrics](../consignes/Metrics.md) — instrumentation, plan de test, étalonnage, campagnes et analyse.
 - [CI/CD](../consignes/CI-CD.md) — intégration, contrôles qualité, construction et livraison continues, transversalement aux trois phases.
 
-La séquence VM intermédiaire présente dans le projet de référence n'est pas retenue comme une phase obligatoire à ce stade. La date de livraison est le 8 janvier 2027 ; le [Gantt](13-pilotage-projet/03-gantt-generique.md) est aligné sur cette séquence et devra être révisé après validation des disponibilités.
+La séquence VM intermédiaire présente dans le projet de référence n'est pas retenue comme une phase obligatoire à ce stade. La date de livraison est le 8 janvier 2027 ; le [Gantt](13-pilotage-projet/03-gantt-generique.md) est recalé au 25 novembre et devra être ajusté après saisie des disponibilités des trois membres.
 
 ## Règles de preuve
 
