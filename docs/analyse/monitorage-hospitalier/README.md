@@ -137,6 +137,7 @@ Le registre note aussi le projet de loi français de transposition NIS2, adopté
 - [Questionnaire d'organisation de l'équipe de trois](13-pilotage-projet/02-questionnaire-equipe.md) — disponibilités, compétences, responsabilités, Git, intégration et décisions.
 - [Gantt](13-pilotage-projet/03-gantt-generique.md) — planning recalé du 25 novembre 2026 au 8 janvier 2027 pour trois personnes.
 - [Stratégies et arbitrages critiques](13-pilotage-projet/04-strategies-et-arbitrages-critiques.md) — options d'architecture, scénarios de panne et mesures comparatives.
+- [Préparation du rapport et de la soutenance](13-pilotage-projet/05-rapport-et-soutenance.md) — rapport progressif, preuves, démonstration, oral et modalités à confirmer.
 
 ### 14. Méthode de réalisation et livraison
 
