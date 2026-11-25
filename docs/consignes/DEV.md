@@ -24,7 +24,7 @@ L'application doit permettre de comprendre :
 - quelles alarmes sont actives, signalées, acquittées ou résolues ;
 - quels événements de transfert, déconnexion ou reprise ont eu lieu.
 
-Le périmètre des services, paramètres, utilisateurs et fonctionnalités est défini par l'équipe, qui dispose de liberté de choix. La réanimation adulte reste une hypothèse de service de référence tant que Hicham, Omar et Nawfel ne l'ont pas retenue.
+Le périmètre des services, paramètres, utilisateurs et fonctionnalités est défini par l'équipe, qui dispose de liberté de choix. La réanimation adulte polyvalente est retenue comme premier périmètre fonctionnel. La cible du système est multi-services, avec centrales locales et supervision transversale ; les autres services seront intégrés progressivement.
 
 ## 2. Architecture logique à réaliser
 
@@ -36,7 +36,7 @@ La séparation des responsabilités doit rester explicite, même si plusieurs co
 | Ingestion et communication | Authentifier la source, recevoir les messages, vérifier format, séquence, horodatage et provenance. |
 | Métier / domaine | Gérer les patients, séjours, affectations, sessions, alarmes, qualité et règles de workflow. |
 | Persistance | Conserver patients fictifs, affectations, observations, waveforms, alarmes, audits et configurations. |
-| Présentation — centrale | Afficher les patients, lits, appareils, valeurs, courbes, tendances, états techniques et alarmes. |
+| Présentation — centrales locales et supervision transversale | Afficher les patients, lits, appareils, valeurs, courbes, tendances, états techniques et alarmes du périmètre autorisé ; agréger les informations de plusieurs services pour la supervision transversale. |
 | Administration | Gérer utilisateurs, rôles, profils, appareils, services et paramètres autorisés. |
 
 Le découpage physique en processus, services ou modules sera choisi après le cadrage. Ne pas créer de microservices uniquement pour reproduire un schéma : il faut justifier chaque séparation par un besoin mesurable ou une frontière métier.
@@ -50,7 +50,7 @@ Le parcours principal à faire fonctionner doit couvrir :
 3. association d'un moniteur virtuel au patient et à une session ;
 4. émission d'une ou plusieurs observations et, si retenu, de segments de courbe ;
 5. réception, validation, horodatage et persistance des données ;
-6. affichage dans la vue centrale et la vue patient ;
+6. affichage dans la centrale locale du service et, si le périmètre multi-centrales est intégré à l'itération, remontée contrôlée vers la supervision transversale ;
 7. émission d'une alarme ou d'un défaut technique de simulation ;
 8. réception de l'alarme, affichage, prise de connaissance et résolution ;
 9. transfert ou clôture de la session ;
