@@ -1,16 +1,22 @@
-# 01 — Questionnaire précis pour le tuteur
+# 01 — Cahier de décisions et questions de cadrage
 
-**Version :** 1.0 — **Date de préparation :** 18 novembre 2026  
-**Objet :** obtenir les décisions et contraintes qui déterminent le périmètre du projet.  
+**Version :** 1.1 — **Date de mise à jour :** 25 novembre 2026  
+**Objet :** guider les choix de conception de l'équipe et consigner les validations utiles.  
 **Contexte confirmé :** système de monitorage hospitalier reliant des moniteurs de chevet à une ou plusieurs centrales de surveillance.
 
-> Consigne d'utilisation : remplir les zones « Réponse du tuteur » pendant ou juste après la réunion. Une question non traitée reste marquée « À confirmer ». Ne pas remplacer une réponse du tuteur par une supposition de l'équipe.
+## Informations déjà confirmées
+
+- Le tuteur laisse à l'équipe la liberté de définir le périmètre fonctionnel, l'architecture, les technologies, l'interface, le stockage et le déploiement. Aucune autre limite de conception n'a été communiquée à ce stade.
+- **La partie programmation réseau doit être réalisée en Java.** Cette contrainte ne signifie pas que toute l'application doit être écrite en Java.
+- Les choix restant dans ce document sont donc d'abord des décisions à prendre par Hicham, Omar et Nawfel. Ils peuvent ensuite être présentés au tuteur pour validation ou avis, sans lui demander de choisir à la place de l'équipe.
+
+> Consigne d'utilisation : Hicham souhaite répondre lui-même aux questions de conception. Les champs « Réponse / décision de l'équipe » sont donc laissés vierges. Les questions cliniques ou réglementaires qui dépassent les connaissances de l'équipe devront être documentées et, si nécessaire, soumises à un professionnel compétent.
 
 ## 1. Périmètre hospitalier et services
 
 ### TUT-01 — Service de référence
 
-**Question à poser :**  
+**Question à trancher par l'équipe :**  
 « Quel service doit constituer le premier périmètre clinique complet du système ? Merci de choisir un service précis, et pas simplement “l'hôpital”. »
 
 **Choix :**
@@ -26,7 +32,7 @@
 - [ ] Néonatologie
 - [ ] Autre : ______________________________
 
-**Réponse du tuteur :**  
+**Réponse / décision de l'équipe :**  
 ............................................................................
 
 **Décision / précision :**  
@@ -34,7 +40,7 @@
 
 ### TUT-02 — Nombre de services à couvrir
 
-**Question à poser :**  
+**Question à trancher par l'équipe :**  
 « Le système doit-il gérer un seul service, plusieurs services partageant une centrale, ou plusieurs services ayant chacun leur propre centrale ? Parmi les services ci-dessus, lesquels doivent réellement être fonctionnels dans la version livrée le 8 janvier 2027 ? »
 
 **Choix :**
@@ -98,7 +104,7 @@ Réponse : ....................................................................
 
 Pour chaque ligne, demander : **obligatoire**, **souhaitée** ou **hors périmètre**, puis préciser les critères de réussite.
 
-| ID | Fonctionnalité concrète à valider | Obligatoire / souhaitée / exclue | Précisions du tuteur |
+| ID | Fonctionnalité concrète à valider | Obligatoire / souhaitée / exclue | Précisions / justification de l'équipe |
 |---|---|---|---|
 | F-01 | Créer et clôturer un séjour patient | | |
 | F-02 | Affecter un patient à un service, une chambre et un lit | | |
@@ -270,27 +276,28 @@ Réponse : ....................................................................
 
 ## 6. Contraintes techniques — technologies séparées des fonctionnalités
 
-### TUT-17 — Langage principal et rôle de Java
+### TUT-17 — Périmètre de la programmation réseau Java
 
-« Java est-il une obligation académique ou une technologie suggérée ? Si Java est obligatoire, doit-il être utilisé pour le serveur uniquement, les simulateurs de moniteurs, l'interface ou tous les composants ? »
+**Contrainte confirmée : la programmation réseau doit être réalisée en Java.** L'équipe doit maintenant préciser dans son architecture quels composants portent cette responsabilité et où se trouvent les frontières entre réseau, métier et interface.
 
-- [ ] Java obligatoire pour tous les composants
-- [ ] Java obligatoire pour le backend uniquement
-- [ ] Java obligatoire pour les clients simulateurs uniquement
-- [ ] Java fortement recommandé mais alternatives autorisées
-- [ ] Langage libre
-- [ ] Autre : ____________________
+**Questions à trancher :**
+- Quel composant Java ouvre et gère les connexions réseau ?
+- Le client simulateur, le serveur, ou les deux doivent-ils contenir le code réseau évalué ?
+- Comment les composants non Java communiqueront-ils avec ce composant Java ?
+- Quelle version de Java et quelle bibliothèque réseau utiliser ?
 
-**Version Java imposée :** ____________________
-
-**Frameworks imposés/interdits :** ____________________
-
-**Réponse du tuteur :**  
+**Périmètre Java retenu :**  
 ............................................................................
 
-### TUT-18 — Alternatives autorisées à Java
+**Version et bibliothèques envisagées :**  
+............................................................................
 
-« Si le langage n'est pas imposé, quelles alternatives sont acceptées et sur quels composants ? »
+**Réponse / décision de l'équipe :**  
+............................................................................
+
+### TUT-18 — Technologies libres pour les autres composants
+
+En dehors de la programmation réseau qui doit être réalisée en Java, les technologies sont libres. Quelles technologies l'équipe souhaite-t-elle évaluer pour le backend métier, les simulateurs, l'interface, les traitements de signaux et les outils ?
 
 - [ ] Kotlin/JVM — proche de l'écosystème Java, backend ou clients JVM
 - [ ] C# / .NET — serveur et applications desktop/web
@@ -319,9 +326,9 @@ Réponse : ....................................................................
 **Systèmes d'exploitation et navigateurs cibles :**  
 ............................................................................
 
-### TUT-20 — Communication entre moniteurs et serveur
+### TUT-20 — Conception des communications réseau (implémentation Java)
 
-« Quel niveau de communication réseau attendez-vous et avez-vous un protocole imposé ? »
+La programmation réseau doit être réalisée en Java, mais le protocole applicatif reste à choisir par l'équipe. Il faut distinguer le langage d'implémentation (Java) du protocole de communication (TCP, WebSocket, MQTT, etc.).
 
 - [ ] TCP avec protocole applicatif défini par l'équipe
 - [ ] WebSocket
@@ -332,7 +339,7 @@ Réponse : ....................................................................
 - [ ] Standards à étudier mais pas nécessairement à implémenter
 - [ ] Libre
 
-**Débit, latence, nombre de moniteurs et clients simultanés attendus :**  
+**Charge que l'équipe décide de viser (moniteurs, paramètres, messages/s, latence, clients simultanés) et justification :**  
 ............................................................................
 
 ### TUT-21 — Base de données et stockage
