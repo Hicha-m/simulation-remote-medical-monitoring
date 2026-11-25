@@ -11,7 +11,7 @@ Projet académique de conception et de développement d'un système logiciel com
 **Contrainte technique confirmée :** la programmation réseau doit être réalisée en Java ; les autres technologies sont libres.  
 **Planning recalé :** à partir du 25 novembre 2026, avec livraison le **8 janvier 2027**.
 
-Le service de référence, les fonctionnalités exactes, les profils médicaux et l'architecture sont des choix de conception à effectuer par l'équipe. Le tuteur laisse le périmètre et les choix technologiques libres, sous réserve de la contrainte Java pour le réseau.
+Le service de référence, les fonctionnalités exactes, les profils médicaux et l'architecture sont des choix de conception à effectuer par l'équipe. Le cahier de décisions forme une baseline initiale qui pourra évoluer, avec un historique des arbitrages conservé. Le tuteur laisse le périmètre et les choix technologiques libres, sous réserve de la contrainte Java pour le réseau.
 
 ## Méthode de réalisation
 
@@ -41,6 +41,7 @@ Il est organisé par thèmes :
 - [Cahier de décisions à compléter par l'équipe](docs/analyse/monitorage-hospitalier/13-pilotage-projet/01-questionnaire-tuteur.md)
 - [Planning Gantt recalé au 25 novembre — livraison le 8 janvier 2027](docs/analyse/monitorage-hospitalier/13-pilotage-projet/03-gantt-generique.md)
 - [Stratégies et arbitrages critiques](docs/analyse/monitorage-hospitalier/13-pilotage-projet/04-strategies-et-arbitrages-critiques.md)
+- [Préparation du rapport et de la soutenance](docs/analyse/monitorage-hospitalier/13-pilotage-projet/05-rapport-et-soutenance.md)
 - [Méthode DEV → Docker → Metrics](docs/consignes/README.md)
 
 Les documents de cadrage initiaux sont conservés dans [docs/analyse](docs/analyse/README.md).
