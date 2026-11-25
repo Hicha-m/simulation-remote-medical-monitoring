@@ -12,6 +12,18 @@
 
 > Consigne d'utilisation : Hicham souhaite répondre lui-même aux questions de conception. Les champs « Réponse / décision de l'équipe » sont donc laissés vierges. Les questions cliniques ou réglementaires qui dépassent les connaissances de l'équipe devront être documentées et, si nécessaire, soumises à un professionnel compétent.
 
+## Statut de ce cahier : baseline initiale évolutive
+
+Ce cahier sert à établir une **première base de référence du projet** à partir des réponses initiales de Hicham, Omar et Nawfel. Cette baseline n'est pas un cahier des charges figé et ne bloque pas les évolutions.
+
+- Une réponse peut commencer comme hypothèse, être retenue provisoirement, puis être confirmée par un test ou une source.
+- Une décision peut être révisée si un essai, une contrainte découverte, un retour du tuteur ou une meilleure compréhension du besoin le justifie.
+- Une évolution ne doit pas effacer silencieusement le choix précédent : noter l'ancienne valeur, la nouvelle, la raison, les preuves et les impacts sur le code, les données, le réseau, les tests et le planning.
+- Les décisions structurantes et leurs changements sont consignés dans le [journal d'arbitrages](04-strategies-et-arbitrages-critiques.md).
+- Le cahier reflète l'état courant ; le journal conserve l'historique.
+
+Pour chaque réponse, utiliser si possible l'un de ces statuts : **Ouvert**, **Hypothèse**, **Décidé provisoirement**, **Vérifié**, **À réexaminer**, **Abandonné**. Une réponse « décidée » n'est pas forcément irréversible.
+
 ## 1. Périmètre hospitalier et services
 
 ### TUT-01 — Service de référence
@@ -407,9 +419,11 @@ La programmation réseau doit être réalisée en Java, mais le protocole applic
 
 Réponse : ....................................................................
 
-### TUT-26 — Livrables du 8 janvier 2027
+### TUT-26 — Livrables du 8 janvier 2027 et soutenance
 
-« Quels éléments exacts seront évalués et dans quel format ? »
+« Quels éléments exacts seront évalués et dans quel format ? Une soutenance est-elle prévue à une date distincte de la livraison ? Quelles sont sa durée, ses règles de participation et les modalités du rapport ? »
+
+**Préparation interne en attendant les consignes :** l'équipe prévoit un rapport technique structuré, un support oral et une démonstration reproductible. Ce sont des hypothèses de préparation, pas des modalités confirmées.
 
 - [ ] Application exécutable
 - [ ] Dépôt source complet
