@@ -4,7 +4,7 @@
 **Équipe :** Hicham, Omar et Nawfel (3 personnes).  
 **Début du planning recalé :** mercredi 25 novembre 2026.  
 **Livraison :** vendredi 8 janvier 2027.  
-**Statut :** planning de référence révisé ; charge individuelle encore à confirmer par le questionnaire d'équipe.
+**Statut :** planning de référence révisé ; charge individuelle et modalités de soutenance encore à confirmer.
 
 ## 1. Hypothèses de planification
 
@@ -16,7 +16,8 @@
 - La méthode est organisée en trois phases principales successives : DEV, Docker, Metrics.
 - La CI/CD est transversale et commence dès DEV.
 - La période des fêtes (notamment du 21 décembre au 4 janvier) est un risque de disponibilité ; chaque membre doit renseigner ses disponibilités.
-- Le 8 janvier est réservé au rendu et à la démonstration, pas au développement majeur.
+- Le 8 janvier est réservé au paquet de livraison du projet (rapport préparé, application, preuves et support oral de base), pas au développement majeur.
+- Les modalités et la date exacte de la soutenance ne sont pas encore connues ; le support et la démonstration sont préparés par précaution. Si l'oral a lieu après le 8 janvier, les répétitions seront recalées.
 - Le planning ne présume pas de la répartition individuelle des tâches. Les responsabilités seront décidées par les trois membres.
 
 La référence Intern comporte aussi une phase de déploiement sur machines virtuelles entre DEV et Docker. Elle n'est pas incluse comme phase obligatoire dans notre organisation actuelle.
@@ -28,7 +29,7 @@ La référence Intern comporte aussi une phase de déploiement sur machines virt
 | **DEV** | 25 novembre – 20 décembre 2026 | Cadrage décidé par l'équipe, prototype, modèle de données, communication réseau Java, backend, interface et recette locale intégrée |
 | **Docker** | 21 – 28 décembre 2026 | Application conteneurisée, réseaux et volumes vérifiés, installation reproductible |
 | **Metrics** | 29 décembre 2026 – 4 janvier 2027 | Instrumentation, étalonnage, campagnes de charge/reprise et analyse |
-| **Stabilisation / livraison** | 5 – 8 janvier 2027 | Corrections critiques, documentation, répétition de démonstration et livraison |
+| **Stabilisation, rapport et préparation orale** | 5 – 8 janvier 2027 | Corrections critiques, rapport final, support oral, répétition et paquet de livraison |
 
 Ces dates constituent un calendrier cible resserré pour trois personnes. Elles devront être réévaluées après saisie des disponibilités, notamment pendant les fêtes. Avec trois personnes, il faut limiter le périmètre initial et éviter le travail en silos, sans retirer les étapes d'intégration ou de test.
 
@@ -51,6 +52,12 @@ Ces dates constituent un calendrier cible resserré pour trois personnes. Elles 
 | Metrics — analyse et rapport | | | | | | ░ | █ |
 | **CI/CD** — tests et qualité à chaque PR | █ | █ | █ | █ | █ | █ | █ |
 | CI/CD — build images, scan et publication | | | | ░ | █ | █ | █ |
+| **Rapport** — plan et modalités à confirmer | █ | | | | | | |
+| Rapport — rédaction progressive des chapitres | ░ | █ | █ | █ | █ | █ | |
+| Rapport — compilation des résultats Docker / Metrics | | | | | ░ | █ | |
+| Rapport — finalisation, sources et annexes | | | | | | | █ |
+| **Oral** — conducteur, supports et trame de démo | | | | | | █ | █ |
+| Oral — répétition complète et corrections | | | | | | | █ |
 | **Livraison** — gel, documentation et démonstration | | | | | | ░ | █ |
 
 L'instrumentation élémentaire (horodatages, logs structurés, compteurs) commence pendant DEV. La phase Metrics correspond à la préparation des campagnes, à leur étalonnage, à leur exécution et à l'analyse.
@@ -87,9 +94,17 @@ gantt
     CI tests et qualité                   :d1, 2026-11-25, 2027-01-08
     Build, scan et publication Docker     :d2, 2026-12-21, 18d
 
+    section Rapport et soutenance
+    Squelette du rapport et modalités      :r1, 2026-11-25, 6d
+    Rédaction progressive                 :r2, 2026-11-30, 36d
+    Collecte de preuves et illustrations  :r3, 2026-11-25, 44d
+    Finalisation du rapport                :r4, 2027-01-05, 2d
+    Support oral et conducteur             :r5, 2027-01-04, 3d
+    Répétition orale et démonstration       :r6, 2027-01-07, 1d
+
     section Livraison
     Gel et validation finale              :e1, 2027-01-05, 3d
-    Rendu final                           :milestone, e2, 2027-01-08, 0d
+    Paquet de livraison prêt               :milestone, e2, 2027-01-08, 0d
 ~~~
 
 ## 5. Jalons et conditions de passage
@@ -103,8 +118,9 @@ gantt
 | M4 — DEV terminé | 20 décembre 2026 | Application locale intégrée et recette fonctionnelle | Tests P0 passants, parcours principal démontrable |
 | M5 — Docker terminé | 28 décembre 2026 | Compose reproductible, volumes et réseaux vérifiés | Le même scénario DEV passe dans l'environnement conteneurisé |
 | M6 — Metrics terminé | 4 janvier 2027 | Campagnes principales, résultats et analyse | Résultats reproductibles et limites identifiées |
-| M7 — Gel final | 7 janvier 2027 | Version candidate, documentation et démonstration répétée | Livraison reproductible avec procédure vérifiée |
-| M8 — Livraison | **8 janvier 2027** | Dépôt, application et démonstration | Tous les livrables retenus sont présents |
+| M7 — Rapport candidat | 6 janvier 2027 | Rapport complet relu, figures, sources et annexes vérifiées | Cohérence entre rapport, dépôt et résultats |
+| M8 — Répétition | 7 janvier 2027 | Oral et démonstration intégrale répétés | Conducteur chronométré, scénario reproductible et solution de secours prête |
+| M9 — Paquet de livraison | **8 janvier 2027** | Application, rapport et support oral de base prêts selon les modalités connues | Tous les livrables confirmés sont présents ; la date réelle d'oral reste à intégrer si différente |
 
 ## 6. Organisation du travail à trois
 
@@ -131,7 +147,7 @@ Cette grille ne suppose pas quatre responsables : elle décompose le travail en 
 
 ## 8. Chemin critique et risques
 
-Chemin critique : cadrage → architecture et contrats → premier flux réseau Java → persistance et centrale intégrées → recette locale → conteneurisation → scénario conteneurisé → campagnes Metrics → livraison.
+Chemin critique : cadrage → architecture et contrats → premier flux réseau Java → persistance et centrale intégrées → recette locale → conteneurisation → scénario conteneurisé → campagnes Metrics → rapport final et support oral → répétition → paquet de livraison.
 
 Risques prioritaires :
 - disponibilité réelle des trois membres pendant les fêtes ;
@@ -141,6 +157,9 @@ Risques prioritaires :
 - données waveform trop volumineuses pour le stockage ou le rendu retenu ;
 - campagnes Metrics trop courtes ou mal étalonnées ;
 - absence de procédure de livraison reproductible.
+- rapport commencé trop tard ou rédigé sans preuves vérifiables ;
+- modalités de soutenance communiquées tardivement ;
+- démonstration dépendante d'un réseau ou service externe non maîtrisé.
 
 ## 9. Règles de pilotage
 
@@ -151,6 +170,7 @@ Risques prioritaires :
 - Ne pas tirer de conclusion de performance avant d'avoir étalonné le protocole.
 - Définir les seuils d'acceptation avant les campagnes.
 - Geler les nouvelles fonctionnalités après le passage M4, sauf correction nécessaire.
-- Réserver les 5 à 8 janvier à la stabilisation, la documentation et la livraison.
+- Réserver les 5 à 8 janvier à la stabilisation, à la finalisation du rapport, à la répétition et à la livraison ; la rédaction du rapport et la collecte de preuves commencent dès le cadrage.
+- Ne pas attendre les modalités officielles pour préparer le contenu ; adapter ensuite durée, format et pagination.
 
 **À compléter :** disponibilités hebdomadaires de Hicham, Omar et Nawfel, notamment du 21 décembre au 4 janvier. Les dates ci-dessus sont un calendrier cible ; les charges individuelles seront ajustées après ces réponses.
