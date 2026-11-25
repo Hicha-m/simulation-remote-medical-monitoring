@@ -32,7 +32,7 @@ Pour chaque réponse, utiliser si possible l'un de ces statuts : **Ouvert**, **H
 « Quel service doit constituer le premier périmètre clinique complet du système ? Merci de choisir un service précis, et pas simplement “l'hôpital”. »
 
 **Choix :**
-- [ ] Réanimation adulte polyvalente
+- [x] Réanimation adulte polyvalente
 - [ ] Réanimation spécialisée (préciser : cardiaque, neuro, autre)
 - [ ] Unité de surveillance continue (USC)
 - [ ] Cardiologie avec télémétrie hospitalière
@@ -44,11 +44,15 @@ Pour chaque réponse, utiliser si possible l'un de ces statuts : **Ouvert**, **H
 - [ ] Néonatologie
 - [ ] Autre : ______________________________
 
-**Réponse / décision de l'équipe :**  
-............................................................................
+**Réponse / décision de l'équipe :**
 
-**Décision / précision :**  
-............................................................................
+La réanimation adulte polyvalente est retenue comme service de référence initial. Elle permet de travailler sur un monitorage multiparamétrique continu, la gestion des alarmes et la surveillance simultanée de plusieurs patients.
+
+Le développement initial portera sur des moniteurs multiparamétriques simulés, plusieurs patients et plusieurs lits. Le système devra recevoir les mesures, les associer correctement aux patients et aux équipements, les stocker, les afficher sur une station centrale et gérer les alarmes.
+
+Ce choix définit le premier périmètre clinique, pas une limite à long terme. Une fois le socle fonctionnel, l'architecture devra permettre l'intégration progressive d'autres équipements, tels que des ventilateurs et des pompes à perfusion, et l'adaptation à d'autres services hospitaliers.
+
+**Décision / précision :** service initial confirmé ; extensions matérielles et cliniques prévues comme évolutions, non exigées dans le premier périmètre.
 
 ### TUT-02 — Nombre de services à couvrir
 
@@ -59,56 +63,74 @@ Pour chaque réponse, utiliser si possible l'un de ces statuts : **Ouvert**, **H
 - [ ] Un seul service, avec une seule centrale
 - [ ] Plusieurs services, une centrale par service
 - [ ] Plusieurs services, une centrale principale commune
-- [ ] Plusieurs services avec centrales locales et supervision transversale
+- [x] Plusieurs services avec centrales locales et supervision transversale
 - [ ] Autre architecture : ______________________________
 
-**Services obligatoires au rendu :**  
-1. ____________________  2. ____________________  3. ____________________
+**Services obligatoires au premier périmètre fonctionnel :**  
+1. Réanimation adulte polyvalente.
 
 **Services facultatifs / extension :**  
-............................................................................
+USC, cardiologie avec télémétrie, urgences / SAUV et SSPI.
 
-**Réponse / décision :**  
-............................................................................
+**Réponse / décision :**
+
+Le système est conçu pour prendre en charge plusieurs services hospitaliers. Chaque service peut disposer de sa propre centrale locale, tandis qu'une infrastructure commune assure la supervision transversale. Le développement commencera par la réanimation adulte polyvalente ; les autres services seront intégrés progressivement.
+
+La cible multi-services ne signifie pas que tous les services doivent être complètement développés dès la première version. La topologie technique exacte et le niveau d'indépendance des centrales restent à définir dans le System Design.
 
 ### TUT-03 — Population surveillée
 
 « Quelle population le système doit-il prendre en charge dans son périmètre initial ? »
 
-- [ ] Adultes uniquement
+- [x] Adultes uniquement
 - [ ] Adultes et pédiatrie
 - [ ] Adultes, pédiatrie et néonatologie
 - [ ] Autre : ____________________
 
 **Les profils adultes/pédiatriques/néonataux doivent-ils être des profils distincts avec leurs propres paramètres et configurations ?**  
-Réponse : ....................................................................
+Réponse : Oui. Les profils adultes, pédiatriques et néonataux devront être distincts et configurables selon leurs paramètres, valeurs de référence et règles d'alarme. Le premier développement concernera uniquement les adultes ; l'architecture devra permettre l'ajout ultérieur des profils pédiatriques et néonataux sans remettre en cause le fonctionnement général.
+
+Les valeurs de référence et seuils ne seront pas inventés : ils devront provenir de sources documentées ou d'une validation compétente. Pour le démonstrateur, tout profil synthétique sera explicitement identifié comme non clinique.
 
 ### TUT-04 — Mobilité des patients
 
 « Les patients doivent-ils rester dans un lit fixe ou le système doit-il gérer aussi la télémétrie, les déplacements et le monitorage pendant les transports ? »
 
-- [ ] Patients fixes au lit uniquement
+- [x] Patients fixes au lit uniquement
 - [ ] Patients mobiles en télémétrie
 - [ ] Transports entre services avec moniteur de transport
 - [ ] Déplacements vers imagerie / bloc / examens
 - [ ] Toutes ces situations
 - [ ] Autre : ____________________
 
-**Situations obligatoires :** ...................................................
+**Situations obligatoires :**
+
+Surveillance continue de patients installés dans des lits identifiés, avec association explicite entre patient, séjour, service, lit, moniteur et session de surveillance. Le système doit aussi gérer les changements de lit, les déconnexions et reconnexions des équipements, tout en conservant l'historique des affectations et des mesures.
+
+La télémétrie et le monitorage pendant les transports sont hors du premier périmètre.
 
 ### TUT-05 — Organisation des centrales
 
 « Pour les services retenus, combien de centrales faut-il représenter et quelles vues un poste central doit-il avoir ? »
 
 - [ ] Une vue limitée à son propre service
-- [ ] Vue multi-lits du service
-- [ ] Vue de plusieurs services
-- [ ] Transfert de surveillance entre centrales
+- [x] Vue multi-lits du service
+- [x] Vue de plusieurs services
+- [x] Transfert de surveillance entre centrales
 - [ ] Terminal mobile / répétiteur
 - [ ] Autre : ____________________
 
-**Précisions / nombre de lits ou patients simultanés :**  
-............................................................................
+**Précisions / nombre de lits ou patients simultanés :**
+
+Les centrales locales doivent afficher les différents lits et patients de leur service. Une supervision transversale doit pouvoir consulter plusieurs services. Le système doit conserver la continuité du suivi lors du transfert de surveillance d'un patient entre deux services / centrales.
+
+Le nombre de lits et de patients simultanés reste à dimensionner.
+
+**Réponse / décision :**
+
+L'organisation cible comporte des centrales locales par service et une supervision transversale. Les centrales ne doivent pas être de simples écrans simulés indépendants : plusieurs composants doivent réellement communiquer à travers le réseau, distribuer les données aux centrales concernées et remonter les informations vers la supervision globale.
+
+Cette exigence décrit le comportement logique attendu ; elle ne présume pas encore du choix monolithe, SOA ou microservices, ni du nombre de serveurs physiques. L'architecture et les frontières réseau restent à étudier.
 
 ## 2. Fonctionnalités attendues — comportements du système
 
@@ -144,8 +166,16 @@ Pour chaque ligne, demander : **obligatoire**, **souhaitée** ou **hors périmè
 **Les trois fonctionnalités considérées comme les plus importantes :**  
 1. ____________________  2. ____________________  3. ____________________
 
-**Fonctionnalités interdites ou à ne surtout pas développer :**  
-............................................................................
+**Fonctionnalités exclues du périmètre actuel :**
+
+- Connexion à de véritables dispositifs médicaux hospitaliers : seuls des équipements simulés seront utilisés.
+- Utilisation de données personnelles réelles de patients : privilégier des données synthétiques ou des données de recherche dé-identifiées, dans le respect de leurs conditions d'accès et de réutilisation.
+- Prescription de traitements ou génération d'ordres médicaux réels.
+- Prise de décision médicale autonome ou diagnostic.
+- Intégration à un véritable SIH ou à un dossier patient informatisé.
+- Envoi de véritables alertes à des soignants ou à des services d'urgence.
+
+L'IA prédictive n'est pas exclue comme perspective expérimentale future, mais elle ne doit pas être une dépendance de l'architecture ni une condition de fonctionnement du système de monitorage.
 
 ### TUT-06 — Actions utilisateur par rôle
 
@@ -153,15 +183,23 @@ Pour chaque ligne, demander : **obligatoire**, **souhaitée** ou **hors périmè
 
 | Rôle | Visualiser | Acquitter | Modifier profil/limites | Affecter appareil/lit | Administrer comptes |
 |---|---|---|---|---|---|
-| Infirmier/ère | | | | | |
-| Médecin | | | | | |
-| Personnel de centrale | | | | | |
-| Biomédical | | | | | |
-| Administrateur technique | | | | | |
+| Infirmier/ère | ✓ | ✓ | — | ✓ | — |
+| Médecin | ✓ | ✓ | ✓ | ✓ | — |
+| Personnel de centrale | ✓ | ✓ | Selon droits | ✓ | — |
+| Biomédical | Limité | — | — | ✓ | — |
+| Administrateur technique | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Autre : | | | | | |
 
-**Réponse / règles d'autorisation :**  
-............................................................................
+**Réponse / règles d'autorisation :**
+
+Première proposition de rôles :
+- **Infirmier / infirmière :** surveillance quotidienne des patients et gestion des alarmes.
+- **Médecin :** consultation des données et historiques ; modification des profils et limites selon les habilitations qui seront définies.
+- **Personnel de centrale :** surveillance simultanée des lits et coordination des alarmes du service.
+- **Biomédical :** inventaire, état, diagnostic et maintenance des équipements ; accès limité aux informations patient.
+- **Administrateur technique :** gestion des comptes, droits et configuration technique.
+
+**À préciser avant implémentation :** séparer les permissions techniques et médicales. En particulier, les droits d'administration technique ne doivent pas donner automatiquement accès à la modification des seuils cliniques ou à l'acquittement des alarmes. Les droits d'affectation d'un moniteur, d'un patient et d'un lit devront également être définis précisément. Les actions sensibles devront être journalisées. La matrice ci-dessus est une première proposition, à affiner.
 
 ## 3. Réalisme médical, paramètres et données
 
