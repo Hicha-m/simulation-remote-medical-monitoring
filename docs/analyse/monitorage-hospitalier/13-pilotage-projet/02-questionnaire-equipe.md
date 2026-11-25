@@ -1,26 +1,29 @@
-# 02 — Questionnaire d'organisation de l'équipe de quatre
+# 02 — Questionnaire d'organisation de l'équipe de trois
 
-**Version :** 1.0 — **Date :** 18 novembre 2026  
+**Version :** 1.1 — **Date :** 25 novembre 2026  
+**Équipe :** Hicham, Omar et Nawfel.  
 **Échéance commune :** 8 janvier 2027.
 
-Ce document est à remplir à quatre lors d'une réunion de lancement. Il sert à révéler les contraintes et à décider d'une organisation explicite ; il ne distribue pas les rôles à votre place.
+Ce document est à remplir par Hicham, Omar et Nawfel. Il sert à rendre visibles les disponibilités, compétences et responsabilités. Les rôles ne sont pas préattribués : l'équipe les choisit elle-même. Il y a quatre chantiers fonctionnels pour trois personnes ; un membre peut donc être responsable de plusieurs chantiers, avec une relecture croisée.
 
 ## 1. Disponibilité réelle
+
+Les trois membres identifiés sont Hicham, Omar et Nawfel. Les réponses de disponibilité restent à compléter par chacun.
 
 ### 1.1 Fiche individuelle
 
 À compléter par chaque membre.
 
-| Information | Membre 1 | Membre 2 | Membre 3 | Membre 4 |
-|---|---|---|---|---|
-| Nom / identifiant | | | | |
-| Heures disponibles par semaine | | | | |
-| Disponibilités en semaine | | | | |
-| Disponibilités le week-end | | | | |
-| Indisponibilités / examens / vacances | | | | |
-| Disponibilité du 21 décembre au 4 janvier | | | | |
-| Présence possible le 7-8 janvier | | | | |
-| Préférence : backend / UI / réseau / données / tests / documentation | | | | |
+| Information | Hicham | Omar | Nawfel |
+|---|---|---|---|
+| Nom / identifiant | Hicham | Omar | Nawfel |
+| Heures disponibles par semaine | | | |
+| Disponibilités en semaine | | | |
+| Disponibilités le week-end | | | |
+| Indisponibilités / examens / vacances | | | |
+| Disponibilité du 21 décembre au 4 janvier | | | |
+| Présence possible le 7-8 janvier | | | |
+| Préférence : backend / UI / réseau Java / données / tests / documentation | | | |
 
 **Question à poser à chacun :** « Combien d'heures réalistes peux-tu consacrer au projet chaque semaine, en tenant compte des cours, examens, fêtes et autres engagements ? »
 
@@ -28,22 +31,22 @@ Ce document est à remplir à quatre lors d'une réunion de lancement. Il sert �
 
 Évaluer chaque domaine de 1 (débutant) à 5 (autonome/expérimenté).
 
-| Domaine | Membre 1 | Membre 2 | Membre 3 | Membre 4 |
-|---|---:|---:|---:|---:|
-| Java / JVM | | | | |
-| Autres langages | | | | |
-| Programmation réseau | | | | |
-| Backend / API | | | | |
-| Interface desktop | | | | |
-| Interface web | | | | |
-| SQL / modélisation BDD | | | | |
-| Séries temporelles / signaux | | | | |
-| Données médicales / recherche documentaire | | | | |
-| Cybersécurité | | | | |
-| Tests automatisés | | | | |
-| Docker / déploiement / CI | | | | |
-| Git / revue de code | | | | |
-| Documentation / présentation | | | | |
+| Domaine | Hicham | Omar | Nawfel |
+|---|---:|---:|---:|
+| Java / JVM | | | |
+| Programmation réseau en Java | | | |
+| Autres langages | | | |
+| Backend / API | | | |
+| Interface desktop | | | |
+| Interface web | | | |
+| SQL / modélisation BDD | | | |
+| Séries temporelles / signaux | | | |
+| Données médicales / recherche documentaire | | | |
+| Cybersécurité | | | |
+| Tests automatisés | | | |
+| Docker / déploiement / CI | | | |
+| Git / revue de code | | | |
+| Documentation / présentation | | | |
 
 **Question :** « Quel domaine souhaites-tu prendre en responsabilité et quel domaine veux-tu éviter ou apprendre ? »
 
@@ -51,7 +54,7 @@ Réponses : ....................................................................
 
 ## 3. Répartition des responsabilités
 
-Les quatre chantiers proposés ci-dessous sont des domaines de responsabilité, pas des silos. Les tâches transversales doivent être partagées.
+Les quatre chantiers proposés ci-dessous sont des domaines de responsabilité, pas des silos. Avec trois membres, un responsable peut prendre plusieurs chantiers ; les revues et tâches transversales doivent être partagées.
 
 | Chantier | Responsable principal | Binôme / relecteur | Périmètre et livrables |
 |---|---|---|---|
