@@ -119,4 +119,4 @@ Toute régression de performance doit être interprétée avec la charge, le run
 
 La CI/CD est considérée opérationnelle lorsque chaque Pull Request exécute des contrôles utiles, la branche principale produit un artefact identifié, le déploiement Compose peut être testé automatiquement et la livraison de démonstration est reproductible.
 
-L'automatisation doit rester proportionnée au projet : un pipeline maintenable et fiable vaut mieux qu'une chaîne complexe qui ne peut pas être comprise ou réparée par les quatre membres.
+L'automatisation doit rester proportionnée au projet : un pipeline maintenable et fiable vaut mieux qu'une chaîne complexe qui ne peut pas être comprise ou réparée par les trois membres.
