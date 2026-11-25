@@ -1,7 +1,7 @@
 # Comparaison des services et choix du service de référence
 
-**Date :** 18 novembre 2026  
-**Décision :** non validée. La réanimation adulte est proposée comme hypothèse de travail pour le premier POC.
+**Date de mise à jour :** 25 novembre 2026  
+**Décision :** réanimation adulte polyvalente retenue comme premier périmètre clinique. Le système cible est multi-services, mais le développement initial se concentre sur ce service.
 
 ## 1. Pourquoi le service change le système
 
@@ -64,11 +64,11 @@ Il ne faut pas supposer que chaque lit d'un service conventionnel dispose d'un m
 | Données de recherche disponibles | Très bonnes | Plus limitées | Bonnes pour ECG / télémétrie | Plus spécialisées | Bonnes via MIMIC-IV-ED |
 | Facilité de cadrage initial | Faible | Moyenne | Moyenne | Moyenne | Faible |
 
-## 5. Proposition pour le POC
+## 5. Premier périmètre fonctionnel retenu
 
-### Hypothèse de travail recommandée : réanimation adulte polyvalente
+### Réanimation adulte polyvalente
 
-Le POC peut prendre une réanimation adulte comme unité principale, avec :
+La réanimation adulte polyvalente est retenue comme premier service à rendre fonctionnel. La première version doit couvrir :
 
 - une centrale affichant plusieurs lits ;
 - des moniteurs multiparamétriques de chevet ;
@@ -78,20 +78,20 @@ Le POC peut prendre une réanimation adulte comme unité principale, avec :
 - des associations patient / séjour / lit / appareil ;
 - des transferts vers et depuis les urgences ou une unité moins intensive.
 
-La réanimation est retenue comme référence documentaire parce que la surveillance continue, les risques de défaut de surveillance et les alarmes y sont clairement documentés par la HAS [H02]. Des bases de recherche dédiées à la réanimation existent également, notamment MIMIC-IV, HiRID, eICU et AmsterdamUMCdb [H100–H104].
+La réanimation est retenue parce que la surveillance multiparamétrique continue, les risques de défaut de surveillance et les alarmes en font un contexte riche pour concevoir et tester le système. Ces pratiques restent à traduire en exigences logicielles sourcées et non en règles cliniques inventées. Des bases de recherche dédiées à la réanimation existent également, notamment MIMIC-IV, HiRID, eICU et AmsterdamUMCdb [H100–H104].
 
-### Alternative si le périmètre devient trop lourd : USC adulte
+### Services d'extension
 
-L'USC peut devenir le service de référence si l'équipe souhaite limiter le nombre de dispositifs de soutien avancés tout en conservant des patients nécessitant une observation renforcée. Ce choix devra être précisé à partir d'une unité réelle ou d'un référentiel professionnel ; il ne faut pas lui attribuer automatiquement un équipement universel.
+L'USC, la cardiologie avec télémétrie, les urgences / SAUV et la SSPI sont conservés comme extensions possibles. Ils ne remplacent pas le service initial : leur intégration viendra après la validation du socle de monitorage et des échanges entre centrales.
 
 ## 6. Ce que nous ne devons pas décider maintenant
 
-- Le nombre exact de lits simulés.
+- Le nombre exact de lits simulés et la charge cible.
 - Le nombre d'appareils par lit.
 - Les seuils d'alarme et les conduites médicales.
 - Les fréquences de production des mesures.
 - La marque ou le protocole d'un fabricant.
-- La topologie réseau ou la technologie Java.
+- La topologie réseau, les frontières entre centrales et supervision, ou les bibliothèques Java.
 
 Ces choix interviennent après validation du contexte et des scénarios.
 
