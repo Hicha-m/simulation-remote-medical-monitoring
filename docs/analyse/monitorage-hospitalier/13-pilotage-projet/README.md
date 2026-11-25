@@ -47,11 +47,11 @@ La référence Intern inclut une phase VM intermédiaire ; elle n'est pas obliga
 | ID | Sujet | État |
 |---|---|---|
 | DIR-01 | Nature du système | Confirmé : monitorage hospitalier, moniteurs de chevet vers centrale(s). |
-| DIR-02 | Services cliniques exacts | Ouvert : service principal et extensions à préciser. |
+| DIR-02 | Services cliniques exacts | Première décision prise : réanimation adulte polyvalente comme service initial ; USC, cardiologie/télémétrie, urgences/SAUV et SSPI comme extensions possibles. |
 | DIR-03 | Fonctionnalités fonctionnelles attendues | Ouvert : liste à faire valider. |
 | DIR-04 | Niveau de réalisme médical et signaux | Ouvert : paramètres, courbes et données sources à sélectionner. |
 | DIR-05 | Technologies | Partiellement confirmé : programmation réseau en Java ; technologies des autres composants libres. |
-| DIR-06 | Architecture réseau et déploiement | Ouvert : à choisir après les besoins et essais. |
+| DIR-06 | Architecture réseau et déploiement | Exigence fonctionnelle décidée : centrales locales par service et supervision transversale réelle ; topologie technique, hébergement et mécanismes réseau encore ouverts. |
 | DIR-07 | Livrables et barème | À préciser par l'équipe et à faire valider si nécessaire. |
 | DIR-08 | Répartition de l'équipe | À décider par Hicham, Omar et Nawfel. |
 | DIR-09 | Séquence DEV → Docker → Metrics | Séquence retenue ; planning recalé au 25 novembre avec échéance au 8 janvier. |
