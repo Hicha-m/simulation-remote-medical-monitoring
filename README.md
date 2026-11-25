@@ -12,7 +12,7 @@ Projet académique de conception et de développement d'un système logiciel com
 **Contrainte technique confirmée :** la programmation réseau doit être réalisée en Java ; les autres technologies sont libres.  
 **Planning recalé :** à partir du 25 novembre 2026, avec livraison le **8 janvier 2027**.
 
-Le service de référence, les fonctionnalités exactes, les profils médicaux et l'architecture sont des choix de conception à effectuer par l'équipe. Le cahier de décisions forme une baseline initiale qui pourra évoluer, avec un historique des arbitrages conservé. Le tuteur laisse le périmètre et les choix technologiques libres, sous réserve de la contrainte Java pour le réseau.
+Le service initial, la cible multi-services et une première priorisation des fonctionnalités ont été retenus provisoirement par l'équipe. Les profils d'accès sont également cadrés dans une première version de TUT-06. Les paramètres médicaux, les choix techniques détaillés et les fonctionnalités souhaitées restent à arbitrer. Le cahier de décisions forme une baseline évolutive, avec un historique des arbitrages conservé. Le tuteur laisse le périmètre et les choix technologiques libres, sous réserve de la contrainte Java pour le réseau.
 
 ## Méthode de réalisation
 
