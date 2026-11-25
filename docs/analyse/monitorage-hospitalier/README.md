@@ -3,7 +3,9 @@
 **Version :** 0.1  
 **Date de mise à jour :** 25 novembre 2026  
 **Périmètre confirmé :** monitorage hospitalier.  
-**Statut :** analyse, cadrage médical et fonctionnel ; les choix de services, fonctionnalités et technologies restent à valider.
+**Équipe :** Hicham, Omar et Nawfel (3 personnes).  
+**Contrainte technique connue :** programmation réseau en Java ; autres technologies libres.  
+**Statut :** analyse et cadrage ; les choix de services, fonctionnalités et architecture restent à définir par l'équipe.
 
 **Nature confirmée :** système de monitorage hospitalier reliant des moniteurs de chevet à une ou plusieurs centrales de surveillance. **Échéance de livraison : 8 janvier 2027.** Il s'agit du projet logiciel complet, et non d'une simple preuve de concept.
 
