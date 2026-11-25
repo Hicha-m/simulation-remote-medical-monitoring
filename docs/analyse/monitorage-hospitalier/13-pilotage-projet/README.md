@@ -1,6 +1,6 @@
 # Pilotage du projet — cadrage, organisation, planning et arbitrages
 
-**Version :** 1.2 — **Date :** 25 novembre 2026  
+**Version :** 1.3 — **Date :** 25 novembre 2026  
 **Échéance de livraison :** vendredi 8 janvier 2027.  
 **Équipe :** Hicham, Omar et Nawfel (3 personnes).  
 **Contrainte technique connue :** programmation réseau en Java ; autres choix libres.  
@@ -8,7 +8,7 @@
 
 ## Objectif
 
-Rendre les décisions explicites et faciles à faire évoluer. Ce dossier est conçu pour être utilisé en réunion puis mis à jour directement : chaque question possède une zone de réponse, chaque décision garde sa justification et les résultats des essais.
+Rendre les décisions explicites et faciles à faire évoluer. Le cahier de décisions constitue une baseline initiale, révisable au fil du projet ; le journal d'arbitrages conserve les versions précédentes et les raisons des changements. Ce dossier est conçu pour être mis à jour directement : chaque décision garde sa justification et les résultats des essais.
 
 ## Documents
 
@@ -16,6 +16,7 @@ Rendre les décisions explicites et faciles à faire évoluer. Ce dossier est co
 2. [Questionnaire d'organisation de l'équipe de trois](02-questionnaire-equipe.md) — compétences, disponibilité, responsabilités, méthode Git, décisions, réunions et règles d'intégration.
 3. [Planning Gantt générique](03-gantt-generique.md) — séquence DEV → Docker → Metrics et échéance du 8 janvier 2027.
 4. [Stratégies et arbitrages critiques](04-strategies-et-arbitrages-critiques.md) — orientations possibles, situations critiques, expérimentations, métriques et journal de décision.
+5. [Préparation du rapport et de la soutenance](05-rapport-et-soutenance.md) — plan du rapport, preuves à conserver, fil oral, démonstration et modalités à confirmer.
 
 ## Méthode de réalisation retenue
 
@@ -37,6 +38,8 @@ La référence Intern inclut une phase VM intermédiaire ; elle n'est pas obliga
 - Définir les métriques et les critères de réussite avant de regarder les résultats.
 - Conserver les résultats bruts des essais : charge, latence, pertes, volume, erreurs, temps d'intégration et limites observées.
 - Le planning est une maquette macro, pas un engagement de charge déjà validé.
+- Le rapport doit être alimenté pendant DEV, Docker et Metrics ; la période du 5 au 8 janvier est réservée à la finalisation et aux répétitions, pas au démarrage de la rédaction.
+- La date et les modalités exactes de soutenance restent inconnues ; elles seront ajoutées dès confirmation.
 - L'échéance du 8 janvier 2027 est une contrainte ferme à confirmer avec le tuteur (heure, format et contenu du rendu).
 
 ## Statut des décisions
