@@ -2,8 +2,9 @@
 
 **Projet :** système de monitorage hospitalier  
 **Échéance :** 8 janvier 2027  
-**Équipe :** 4 personnes  
-**Statut :** méthode de travail proposée, à ajuster après validation du tuteur.
+**Équipe :** Hicham, Omar et Nawfel (3 personnes)  
+**Contrainte technique confirmée :** programmation réseau en Java ; autres technologies libres.  
+**Statut :** méthode de travail adaptée à une équipe de trois.
 
 ## Principe
 
@@ -49,7 +50,7 @@ Chaque étape doit présenter :
 5. les livrables ;
 6. les critères permettant de passer à l'étape suivante.
 
-Les exemples de métriques ou de configurations ne sont pas des résultats. Les valeurs cibles restent à fixer à partir des réponses du tuteur et des besoins mesurés.
+Les exemples de métriques ou de configurations ne sont pas des résultats. Les valeurs cibles seront fixées par l'équipe à partir des besoins argumentés et des essais mesurés ; le tuteur peut être sollicité pour avis.
 
 ## Documents de référence du projet
 
